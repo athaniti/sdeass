@@ -1,0 +1,380 @@
+body {
+    background:#eee none repeat scroll 0 0;
+    color:#333;
+    font-family:Helvetica;
+    font-size:72%;
+    line-height:1.5em;
+    margin:0;
+    border-top:1px solid #393939;
+  }
+
+
+
+#stage.theme{
+    padding:3px;
+  }
+
+#stage.theme > h1{
+    color:#333;
+    font-size:1.6em;
+    text-align:center;
+    margin-top:15px;
+    padding:0;
+  }
+
+#stage.theme .ui-title {
+    color: #CBDCEE;
+}
+
+#stage.theme > h2{
+  	clear:both;
+    margin:10 0;
+    font-size:1em;
+    text-align:center;
+  }
+#stage.theme h3{
+  	clear:both;
+    margin:10 0;
+    font-size:1.8em;
+    
+  }
+
+#stage.theme a.btn{
+  	border: 2px solid #222;
+  	-webkit-border-radius: 9px;
+  	border-radius: 9px;
+  	text-align:center;
+  	display:block;
+  	background:#eee;
+  	width:280px;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0;
+  	margin:12px;
+  }
+  
+#stage.theme input.ui-input-text{
+    border: 1px solid #BFBFBF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0 #000000, 0 3px 3px #EEEEEE inset;
+    
+  	display:block;
+  	background:#CBDCEE;
+  	width:263px;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0.5em;
+  	margin:12px;
+  }
+  
+#stage.theme input.ui-input-textarea{
+  	border: 2px solid #222;
+  	-webkit-border-radius: 9px;
+  	border-radius: 9px;
+  	text-align:center;
+  	display:block;
+  	background:#CBDCEE;
+  	width:350px;
+	height:100px;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0;
+  	margin:12px;
+  }
+
+#stage.theme a.btn.enc{
+  	background:#555;
+  	color:#eee;
+  }
+
+#submitButton, #regsubmitButton {
+    background: -moz-linear-gradient(center top , #33A0E8, #2180CE) repeat scroll 0 0 transparent;
+    border-color: #2270AB #18639A #0F568B;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 0 #83C5F1 inset;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px #355782;
+  border-radius: 3px 3px 3px 3px;
+  text-align:center;
+  	display:block;
+  	width:280px;
+  	color:#eee;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 1.0em;
+  	margin:12px;
+}
+	
+#stage.theme label, .ui-btn-text{
+    color: #222;
+    font-size:1.3em;
+    padding-left:10px;
+}
+
+#docList li {
+    border: 1px solid #222;
+  	-webkit-border-radius: 2px;
+  	border-radius: 2px;
+  	text-align:center;
+  	display:block;
+  	background:#eee;
+  	width:280px;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0;
+  	margin:0px;
+}
+
+#productDetails {
+    border: 1px solid #222;
+  	-webkit-border-radius: 2px;
+  	border-radius: 2px;
+	display:block;
+  	background:#eee;
+  	width:280px;
+	padding-left:1.0em;
+	padding-right:1.0em;
+    margin:10px;
+    font-size:1.2em;
+    line-height:1.5em;
+}
+
+#productDetails h3 {
+    border-bottom:1px solid #222;
+    width:95%;
+    
+}
+
+#reg {margin:12px;}
+#reg a {
+    text-decoration:none;
+    color: #eee;
+    font-size: 1.4em;
+}
+
+
+#stage.theme ul {
+	 margin: 12px;
+    padding: 1em 0;
+}
+#stage.theme li{
+  	border: 1px solid #bfbfbf;
+  	-webkit-border-radius: 3px;
+  	border-radius: 3px;
+  	text-align:center;
+  	display:block;
+  	background:#CBDCEE;
+  	width:280px;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0;
+  	margin:0.5em 0;	
+  }
+
+#stage.theme li.lessons {
+	padding:0;
+
+	}
+#lessons button {
+    border: 1px solid #BFBFBF;
+    border-radius: 3px 3px 3px 3px;
+    
+  	display:block;
+  	background:#CBDCEE;
+  	color:#222;
+  	font-size:1.3em;
+  	text-decoration:none;
+  	padding:1.0em 0;
+  	margin:0px;;
+  
+	text-align:center;
+  	width:280px;
+  	
+}
+  
+/* Top Menu */
+#usermenu {
+	width:100%;
+	background-color:#333;
+	color:#eee;
+	display:block;
+	height:20px;
+	font-size:1.2em;
+	font-weight:700;
+	padding:5px;
+	margin:0px;
+}
+
+#usermenu a {
+	color:#eee;
+	text-decoration:none;
+	padding-right:10px;
+}
+
+#usermenu a:hover, #exportgrades a:hover {
+	text-decoration:underline;
+}
+
+#menuleft {
+    float: left;
+}
+
+#menuright {
+    float: right;
+}
+
+
+#stage.theme #menuright li {
+    float: left;
+    padding: 0px;
+    border:none;
+    background-color: transparent;
+    font-size:1.0em;
+    font-weight:700;
+    width: auto;
+    margin: auto;
+}
+
+
+
+
+
+/* End of Top Menu */
+
+#classes a, #exportgrades a {
+	text-decoration:none;
+	color:#006;
+}
+
+#exportgrades {margin-bottom:10px;}
+#exportgrades a {
+	border: 2px solid #222;
+  	-webkit-border-radius: 4px;
+  	border-radius: 4px;
+	background-color:#CBDCEE;
+	width:200px;
+	height:20px;
+	padding:5px;
+	margin-right:10px;
+}
+
+.edit_area {
+	border: 2px solid #222;
+  	-webkit-border-radius: 4px;
+  	border-radius: 4px;
+	background:#CBDCEE;
+	display:block;
+	width:400px;
+	height:100;
+	margin:10px;
+	padding:10px;
+	padding-bottom:40px;
+	font-size:1.2em;
+	color:#222;
+}
+
+.edit_area button input[type="submit"]  { 
+	border: 1px solid #222;
+  	-webkit-border-radius: 4px;
+  	border-radius: 4px;
+	float:left;
+	width:80px;
+	height:30px;
+	background: #aaa;
+	color:#CBDCEE;
+	margin-right:4px;
+	
+}
+.jedit input, textarea {
+    font-family: Helvetica, Verdana, Arial;
+    font-size:1.0em;
+    background-color:#eee;
+    
+}
+
+#Edit-ProjectType {
+    
+    visibility: hidden;
+}
+
+#GradesContainer p {
+	margin:10px;
+}
+
+#gradestitle {
+    padding:10px;
+    font-size:1.3em;
+}
+
+#organizationmgmt, #lessonmgmt, #schoolmgmt {
+    border: 0px solid #222;
+    float:left;
+    margin: 10px;
+    padding: 10px;
+    min-height: 200px;
+    background-color: #CBDCEE;
+}
+
+
+
+.divtitle {
+    color:#222;
+    font-size:1.3em;
+    font-weight: bolder;
+    border-bottom: 1px solid #222;
+    padding: 5px;
+}
+
+#stage.theme a.adminbtn{
+  	border: 1px solid #222;
+  	-webkit-border-radius: 9px;
+  	border-radius: 9px;
+  	text-align:center;
+  	display:block;
+  	background:#eee;
+  	width:260px;
+  	color:#222;
+  	font-size:1em;
+  	text-decoration:none;
+  	padding:0.5em 0;
+  	margin:12px;
+  }
+  
+#stage.theme li.listitems {
+    font-size: 1.1em;
+    border:none;
+    background:#eee;
+    text-align: left;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+#students, #teachers, #project, #otherteachers, #otherstudents {
+    padding: 5px;
+    
+}
+
+#teachersdiv, #studentsdiv {
+    float: left;
+    margin: 10px;
+}
+
+#project {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#fpmessage {
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+}
+
+

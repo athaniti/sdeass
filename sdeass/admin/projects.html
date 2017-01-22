@@ -1,0 +1,108 @@
+<html>
+  <head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Αγρινίου</title>
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+	<link href="../js/jtable/themes/lightcolor/orange/jtable.css" rel="stylesheet" type="text/css" />
+    <script src="../js/main.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="../js/jtable/jquery.jtable.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		isLoggedIn();
+		var userid = window.localStorage["userid"];
+	</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+  <body id="stage" class="theme">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();
+    eduyear=document.getElementById("eduyear").innerHTML;</script>
+  </div>
+	<div id="ProjectTableContainer" style="width: 100%;"></div>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			//Localization texts
+        var greekMessages = {
+            serverCommunicationError: 'Πρόβλημα στην επικοινωνία με τον server.',
+            loadingMessage: 'Περιμένετε...',
+            noDataAvailable: 'Δεν υπάρχουν διαθέσιμα δεδομένα!',
+            addNewRecord: '+ Προσθήκη εγγραφής',
+            editRecord: 'Επεξεργασία Εγγραφής',
+            areYouSure: 'Είστε σίγουρος?',
+            deleteConfirmation: 'Η εγγραφή θα διαγραφεί. Είστε σίγουρος?',
+            save: 'Αποθήκευση',
+            saving: 'Αποθήκευση...',
+            cancel: 'Ακύρωση',
+            deleteText: 'Διαγραφή',
+            deleting: 'ΔΙαγραφή...',
+            error: 'Σφάλμα',
+            close: 'Κλείσιμο',
+            cannotLoadOptionsFor: '{0} δεν είναι δυνατή η φόρτωση επιλογών!'
+           // pagingInfo: 'Σελίδα {2}, {0} από {1} ',
+            //canNotDeletedRecords: '{1} kayıttan {0} adedi silinemedi!',
+            //deleteProggress: '{1} kayıttan {0} adedi silindi, devam ediliyor...'
+        };
+		    //Prepare jTable
+			$('#ProjectTableContainer').jtable({
+				messages: greekMessages, //Lozalize
+				title: 'Projects - Εργαστήρια',
+				sorting: true, //Enable sorting
+				defaultSorting: 'Type ASC', //Set default sorting
+				actions: {
+					listAction: websvcroot+'ProjectActions.php?action=list&eduyear='+eduyear,
+					createAction: websvcroot+'ProjectActions.php?action=create&eduyear='+eduyear,
+					updateAction: websvcroot+'ProjectActions.php?action=update&eduyear='+eduyear,
+					deleteAction: websvcroot+'ProjectActions.php?action=delete&eduyear='+eduyear
+				},
+				fields: {
+					ProjectID: {
+						key: true,
+						create: false,
+						edit: false,
+						list: false
+					},
+					projectName: {
+						title: 'Όνομα',
+						width: '40%',
+						display: function (data) {
+						    return '<a href="project.html?projectid=' + data.record.ProjectID + '">' + data.record.projectName + '</a>';
+						  }
+					},
+					Type: {
+						title: 'Τύπος',
+						width: '20%',
+						options: { '1': 'Project', '2': 'Εργαστήριο'}
+					}
+					,
+					projectWebPage: {
+						title: 'Ιστοσελίδα',
+						width: '40%',
+						display: function (data) {
+						    return '<a href="' + data.record.projectWebPage + '">' + data.record.projectWebPage + '</a>';
+						  }
+					}
+					
+				}
+			});
+
+			//Load person list from server
+			$('#ProjectTableContainer').jtable('load');
+
+		});
+
+	</script>
+ <script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+  </body>
+</html>
