@@ -25,18 +25,18 @@ function getMenu() {
     document.write('<li class="dropdown">');
               document.write('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ρυθμίσεις <span class="caret"></span></a>');
     document.write('<ul class="dropdown-menu" role="menu">');
-    
-    
+
+
     document.write('<li><a href="#"  onClick="gotoProfil();">Προφίλ Χρήστη</a></li>');
     document.write('<li><a href="#"  onClick="changePass();">Αλλαγή Κωδικού</a></li>');
     document.write('<li><a href="#" onClick="logout();">Αποσύνδεση</a></li>');
     document.write('</ul></li>');
     document.write('<li class="active"><a href="#">Σχ. Έτος: <span id="eduyear">'+eduyear+'</span></a></li>');
     document.write('</ul>');
-    document.write('<select id="academicyear" class="selectpicker btn" style="margin-top:10px;"><option value="1112">1112</option><option value="1213">1213</option><option value="1314">1314</option><option value="1415">1415</option><option value="1516">1516</option></select></div>');
-    
-     
-    
+    document.write('<select id="academicyear" class="selectpicker btn" style="margin-top:10px;"><option value="1112">1112</option><option value="1213">1213</option><option value="1314">1314</option><option value="1415">1415</option><option value="1516">1516</option><option value="1617">1617</option></select></div>');
+
+
+
 
 
 }
@@ -56,12 +56,12 @@ function getUrlVars() {
 
 function getCurrentAcademicYear() {
     var currentAcademicYear='';
-    
+
     //alert('bika');
     var d = new Date();
     var mon = d.getMonth();
     var yr='';
-    
+
     if (mon<8)
     {
 	currentAcademicYear = (d.getFullYear()-1).toString().substr(2,2) + d.getFullYear().toString().substr(2,2);
@@ -70,14 +70,14 @@ function getCurrentAcademicYear() {
     {
 	currentAcademicYear = d.getFullYear().toString().substr(2,2) + (d.getFullYear()+1).toString().substr(2,2);
     }
-	
+
     //return document.getElementById("eduyear").innerHTML;
     return currentAcademicYear;
 }
 
 function getPreviousAcademicYear() {
     var prevAcademicYear='';
-    
+
     //alert('bika');
     var d = new Date();
     var mon = d.getMonth();
@@ -91,7 +91,7 @@ function getPreviousAcademicYear() {
     {
 	prevAcademicYear = (d.getFullYear()-1).toString().substr(2,2) + d.getFullYear().toString().substr(2,2);
     }
-	
+
     //return document.getElementById("eduyear").innerHTML;
     return prevAcademicYear;
 }
@@ -109,7 +109,7 @@ function getSelectedAcademicYear() {
 	var d = new Date();
 	var mon = d.getMonth();
 	var yr='';
-	
+
 	if (mon<8)
 	{
 	    selectedAcademicYear = (d.getFullYear()-1).toString().substr(2,2) + d.getFullYear().toString().substr(2,2);
@@ -195,35 +195,27 @@ var getAllDocs = function() {
 function getProjectsForUser() {
     var uid = getUrlVars()["userid"];
     var eduyear = getUrlVars()["eduyear"];
-     
-    
+
+
     if(window.localStorage["username"] != undefined && window.localStorage["password"] != undefined) {
 	$.getJSON(websvcroot+'services.php?tag=getuserprojects&userid='+userid+'&eduyear='+eduyear+'&callback=?', fillTheProjects);
-	
+
     }
 }
-	
+
 function fillTheProjects(data) {
 	var projectsList = $('#projects');
-	
-	
+
+
 	var items = data.projects;
 		//console.log(items);
-		
+
 		projectsList.html("");
 
 		$.each(items, function(key, val) {
 			var newel =   document.createElement('li');
 			newel.className = "lessons";
-			projectsList.append($(newel).html('<a class="adminbtn" href="projectgrades.html?projectid='+val.projectid+'">'+val.projectname+'</a>')); 
+			projectsList.append($(newel).html('<a class="adminbtn" href="projectgrades.html?projectid='+val.projectid+'">'+val.projectname+'</a>'));
 			});
-		
+
 }
-
-
-
-
-	
-	
-	
-	

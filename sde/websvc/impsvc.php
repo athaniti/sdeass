@@ -18,11 +18,11 @@ $data = new Spreadsheet_Excel_Reader();
 $data->setOutputEncoding('UTF8');
 $data->read('external/aitiseis.xls');
 
-$eduyear = '1516';
+$eduyear = '1617';
     if (isset($_GET['eduyear']) && $_GET['eduyear'] != '') {
 	$eduyear = $_GET['eduyear'];
     }
-
+console.log($eduyear);
 $successes = 0;
 $failures = 0;
 for ($x == 2; $x <= count($data->sheets[0]["cells"]); $x++)
@@ -90,7 +90,7 @@ for ($x == 2; $x <= count($data->sheets[0]["cells"]); $x++)
 		if ($res) { $successes += 1;} else { $failures += 1;}
 	}
 
-	$response["aaa"] = $sss;
+	//$response["aaa"] = $sss;
 	if ($successes > 0) {
 		$response["success"] = 1;
 		$response["success_msg"] = "Succesfull imports: ".$successes." - Failure imports: ".$failures;
