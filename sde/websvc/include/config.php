@@ -3,8 +3,8 @@
 /**
  * Database config variables
  */
-define("DB_HOST", "userdb");
-define("DB_USER", "sdeagr");
-define("DB_PASSWORD", "03578nsv");
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
 define("DB_DATABASE", "sdeagr-db2");
 ?>
