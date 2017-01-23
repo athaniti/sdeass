@@ -1,0 +1,11 @@
+INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (1269, 1, '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 1, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 2, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 3, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 4, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 5, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 6, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 7, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 8, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 9, '0', '1617');
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1269, 10, '0', '1617');
