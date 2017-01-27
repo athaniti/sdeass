@@ -9,15 +9,15 @@ try
     if (isset($_GET['eduyear']) && $_GET['eduyear'] != '') {
 	$eduyear = $_GET['eduyear'];
     }
-    
-	
+
+
 	//Getting records (listAction)
 	if($_GET["action"] == "list")
 	{
 		//Get records from database
 		//$a1 = "SELECT COUNT(*) FROM `_class_teachers`
 		$result = mysql_query("SELECT *, l.LessonID FROM sdeusers LEFT JOIN `_lessons_teachers` AS l ON l.TeacherID = sdeusers.UserID;");
-		
+
 		//Add all records to an array
 		$rows = array();
 		while($row = mysql_fetch_array($result))
@@ -48,9 +48,9 @@ try
 				}
 			}
 			$rows[] = $row;
-			
-			
-		    
+
+
+
 		}
 
 		//Return result to jTable
@@ -62,13 +62,13 @@ try
 	//Creating a new record (createAction)
 	else if($_GET["action"] == "create")
 	{
-		if ($_POST["UserFname"]=='' || $_POST["UserLname"]=='') 
+		if ($_POST["UserFname"]=='' || $_POST["UserLname"]=='')
 		{
 			$jTableResult = array();
 			$jTableResult['Result'] = "ERROR";
 			$jTableResult['Message'] = "Πρέπει να δώσετε όνομα και επίθετο.";
 			print json_encode($jTableResult);
-			
+
 		}
 		else
 		{
@@ -79,14 +79,14 @@ try
 				$rows = mysql_fetch_array($res1);
 				$newid = intval($rows["mid"])+1;
 			}
-			$result = mysql_query("INSERT INTO sdeusers(UserID, UserFname, UserLname, Username, Eidikotita, EidikotitaCode, userrole, Phone, Address, encrypted_password, salt) VALUES($newid, '" . $_POST["UserFname"] . "', '" . $_POST["UserLname"] . "', '" . $_POST["Username"] . "', '" . $_POST["Eidikotita"] . "', '" . $_POST["EidikotitaCode"] . "','" . $_POST["userrole"] . "','" . $_POST["Phone"] . "','" . $_POST["Address"] . "','DXkRD8/Mbv65wCxVams09oQZBlQ2MTg3MzBiZWFm', '618730beaf');");
+			$result = mysql_query("INSERT INTO sdeusers(UserID, UserFname, UserLname, Username, Eidikotita, EidikotitaCode, userrole, Phone, Email, Address, encrypted_password, salt) VALUES($newid, '" . $_POST["UserFname"] . "', '" . $_POST["UserLname"] . "', '" . $_POST["Username"] . "', '" . $_POST["Eidikotita"] . "', '" . $_POST["EidikotitaCode"] . "','" . $_POST["userrole"] . "','" . $_POST["Phone"] . "','" . $_POST["Email"] . "','" . $_POST["Address"] . "','DXkRD8/Mbv65wCxVams09oQZBlQ2MTg3MzBiZWFm', '618730beaf');");
 			if ($result)
 			{
-			
+
 				//Get last inserted record (to return to jTable)
 				$resultu = mysql_query("SELECT * FROM sdeusers WHERE UserID = $newid;");
 				$row = mysql_fetch_array($resultu);
-				
+
 				$result1 = mysql_query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $row["UserID"] . ",'".$eduyear."');");
 				$insvalues = "";
 				if ($_POST["A1"] == "1") {$insvalues .= "(1, " . $row["UserID"] . ",'".$eduyear."')";}
@@ -100,31 +100,31 @@ try
 					$result2 = mysql_query("INSERT INTO `_class_teachers` (ClassID, TeacherID, eduyear) VALUES ".$insvalues.";");
 				}
 			}
-	
+
 			//Return result to jTable
 			$jTableResult = array();
 			$jTableResult['Result'] = "OK";
 			$jTableResult['Record'] = $result;
-			
+
 			print json_encode($jTableResult);
 		}
 	}
 	//Updating a record (updateAction)
 	else if($_GET["action"] == "update")
 	{
-		if ($_POST["UserFname"]=='' || $_POST["UserLname"]=='') 
+		if ($_POST["UserFname"]=='' || $_POST["UserLname"]=='')
 		{
 			$jTableResult = array();
 			$jTableResult['Result'] = "ERROR";
 			$jTableResult['Message'] = "Πρέπει να δώσετε όνομα και επίθετο.";
 			print json_encode($jTableResult);
-			
+
 		}
 		else
 		{
 			//Update record in database
-			$result = mysql_query("UPDATE sdeusers SET UserFname = '" . $_POST["UserFname"] . "', UserLname = '" . $_POST["UserLname"] . "', Username = '" . $_POST["Username"] . "', Eidikotita = '" . $_POST["Eidikotita"] . "', EidikotitaCode = '" . $_POST["EidikotitaCode"] . "', Phone = '" . $_POST["Phone"] . "', Address = '" . $_POST["Address"] . "', userrole = '" . $_POST["userrole"] . "' WHERE UserID = " . $_POST["UserID"] . ";");
-			
+			$result = mysql_query("UPDATE sdeusers SET UserFname = '" . $_POST["UserFname"] . "', UserLname = '" . $_POST["UserLname"] . "', Username = '" . $_POST["Username"] . "', Eidikotita = '" . $_POST["Eidikotita"] . "', EidikotitaCode = '" . $_POST["EidikotitaCode"] . "', Phone = '" . $_POST["Phone"] . "', Email = '" . $_POST["Email"] . "', Address = '" . $_POST["Address"] . "', userrole = '" . $_POST["userrole"] . "' WHERE UserID = " . $_POST["UserID"] . ";");
+
 			$result1 = mysql_query("DELETE FROM `_lessons_teachers` WHERE TeacherID = " . $_POST["UserID"] . ";");
 			$result1 = mysql_query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $_POST["UserID"] . ",'".$eduyear."');");
 			$insvalues = "";
@@ -141,14 +141,14 @@ try
 				$resq = "INSERT INTO `_class_teachers` (ClassID, TeacherID, eduyear) VALUES ".$insvalues.";";
 				$result2 = mysql_query("INSERT INTO `_class_teachers` (ClassID, TeacherID, eduyear) VALUES ".$insvalues.";");
 			}
-	
+
 			//Return result to jTable
 			$jTableResult = array();
 			$jTableResult['Result'] = "OK";
 			$jTableResult['Insvals'] = $resq;
 			print json_encode($jTableResult);
 		}
-		
+
 	}
 	//Deleting a record (deleteAction)
 	else if($_GET["action"] == "delete")
@@ -176,5 +176,5 @@ catch(Exception $ex)
 	$jTableResult['Message'] = $ex->getMessage();
 	print json_encode($jTableResult);
 }
-	
+
 ?>
