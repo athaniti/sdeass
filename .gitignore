@@ -1,0 +1,5 @@
+#Exclude various files
+*.sw?
+.vimtags
+.DS_Store
+~$*.*
