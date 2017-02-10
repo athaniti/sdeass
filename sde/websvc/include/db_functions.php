@@ -815,7 +815,7 @@ class DB_Functions {
      */
     public function insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive) {
 		//*** Start Transaction ***//
-		mysql_query("BEGIN"); 
+		mysql_query("BEGIN");
 		$result = mysql_query("INSERT INTO students
 							  (StudentCode, StudentFname, StudentLname, Sex, Age, ClassID, Fathername, Phone, Address, MaritalStatus, ChildrenNumber, JobStatus, MonthsUnemployment, IsRoma, IsCurrent, IsActive)
 							  VALUES
@@ -1033,6 +1033,65 @@ class DB_Functions {
 
 
 
+    /**
+       * Insert Student Lessons Data into the database
+       */
+      public function insertStudLessonsData($sid, $eduyear) {
+      //*** Start Transaction ***//
+      mysql_query("BEGIN");
+
+
+      for ($x = 1; $x <= 10; $x++) {
+        $result2 = mysql_query("INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (".$sid.", ".$x.", '0', '".$eduyear."');") or die(mysql_error());
+        if ($result2 == false) {$successfull = false;}
+      }
+      $msg = '';
+      if($successfull)
+      {
+        //*** Commit Transaction ***//
+        mysql_query("COMMIT");
+        $msg = "Save Done.";
+        $res = true;
+      }
+      else
+      {
+        //*** RollBack Transaction ***//
+        mysql_query("ROLLBACK");
+        $msg = "Error. Try Again";
+        $res = false;
+      }
+      return $res;
+      }
+
+      /**
+        * Delete Student Lessons Data from the database
+         */
+        public function removeStudLessonsData($sid, $eduyear) {
+        //*** Start Transaction ***//
+        mysql_query("BEGIN");
+
+
+        for ($x = 1; $x <= 10; $x++) {
+          $result2 = mysql_query("DELETE FROM `_students_lessons` WHERE StudentID = ".$sid." AND eduyear= '".$eduyear."';") or die(mysql_error());
+          if ($result2 == false) {$successfull = false;}
+        }
+        $msg = '';
+        if($successfull)
+        {
+          //*** Commit Transaction ***//
+          mysql_query("COMMIT");
+          $msg = "Deletion Done.";
+          $res = true;
+        }
+        else
+        {
+          //*** RollBack Transaction ***//
+          mysql_query("ROLLBACK");
+          $msg = "Error. Try Again";
+          $res = false;
+        }
+        return $res;
+        }
 
 
 }

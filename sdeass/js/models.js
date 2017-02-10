@@ -3,9 +3,9 @@
         this.classid = classid;
         this.classname = classname;
     };
-    
-    
- 
+
+
+
 
 var personModel = function(id, studentcode, fname, lname, age, sex, classname, fathername, address, marital, children,
 			   phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive){
@@ -25,16 +25,16 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
   this.phone = ko.observable(phone);
   this.jobstatus = ko.observable(jobstatus);
   this.monthsunemployment = ko.observable(monthsunemployment);
-  
+
   this.isroma = ko.observable(isroma);
   this.isromabool = ko.observable((isroma==1 ? true : false));
   this.iscurrent = ko.observable(iscurrent);
   this.iscurrentbool = ko.observable((iscurrent==1 ? true : false));
   this.isactive = ko.observable(isactive);
   this.isactivebool = ko.observable((isactive==1 ? true : false));
-  
+
   this.studentUpdate = ko.observable(false);
-  
+
   this.ClassByName = ko.computed(function(){
         if ( this.classname() == 1) return "Α1";
 	if ( this.classname() == 2) return "Α2";
@@ -43,27 +43,27 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
 	if ( this.classname() == 5) return "Β2";
         return "Β3";
     }, this);
-  
+
   this.RomaByName = ko.computed(function(){
         if ( this.isroma() == 1) return "ΝΑΙ";
 	return "ΟΧΙ";
     }, this);
-  
+
   this.CurrentByName = ko.computed(function(){
         if ( this.isroma() == 1) return "ΝΑΙ";
 	return "ΟΧΙ";
     }, this);
-  
+
   this.ActiveByName = ko.computed(function(){
         if ( this.isroma() == 1) return "ΝΑΙ";
 	return "ΟΧΙ";
     }, this);
-  
+
   //this.url = ko.computed(function(){
   //  return 'student.html?studentid='+this.id();
   //});
-  
-  
+
+
   this.studentcodeHasFocus = ko.observable(false);
   this.fnameHasFocus = ko.observable(false); //if the name is currently updated
   this.lnameHasFocus = ko.observable(false); //if the name is currently updated
@@ -80,19 +80,19 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
   this.isromaHasFocus = ko.observable(false); //if the name is currently updated
   this.iscurrentHasFocus = ko.observable(false); //if the name is currently updated
   this.isactiveHasFocus = ko.observable(false); //if the age is currently updated
-  
-  
-  
+
+
+
   //executed if the user clicks on the span for the student fname
   this.studentUpdating = function(){
       self.studentUpdate(true); //make nameUpdate equal to true
   };
-  
+
   //executed if the user clicks on the span for the student fname
   this.gotoDetails = function(){
       window.location.href = 'student.html?studentid='+this.id(); //make nameUpdate equal to true
   };
-  
+
   this.availableClasses = ko.observableArray([
             new Class(1, "Α1"),
             new Class(2, "Α2"),
@@ -101,10 +101,10 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
             new Class(5, "Β2"),
             new Class(6, "Β3")
         ]);
-  
-  
+
+
         //this.selectedClass = ko.observable()
-  
+
 
 };
 
@@ -118,11 +118,11 @@ var model = function(){
 	this.person_lname_focus = ko.observable(true); //if the student name text field has focus
 	this.person_age_focus = ko.observable(true); //if the student name text field has focus
 	this.people = ko.observableArray([]); //this will store all the students
-	
-	
-	
+
+
+
 	this.loadData = function(){
-	  
+
 	  //fetch existing student data from database
 	  $.ajax({
 	      url : '/sde/websvc/person_save.php',
@@ -140,7 +140,7 @@ var model = function(){
 		      var age = data[x]['age'];
 		      var sex = data[x]['sex'];
 		      var classname = data[x]['classname'];
-		      
+
 		      var fathername = data[x]['fathername'];
 		      var address = data[x]['address'];
 		      var marital = data[x]['marital'];
@@ -149,17 +149,17 @@ var model = function(){
 		      var jobstatus = data[x]['jobstatus'];
 		      var monthsunemployment = data[x]['monthsunemployment'];
 		      var isroma = data[x]['isroma'];
-		      
+
 		      var iscurrent = data[x]['iscurrent'];
 		      var isactive = data[x]['isactive'];
-		      
-		      
-		      //push each of the student record to the observable array for 
+
+
+		      //push each of the student record to the observable array for
 		      //storing student data
 		      self.people.push(new personModel(id, studentcode, fname, lname, age, sex, classname, fathername,
 						       address, marital, children, phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive));
 		  }
-		  
+
 	      }
 	  });
 	};
@@ -168,25 +168,25 @@ var model = function(){
 		if(self.validatePerson()){ //if the validation succeeded
 			//build the data to be submitted to the server
 			var person = {'fname' : this.person_fname(), 'lname' : this.person_lname(), 'age' : this.person_age()};
-      
-			//submit the data to the server        
+
+			//submit the data to the server
 			$.ajax(
 			    {
 				url: '/sde/websvc/person_save.php',
 				type: 'POST',
 				data: {'student' : person, 'action' : 'insert'},
 				success: function(id){//id is returned from the server
-				
+
 				    //push a new record to the student array
 				    self.people.push(new personModel(id, self.person_fname(), self.person_lname(), self.person_age()));
-				    
+
 				    self.person_fname(""); //empty the text field for the student name
 				    self.person_lname(""); //empty the text field for the student name
 				    self.person_age("");
 				}
 			    }
-			);           
-			
+			);
+
 		    }else{ //if the validation fails
 			alert("Name and age are required and age should be a number!");
 		    }
@@ -215,7 +215,7 @@ var model = function(){
 		    }
 		    else
 		    {alert('Υπήρξε πρόβλημα στη διαδικασία. παρακαλώ ξαναπροσπαθήστε.');}
-		    
+
 		}
 	    );
 	  }
@@ -231,22 +231,22 @@ var model = function(){
 	  var fathername = person.fathername();
 	  var studentcode = person.studentcode();
 	  var classname = person.classname();
-	 
+
 	  var address = person.address();
 	  var marital = person.marital();
 	  var children = person.children();
 	  var phone = person.phone();
 	  var isromabool = person.isromabool();
 	  var isroma = (isromabool==true ? 1 : 0);
-	  
+
 	  var iscurrentbool = person.iscurrentbool();
 	  var iscurrent = (iscurrentbool==true ? 1 : 0);
 	  var isactivebool = person.isactivebool();
 	  var isactive = (isactivebool==true ? 1 : 0);
-	  
+
 	  var jobstatus = person.jobstatus();
 	  var monthsunemployment = person.monthsunemployment();
-	
+
 	  //build the data
 	  var student = {
 	    'studentid' : id,
@@ -266,9 +266,9 @@ var model = function(){
 	    'iscurrent' : iscurrent,
 	    'jobstatus' : jobstatus,
 	    'monthsunemployment' : monthsunemployment
-	    
+
 	    };
-	  
+
 	  //submit to server via POST
 	  $.post(
 	      '/sde/websvc/person_save.php',
@@ -281,7 +281,40 @@ var model = function(){
 	      }
 	  );
 	};
-	
+
+
+  this.addPersonLessons = function(person){
+	  //get the student details
+	  var id = person.id();
+	  //submit to server via POST
+	  $.post(
+	      '/sde/websvc/person_save.php',
+	      {'action' : 'addlessons', 'studentid' : id, 'eduyear' : eduyear},
+	      function(response){
+		if (response=='true')
+		{
+		  removefocus(person);
+		}
+	      }
+	  );
+	};
+
+  this.removePersonLessons = function(person){
+	  //get the student details
+	  var id = person.id();
+	  //submit to server via POST
+	  $.post(
+	      '/sde/websvc/person_save.php',
+	      {'action' : 'removelessons', 'studentid' : id, 'eduyear' : eduyear},
+	      function(response){
+		if (response=='true')
+		{
+		  removefocus(person);
+		}
+	      }
+	  );
+	};
+
 	this.getPdf = function(person){
 	  $.post(
 		'/sde/websvc/expsvc.pdf.php',
@@ -289,11 +322,11 @@ var model = function(){
 		function(response){
 		    if (response) {
 		      window.open("data/"+person.id()+".pdf", '_blanc');
-		      
+
 		    }
 		    else
 		    {alert('Υπήρξε πρόβλημα στη διαδικασία. παρακαλώ ξαναπροσπαθήστε.');}
-		    
+
 		}
 	    );
 	};
@@ -302,10 +335,7 @@ var model = function(){
 var removefocus = function(person)
 {
   person.studentUpdate(false);
-  
+
 };
 
 //var cont = document.getElementById("cont");
-	
-
-
