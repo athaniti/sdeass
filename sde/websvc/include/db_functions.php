@@ -981,6 +981,52 @@ class DB_Functions {
 		return $res;
     }
 
+    public function updateStudentData2($studentid, $studentCode, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $fathernamegen,
+              $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $iscurrent, $isactive, $eduyear) {
+    //*** Start Transaction ***//
+    mysql_query("BEGIN");
+    $result = mysql_query("UPDATE students SET
+              StudentCode = '".$studentCode."',
+              StudentFname = '".$studentfname."',
+              StudentLname = '".$studentlname."',
+              Sex = '".$sex."',
+              Age = '".$age."',
+              ClassID = ".$classid.",
+              Fathername = '".$fathername."',
+              FathernameGen = '".$fathernamegen."',
+              Phone = '".$phone."',
+              Address = '".$address."',
+              MaritalStatus = '".$marital."',
+              ChildrenNumber = '".$children."',
+              JobStatus = '".$jobstatus."',
+              MonthsUnemployment = '".$monthsunemployment."',
+              IsRoma = '".$isroma."',
+              IsCurrent = '".$iscurrent."',
+              IsActive = '".$isactive."'
+              WHERE StudentID = ".$studentid.";") or die(mysql_error());
+
+    $successfull = true;
+    if($eduyear>0)
+    {
+        $result1 = mysql_query("UPDATE `_students_class` SET ClassID = ".$classid." WHERE StudentID = ".$studentid." AND eduperiod ='".$eduyear."';") or die(mysql_error());
+        if ($result1 == false) {$successfull = false;}
+    }
+    if(($result) and ($successfull))
+    {
+      //*** Commit Transaction ***//
+      mysql_query("COMMIT");
+      $msg = "Save Done.";
+      $res = true;
+    }
+    else
+    {
+      //*** RollBack Transaction ***//
+      mysql_query("ROLLBACK");
+      $msg = "Error. Try Again";
+      $res = false;
+    }
+    return $res;
+    }
 
     public function removeStudentFromEduyear($studentid, $eduyear) {
 

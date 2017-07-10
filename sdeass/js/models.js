@@ -7,7 +7,7 @@
 
 
 
-var personModel = function(id, studentcode, fname, lname, age, sex, classname, fathername, address, marital, children,
+var personModel = function(id, studentcode, fname, lname, age, sex, classname, fathername, fathernamegen, address, marital, children,
 			   phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive){
   var self = this; //caching so that it can be accessed later in a different context
   this.id = ko.observable(id); //unique id for the student (auto increment primary key from the database)
@@ -19,6 +19,7 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
   this.classname = ko.observable(classname);
   this.selectedClass = ko.observable(classname);
   this.fathername = ko.observable(fathername);
+  this.fathernamegen = ko.observable(fathernamegen);
   this.address = ko.observable(address);
   this.marital = ko.observable(marital);
   this.children = ko.observable(children);
@@ -71,6 +72,7 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
   this.sexHasFocus = ko.observable(false); //if the name is currently updated
   this.classnameHasFocus = ko.observable(false); //if the name is currently updated
   this.fathernameHasFocus = ko.observable(false); //if the age is currently updated
+  this.fathernamegenHasFocus = ko.observable(false); //if the age is currently updated
   this.addressHasFocus = ko.observable(false); //if the name is currently updated
   this.maritalHasFocus = ko.observable(false); //if the name is currently updated
   this.childrenHasFocus = ko.observable(false); //if the name is currently updated
@@ -142,6 +144,7 @@ var model = function(){
 		      var classname = data[x]['classname'];
 
 		      var fathername = data[x]['fathername'];
+          var fathernamegen = data[x]['fathernamegen'];
 		      var address = data[x]['address'];
 		      var marital = data[x]['marital'];
 		      var children = data[x]['children'];
@@ -156,7 +159,7 @@ var model = function(){
 
 		      //push each of the student record to the observable array for
 		      //storing student data
-		      self.people.push(new personModel(id, studentcode, fname, lname, age, sex, classname, fathername,
+		      self.people.push(new personModel(id, studentcode, fname, lname, age, sex, classname, fathername, fathernamegen,
 						       address, marital, children, phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive));
 		  }
 

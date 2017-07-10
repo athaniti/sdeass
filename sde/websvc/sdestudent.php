@@ -13,7 +13,7 @@
   require_once 'include/DB_Functions.php';
     $db = new DB_Functions();
     mysql_select_db(DB_DATABASE);
-	
+
 
 $studentid = (!empty($_POST['studentid'])) ? $_POST['studentid'] : ''; //action to be used(insert, delete, update, fetch)
 $action = (!empty($_POST['action'])) ? $_POST['action'] : ''; //action to be used(insert, delete, update, fetch)
@@ -27,6 +27,7 @@ if(!empty($person)){
   $lname = $person['lname'];
   $address = $person['address'];
   $fathername = $person['fathername'];
+  $fathernamegen = $person['fathernamegen'];
   $phone = $person['phone'];
   $classid = $person['classid'];
   $sex = $person['sex'];
@@ -35,26 +36,27 @@ if(!empty($person)){
   $isroma = $person['isroma'];
   $iscurrent = $person['iscurrent'];
   $isactive = $person['isactive'];
-  
-  
+
+
 }
 
 switch($action){
   //actions here...
   case "update":
     if(!empty($person)){
-      $res = $db->updateStudentData($person['personid'], $code, $fname,  $lname,  $sex, $age, $classid, $fathername,
+      $res = $db->updateStudentData2($person['personid'], $code, $fname,  $lname,  $sex, $age, $classid,
+      $fathername, $fathernamegen,
 				    $phone, $address, $jobstatus, $isroma, $iscurrent, $isactive, 0);
       echo json_encode($res);
     }
-    
+
     break;
   case "getdetails":
     if(!empty($studentid)){
       $res = $db->getDetailsForStudent($studentid);
       echo json_encode($res);
     }
-    
+
     break;
   default:
   //only select student records which aren't deleted
@@ -66,7 +68,9 @@ switch($action){
 	  'lname' => $user['StudentLname'],
 	  'sex' => $user['Sex'],
           'age' => $user['Age'], 'classid' => $user['ClassID'], 'address' => $user['Address'], 'phone' => $user['Phone'],
-	  'fathername' => $user['Fathername'], 'jobstatus' => $user['JobStatus'], 'isroma' => $user['IsRoma'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
+	  'fathername' => $user['Fathername'],
+    'fathernamegen' => $user['FathernameGen'], 'jobstatus' => $user['JobStatus'], 
+    'isroma' => $user['IsRoma'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
           );
       echo json_encode($sdestudent);
       break;

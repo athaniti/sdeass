@@ -4,16 +4,16 @@ var studentDetailsModel = function(eduyear, classid, amathisiakiporeia, asynerga
   this.eduyear = ko.observable(eduyear); //unique id for the student (auto increment primary key from the database)
   this.classid = ko.observable(classid); //name of the student
   this.amathisiakiporeia = ko.observable(amathisiakiporeia);
-  this.asynergasia = ko.observable(asynergasia); 
-  this.aendiaferon = ko.observable(aendiaferon); 
-  this.adesmefsi = ko.observable(adesmefsi); 
-  this.bmathisiakiporeia = ko.observable(bmathisiakiporeia); 
-  this.bsynergasia = ko.observable(bsynergasia); 
-  this.bendiaferon = ko.observable(bendiaferon); 
+  this.asynergasia = ko.observable(asynergasia);
+  this.aendiaferon = ko.observable(aendiaferon);
+  this.adesmefsi = ko.observable(adesmefsi);
+  this.bmathisiakiporeia = ko.observable(bmathisiakiporeia);
+  this.bsynergasia = ko.observable(bsynergasia);
+  this.bendiaferon = ko.observable(bendiaferon);
   this.bdesmefsi = ko.observable(bdesmefsi);
-  
-  
-  
+
+
+
 };
 
 var StudentModel = function() {
@@ -22,8 +22,9 @@ var StudentModel = function() {
 	this.fname = ko.observable(""); //default value for the student name
 	this.lname = ko.observable(""); //default value for the student name
 	this.fathername = ko.observable("");
+	this.fathernamegen = ko.observable("");
 	this.classid = ko.observable("");
-	this.sex = ko.observable(""); 
+	this.sex = ko.observable("");
 	this.phone = ko.observable("");
 	this.address = ko.observable("");
 	this.age = ko.observable("");
@@ -32,17 +33,17 @@ var StudentModel = function() {
 	this.iscurrent = ko.observable("");
 	this.isactive = ko.observable("");
 	this.details = ko.observableArray([]);
-	
+
 	this.studentUpdate = ko.observable(false);
 	//executed if the user clicks on the span for the student fname
 	this.studentUpdating = function(){
 		self.studentUpdate(true); //make nameUpdate equal to true
 		};
-	
+
 	this.fullName = ko.computed(function() {
 		return this.fname() + " " + this.lname();
 		}, this);
-	
+
 	this.loadData = function(studentid){
 	  //fetch existing student data from database
 	  $.ajax({
@@ -60,18 +61,19 @@ var StudentModel = function() {
 		      self.address(d[0]['address']);
 		      self.phone(d[0]['phone']);
 		      self.fathername(d[0]['fathername']);
+					self.fathernamegen(d[0]['fathernamegen']);
 		      self.classid(d[0]['classid']);
 		      self.jobstatus(d[0]['jobstatus']);
 		      self.isroma(d[0]['isroma']);
 		      self.iscurrent(d[0]['iscurrent']);
 		      self.isactive(d[0]['isactive']);
-		      
+
 		      self.studentUpdate(false);
-		      
+
 
 	      }
 	  });
-	  
+
 	  //fetch existing student data from database
 	  $.ajax({
 	      url : '/sde/websvc/sdestudent.php',
@@ -87,7 +89,7 @@ var StudentModel = function() {
 	      }
 	  });
 	};
-	
+
 	this.save = function()
 	{
         //get the student details
@@ -96,6 +98,7 @@ var StudentModel = function() {
 	  var fname = this.fname();
 	  var lname = this.lname();
 	  var fathername = this.fathername();
+		var fathernamegen = this.fathernamegen();
 	  var address = this.address();
 	  var phone = this.phone();
 	  var sex = this.sex();
@@ -105,8 +108,8 @@ var StudentModel = function() {
 	  var isroma = this.isroma();
 	  var iscurrent = this.iscurrent();
 	  var isactive = this.isactive();
-	  
-	
+
+
 	  //build the data
 	  var person = {
 	    'personid' : id,
@@ -114,6 +117,7 @@ var StudentModel = function() {
 	    'fname' : fname,
 	    'lname' : lname,
 	    'fathername' : fathername,
+			'fathernamegen' : fathernamegen,
 	    'address' : address,
 	    'phone' : phone,
 	    'sex' : sex,
@@ -124,7 +128,7 @@ var StudentModel = function() {
 	    'isactive' : isactive,
 	    'classid' : classid
 	    };
-	  
+
 	  //submit to server via POST
 	  $.post(
 	      '/sde/websvc/sdestudent.php',
@@ -137,7 +141,7 @@ var StudentModel = function() {
 		}
 		else
 		{
-			console.log(response);	
+			console.log(response);
 		}
 	      }
 	  );
@@ -154,10 +158,9 @@ var StudentModel = function() {
 	};
 
 	this.removePerson = function(person){
-	  
+
 	};
 
 	this.updatePerson = function(person){
 	};
 };
-

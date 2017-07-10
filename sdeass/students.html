@@ -65,6 +65,7 @@
 	      <th>Φύλο</th>
 	      <th>Τάξη</th>
 	      <th>Πατρώνυμο</th>
+		  <th>Πατρώνυμο (Γεν)</th>
 	      <th>Διεύθυνση</th>
 	      <th>Τηλέφωνο</th>
 	      <th>Οικ. Κατάσταση</th>
@@ -113,6 +114,10 @@
 	      <td>
                   <span data-bind="text: fathername, click: studentUpdating, visible: !studentUpdate()"></span>
                   <input type="text" style="max-width: 100px; font-size: 1.0em;"  class="name" data-bind="value: fathername, visible: studentUpdate, hasfocus: fathernameHasFocus">
+              </td>
+		 <td>
+                  <span data-bind="text: fathernamegen, click: studentUpdating, visible: !studentUpdate()"></span>
+                  <input type="text" style="max-width: 100px; font-size: 1.0em;"  class="name" data-bind="value: fathernamegen, visible: studentUpdate, hasfocus: fathernamegenHasFocus">
               </td>
 	      <td>
                   <span data-bind="text: address, click: studentUpdating, visible: !studentUpdate()"></span>

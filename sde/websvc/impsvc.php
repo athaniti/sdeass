@@ -11,6 +11,7 @@
  * check for POST request
  */
 require_once 'include/DB_Functions.php';
+require_once 'include/helper_functions.php';
 $db = new DB_Functions();
 
 require_once 'Excel/reader.php';
