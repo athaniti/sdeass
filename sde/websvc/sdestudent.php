@@ -10,7 +10,7 @@
   /**
  * check for POST request
  */
-  require_once 'include/DB_Functions.php';
+  require_once 'include/db_functions.php';
     $db = new DB_Functions();
     mysql_select_db(DB_DATABASE);
 
@@ -27,7 +27,6 @@ if(!empty($person)){
   $lname = $person['lname'];
   $address = $person['address'];
   $fathername = $person['fathername'];
-  $fathernamegen = $person['fathernamegen'];
   $phone = $person['phone'];
   $classid = $person['classid'];
   $sex = $person['sex'];
@@ -44,8 +43,7 @@ switch($action){
   //actions here...
   case "update":
     if(!empty($person)){
-      $res = $db->updateStudentData2($person['personid'], $code, $fname,  $lname,  $sex, $age, $classid,
-      $fathername, $fathernamegen,
+      $res = $db->updateStudentData($person['personid'], $code, $fname,  $lname,  $sex, $age, $classid, $fathername,
 				    $phone, $address, $jobstatus, $isroma, $iscurrent, $isactive, 0);
       echo json_encode($res);
     }
@@ -68,9 +66,7 @@ switch($action){
 	  'lname' => $user['StudentLname'],
 	  'sex' => $user['Sex'],
           'age' => $user['Age'], 'classid' => $user['ClassID'], 'address' => $user['Address'], 'phone' => $user['Phone'],
-	  'fathername' => $user['Fathername'],
-    'fathernamegen' => $user['FathernameGen'], 'jobstatus' => $user['JobStatus'], 
-    'isroma' => $user['IsRoma'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
+	  'fathername' => $user['Fathername'], 'jobstatus' => $user['JobStatus'], 'isroma' => $user['IsRoma'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
           );
       echo json_encode($sdestudent);
       break;

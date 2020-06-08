@@ -1,7 +1,7 @@
 <html>
   <head>
 	 <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Αγρινίου</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
     <link href="../css/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
 	<link href="../js/jtable/themes/lightcolor/orange/jtable.css" rel="stylesheet" type="text/css" />
     <!--<link rel="stylesheet" href="css/main.css" type="text/css">
@@ -25,16 +25,19 @@
 		var teacherid = getUrlVars()["teacherid"];
 		//var eduyear = getUrlVars()["eduyear"];
 		var eduyear = getSelectedAcademicYear();
+		
 		var userid = window.localStorage["userid"];
 		var classid = getUrlVars()["classid"];
+		
 		if(!classid){
 		  classid = 0;
 		};
+		//alert(eduyear+' '+classid);
     	</script>
   <body id="stage" class="theme">
   <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <script>getMenu();</script>
-  </script>
+  
     </div>
     <div id="gradestitle"></div>
 	<div id="GradesContainer" style="width: 100%;">
@@ -49,8 +52,13 @@
     <div class="filtering">
     <form>
       <script>
-	document.write('<input type="hidden" name="teacherid" id="teacherid" value="'+teacherid+'" />');
-	document.write('<input type="hidden" name="eduyear" id="eduyear" value="'+eduyear+'" />');
+		  if (teacherid.substr(teacherid.length - 1)=='#')
+			{
+				teacherid=teacherid.substring(0, teacherid.length-1);
+		    }
+		 
+		document.write('<input type="hidden" name="teacherid" id="teacherid" value="'+teacherid+'" />');
+		document.write('<input type="hidden" name="eduyear" id="eduyear" value="'+eduyear+'" />');
       </script>
         Τμήμα:
         <select id="classid" name="classid">
@@ -61,6 +69,8 @@
             <option value="4">Β1</option>
             <option value="5">Β2</option>
             <option value="6">Β3</option>
+			<option value="7">Β4</option>
+			<option value="8">Β5</option>
         </select>
         <button type="submit" id="LoadRecordsButton">Φίλτρο</button>
     </form>

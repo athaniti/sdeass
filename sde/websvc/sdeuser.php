@@ -10,10 +10,10 @@
   /**
  * check for POST request
  */
-  require_once 'include/DB_Functions.php';
+  require_once 'include/db_functions.php';
     $db = new DB_Functions();
     mysql_select_db(DB_DATABASE);
-	
+
 
 $userid = (!empty($_POST['userid'])) ? $_POST['userid'] : ''; //action to be used(insert, delete, update, fetch)
 $action = (!empty($_POST['action'])) ? $_POST['action'] : ''; //action to be used(insert, delete, update, fetch)
@@ -28,7 +28,7 @@ if(!empty($person)){
   $email = $person['email'];
   $phone = $person['phone'];
   $eidikotita = $person['eidikotita'];
-  $eidikotitacode = $person['eidikotitacode']; 
+  $eidikotitacode = $person['eidikotitacode'];
 }
 
 switch($action){
@@ -38,7 +38,7 @@ switch($action){
       $res = $db->updatePersonData($person['personid'], $address, $eidikotita, $eidikotitacode, $fname, $lname, $phone, $email);
       echo json_encode($res);
     }
-    
+
     break;
   default:
   //only select student records which aren't deleted

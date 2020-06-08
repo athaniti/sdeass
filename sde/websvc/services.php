@@ -16,7 +16,7 @@ if (isset($_GET['tag']) && $_GET['tag'] != '') {
 
     // include db handler
     //require_once 'include/config.php';
-    require_once 'include/DB_Functions.php';
+    require_once 'include/db_functions.php';
     $db = new DB_Functions();
 
     // response Array

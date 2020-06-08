@@ -3,8 +3,13 @@
 try
 {
 	//Open database connection
-	require_once 'include/DB_Functions.php';
+	//require_once 'include/DB_Connect.php';
+	require_once 'include/db_functions.php';
+	//$dbc = new DB_Connect();
+    //$con = $dbc->connect();
     $db = new DB_Functions();
+	$con = $db->con;
+	
 	if (isset($_GET['tag']) && $_GET['tag'] != '') {
 		$tag = $_GET['tag'];
 
@@ -33,19 +38,25 @@ try
 				//Get records from database
 				$qry = "SELECT students.StudentFname AS StudentFname, students.StudentLname AS StudentLname, class.ClassName, lessons.LessonName As LessonName, l.* FROM `_students_lessons` AS l INNER JOIN students ON students.StudentID=l.StudentID INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID
 INNER JOIN class ON class.ClassID = `_students_class`.ClassID INNER JOIN lessons ON lessons.LessonID=l.LessonID WHERE l.eduyear='".$eduyear."' AND `_students_class`.eduperiod='".$eduyear."' ".$filterclass." AND l.StudentID IN (SELECT students.StudentID from students INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID 
-WHERE students.IsActive=1 AND `_students_class`.eduperiod='".$eduyear."'
+WHERE `_students_class`.eduperiod='".$eduyear."'
 AND `_students_class`.ClassID IN (SELECT ClassID FROM `_class_teachers` WHERE TeacherID = ".$teacherid."
 AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_teachers` WHERE TeacherID = ".$teacherid.")".$filter.";";
 	
+								//Get records from database
+				//$qry = "SELECT students.StudentFname AS StudentFname, students.StudentLname AS StudentLname, class.ClassName, lessons.LessonName As LessonName, l.* FROM `_students_lessons` AS l INNER JOIN students ON students.StudentID=l.StudentID INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID
+//INNER JOIN class ON class.ClassID = `_students_class`.ClassID INNER JOIN lessons ON lessons.LessonID=l.LessonID WHERE l.eduyear='".$eduyear."' AND `_students_class`.eduperiod='".$eduyear."' ".$filterclass." AND l.StudentID IN (SELECT students.StudentID from students INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID 
+//WHERE students.IsActive=1 AND `_students_class`.eduperiod='".$eduyear."'
+//AND `_students_class`.ClassID IN (SELECT ClassID FROM `_class_teachers` WHERE TeacherID = ".$teacherid."
+//AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_teachers` WHERE TeacherID = ".$teacherid.")".$filter.";";
 	
-				$result = mysql_query($qry) or die(mysql_error());
+				$result = $con->query($qry);
 				
 				$jTableResult = array();
 				
 				if ($result) {
 					//Add all records to an array
 					$rows = array();
-					while($row = mysql_fetch_array($result))
+					while($row = $result->fetch_array())
 					{
 					    $rows[] = $row;
 					}
@@ -76,7 +87,7 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 				finalgrade = " . $_POST["finalgrade"] . "
 				WHERE LessonID=".$_POST["LessonID"]." AND StudentID = " . $_POST["StudentID"] . "
 				AND eduyear='".$eduyear."';";
-				$result = mysql_query($qry);
+				$result = $con->query($qry);
 		
 				//Return result to jTable
 				$jTableResult = array();
@@ -113,14 +124,14 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 				$qry = "SELECT students.StudentFname AS StudentFname, students.StudentLname AS StudentLname, projects.projectName As ProjectName, projects.Type As ProjectType, p.* FROM `_projects_students` AS p 				INNER JOIN students ON students.StudentID=p.StudentID INNER JOIN projects ON projects.ProjectID=p.ProjectID".$filter.";";
 	
 	
-				$result = mysql_query($qry) or die(mysql_error());
+				$result = $con->query($qry);
 				
 				$jTableResult = array();
 				
 				if ($result) {
 					//Add all records to an array
 					$rows = array();
-					while($row = mysql_fetch_array($result))
+					while($row = $result->fetch_array())
 					{
 					    $rows[] = $row;
 					}
@@ -140,12 +151,12 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 			} 
 			else if($_GET["action"] == "update")
 			{
-				$eduyear = $_GET["eduyear"];
+				//$eduyear = $_GET["eduyear"];
 				//Update record in database
 				$qry = "UPDATE `_projects_students` SET asemester = '" . $_POST["asemester"] . "',
 				bsemester = '" . $_POST["bsemester"] . "'
 				WHERE ProjectID=".$_POST["ProjectID"]." AND StudentID = " . $_POST["StudentID"] . ";";
-				$result = mysql_query($qry);
+				$result = $con->query($qry);
 				
 				//Update record in database
 				$ptype = '9';
@@ -155,7 +166,7 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 				$qry = "UPDATE `_students_lessons` SET asemester = '" . $_POST["asemester"] . "',
 				bsemester = '" . $_POST["bsemester"] . "'
 				WHERE StudentID = " . $_POST["StudentID"] . " AND LessonID = ".$ptype;
-				$result = mysql_query($qry);
+				$result = $con->query($qry);
 		
 		
 				//Return result to jTable
@@ -185,14 +196,14 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 					AND l.StudentID = ".$studentid.";";
 	
 	
-				$result = mysql_query($qry) or die(mysql_error());
+				$result = $con->query($qry);
 				
 				$jTableResult = array();
 				
 				if ($result) {
 					//Add all records to an array
 					$rows = array();
-					while($row = mysql_fetch_array($result))
+					while($row = $result->fetch_array())
 					{
 					    $rows[] = $row;
 					}
@@ -222,7 +233,7 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 				finalgrade = " . $_POST["finalgrade"] . "
 				WHERE LessonID=".$_POST["LessonID"]." AND StudentID = " . $_POST["StudentID"] . "
 				AND eduyear='".$eduyear."';";
-				$result = mysql_query($qry);
+				$result = $con->query($qry);
 		
 				//Return result to jTable
 				$jTableResult = array();
@@ -248,14 +259,14 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 			$stid = $_GET["studentid"];
 			//Get records from database
 			$qry = "SELECT lessons.LessonName AS lessonname, l.* FROM `_students_lessons` AS l INNER JOIN lessons ON lessons.LessonID=l.LessonID WHERE l.StudentID = ".$stid." AND l.eduyear='".$eduyear."';";
-			$result = mysql_query($qry) or die(mysql_error());
+			$result = $con->query($qry);
 		
 			$jTableResult = array();
 			
 			if ($result) {
 				//Add all records to an array
 				$rows = array();
-				while($row = mysql_fetch_array($result))
+				while($row = $result->fetch_array())
 				{
 				    $rows[] = $row;
 				}
@@ -285,7 +296,7 @@ AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_t
 	{
 		//Update record in database
 		$qry = "UPDATE `_students_lessons` SET asemester = '" . $_POST["asemester"] . "', bsemester = '" . $_POST["bsemester"] . "' WHERE LessonID=".$_POST["LessonID"]." AND StudentID = " . $_POST["StudentID"] . ";";
-		$result = mysql_query($qry);
+		$result = $con->query($qry);
 
 		//Return result to jTable
 		$jTableResult = array();

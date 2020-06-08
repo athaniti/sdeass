@@ -679,7 +679,7 @@ class DB_Functions {
     public function getProjectOtherStudents($projectid) {
 	$result = $this->con->query("SELECT t.* FROM students As t WHERE IsCurrent=1 AND StudentID NOT IN
 		(SELECT StudentID FROM `_projects_students` As p
-		WHERE p.ProjectID IN (Select ProjectID FROM `projects` where projectPeriod IN (select projectPeriod from `projects` where ProjectID=".$projectid.") AND Type IN (SELECT Type from `projects`where ProjectID=".$projectid."))) ORDER BY t.StudentLname");
+		WHERE p.ProjectID = ".$projectid.") ORDER BY t.StudentLname");
         // check for result
 	if ($result) {
 	    $no_of_rows = $result->num_rows;
@@ -815,16 +815,14 @@ class DB_Functions {
 	/**
      * Insert Excel Data into the database
      */
-    public function insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive, $isold) {
-		if($isold==0)
-		{
+    public function insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive) {
 		//*** Start Transaction ***//
 		$this->con->query("BEGIN");
 		$result = $this->con->query("INSERT INTO students
 							  (StudentCode, StudentFname, StudentLname, Sex, Age, ClassID, Fathername, Phone, Address, MaritalStatus, ChildrenNumber, JobStatus, MonthsUnemployment, IsRoma, IsCurrent, IsActive)
 							  VALUES
 							  ('$mitroo', '$studentfname', '$studentlname', '$sex', '$age', $classid,'$fathername','$phone','$address', '$marital', '$children','$jobstatus', '$monthsunemployment','$isroma', '$iscurrent', $isactive);");
-		$sid = $this->con->insert_id;
+		$sid = $this->con->insert_id();
 		$successfull = true;
 		$result1 = $this->con->query("INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (".$sid.", ".$classid.", '".$eduyear."');");
 		if ($result1 == false) {$successfull = false;}
@@ -849,9 +847,6 @@ class DB_Functions {
 			$res = false;
 		}
 		return $res;
-		}
-		return true;
-		
     }
 
     public function changeStudentsYear($oldeduyear, $neweduyear)

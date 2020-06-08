@@ -82,8 +82,8 @@
 	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή σε Word για το B\' Τετράμηνο</a>');
 	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=endiaferonantapokrisi&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Ενδιαφέροντος - Ανταπόκρισης Τελικό</a>');
 	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=arithmetic&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αριθμητικής Βαθμολογίας σε Word</a>');
-		//document.write('<br /><a href="'+websvcroot+'detailedgrades02.php?eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</a>');
-			document.write('<br /><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'+eduyear+'">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</button>');
+		document.write('<br /><a href="'+websvcroot+'detailedgrades.php?eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</a>');
+			document.write('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'+eduyear+'">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</button>');
 
 	    </script>
 	  </div>
@@ -103,37 +103,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="numericexport-form" action="/sde/websvc/detailedgrades02.php" method="POST">
+        <form id="numericexport-form" action="/sde/websvc/detailedgrades.php" method="POST">
           <div class="form-group">
             <label for="eduyear" class="col-form-label">Περίοδος:</label>
-            <input type="text" class="form-control" name="eduyear" id="eduyear">
+            <input type="text" class="form-control" id="eduyear">
           </div>
           <div class="form-group">
             <label for="praxi" class="col-form-label">Αρ. Πράξης:</label>
-            <input type="text" class="form-control" name="praxi" id="praxi"></textarea>
+            <input type="text" class="form-control" id="praxi"></textarea>
           </div>
 		  <div class="form-group">
-            <label for="praxi-protocol-date" class="col-form-label">Ημερομηνία Πράξης (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
-            <input type="text" class="form-control" name="praxi-protocol-date" id="praxi-protocol-date"></textarea>
-          </div>
-		  <div class="form-group">
-            <label for="title-protocol-number" class="col-form-label">Αρχικός Αρ. Πρωτ Τίτλου Σπουδών:</label>
-            <input type="text" class="form-control" name="title-protocol-number" id="title-protocol-number"></textarea>
-          </div>
-		  <div class="form-group">
-            <label for="title-protocol-date" class="col-form-label">Ημερομηνία Πρωτ Τίτλου Σπουδών (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
-            <input type="text" class="form-control" name="title-protocol-date" id="title-protocol-date"></textarea>
-          </div>
-		  <div class="form-group">
-            <label for="protocol-number" class="col-form-label">Αρχικός Αρ. Πρωτ Αναλυτικής Βαθμολογίας:</label>
-            <input type="text" class="form-control" name="protocol-number" id="protocol-number"></textarea>
+            <label for="protocol-number" class="col-form-label">Αρχικός Αρ. Πρωτ:</label>
+            <input type="text" class="form-control" id="protocol-number"></textarea>
           </div>
 		<div class="form-group">
-            <label for="protocol-date" class="col-form-label">Ημερομηνία Πρωτ Αναλυτικής Βαθμολογίας (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
-            <input type="text" class="form-control" name="protocol-date" id="protocol-date"></textarea>
+            <label for="protocol-date" class="col-form-label">Ημερομηνία Πρωτ:</label>
+            <input type="text" class="form-control" id="protocol-date"></textarea>
           </div>
-		  
-		  
         </form>
       </div>
       <div class="modal-footer">
@@ -164,15 +150,13 @@ $(document).ready(function () {
     $("#numericexport-form").on("submit", function(e) {
 		event.preventDefault(); //prevent default action 
         var postData = $(this).serializeArray();
-		//alert(postData);
 		console.log(postData);
         var formURL = $(this).attr("action");
-		console.log(formURL);
         $.ajax({
             url: formURL,
             type: "POST",
             data: postData,
-			success: function(data, textStatus, jqXHR) {
+            success: function(data, textStatus, jqXHR) {
                 $('#exampleModal .modal-header .modal-title').html("Result");
                 $('#exampleModal .modal-body').html(data);
                 $("#submitForm").remove();
@@ -187,8 +171,6 @@ $(document).ready(function () {
     $("#submitForm").on('click', function() {
         $("#numericexport-form").submit();
     });
-	
-	
 });
 </script>
   </body>

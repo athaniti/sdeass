@@ -10,8 +10,7 @@
   /**
  * check for POST request
  */
-require_once 'include/DB_Functions.php';
-require_once 'include/helper_functions.php';
+require_once 'include/db_functions.php';
 $db = new DB_Functions();
 
 require_once 'Excel/reader.php';
@@ -19,11 +18,11 @@ $data = new Spreadsheet_Excel_Reader();
 $data->setOutputEncoding('UTF8');
 $data->read('external/aitiseis.xls');
 
-$eduyear = '1617';
+$eduyear = '1516';
     if (isset($_GET['eduyear']) && $_GET['eduyear'] != '') {
 	$eduyear = $_GET['eduyear'];
     }
-console.log($eduyear);
+
 $successes = 0;
 $failures = 0;
 for ($x == 2; $x <= count($data->sheets[0]["cells"]); $x++)
@@ -32,17 +31,19 @@ for ($x == 2; $x <= count($data->sheets[0]["cells"]); $x++)
 	if($studentlname!="" && trim($studentlname)!="Επίθετο")
 	{
 		$studentfname = $data->sheets[0]["cells"][$x][3];
-		//$yearofbirth = $data->sheets[0]["cells"][$x][4];
-		$age = $data->sheets[0]["cells"][$x][4];
-		$address = $data->sheets[0]["cells"][$x][6];
+		$studentfathername = $data->sheets[0]["cells"][$x][4];
+		
+		$age = $data->sheets[0]["cells"][$x][5]; //refers to year of birth
+		$address = $data->sheets[0]["cells"][$x][7];
 		$marital = '';
-		$childrenNumber = '';
+		$childrenNumber = $data->sheets[0]["cells"][$x][15];
+		//$mitroo = $data->sheets[0]["cells"][$x][14];
 		$monthsunemployment = 0;
-		$phone = $data->sheets[0]["cells"][$x][7];
+		$phone = $data->sheets[0]["cells"][$x][8];
 		$sex = 1;
-		if ((isset($data->sheets[0]["cells"][$x][8])) && ($data->sheets[0]["cells"][$x][8]=='Γ'))
+		if ((isset($data->sheets[0]["cells"][$x][9])) && ($data->sheets[0]["cells"][$x][9]=='Γ'))
 		{ $sex = 2; }
-		switch ($data->sheets[0]["cells"][$x][10])
+		switch ($data->sheets[0]["cells"][$x][11])
 		{
 		case 'A2':
 		  $classid = 2;
@@ -78,20 +79,26 @@ for ($x == 2; $x <= count($data->sheets[0]["cells"]); $x++)
 		  $classid = 1;
 		}
 		$isroma = 0;
-		if (isset($data->sheets[0]["cells"][$x][12])) {$isroma = 1;}
+		if (isset($data->sheets[0]["cells"][$x][13]) && ($data->sheets[0]["cells"][$x][9]=='ROMA')) {$isroma = 1;}
 		$isactive = 1;
-		if (isset($data->sheets[0]["cells"][$x][13])) {$isactive = $data->sheets[0]["cells"][$x][13];}
-		$jobstatus = $data->sheets[0]["cells"][$x][11];
+		if (isset($data->sheets[0]["cells"][$x][24])) {$isactive = $data->sheets[0]["cells"][$x][24];}
+		$isold = 0;
+		if (isset($data->sheets[0]["cells"][$x][25])) {$isold = $data->sheets[0]["cells"][$x][25];}
+		$jobstatus = $data->sheets[0]["cells"][$x][12];
     $mitroo = "";
     if (isset($data->sheets[0]["cells"][$x][14])) {$mitroo = $data->sheets[0]["cells"][$x][14];}
 		//$eduyear = '1213';
 		$iscurrent=1;
 		$sss = $studentfname.$studentlname.$sex.$age.$classid.$fathername.$phone.$address.$jobstatus.$isroma.$eduyear.$iscurrent.$isactive;
-		$res = $db->insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $phone, $address, $marital, $childrenNumber, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive);
+		echo json_encode($sss);
+		$res = $db->insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $studentfathername, $phone, $address, $marital, $childrenNumber, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive, $isold);
+		
 		if ($res) { $successes += 1;} else { $failures += 1;}
+		
 	}
 
-	//$response["aaa"] = $sss;
+	
+	
 	if ($successes > 0) {
 		$response["success"] = 1;
 		$response["success_msg"] = "Succesfull imports: ".$successes." - Failure imports: ".$failures;

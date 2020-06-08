@@ -20,8 +20,7 @@ class DB_Connect {
         // selecting database
         //mysql_select_db(DB_DATABASE);
 		//mysql_query('set character set utf8');
-        mysqli_query($con, "SET NAMES utf8");
-		
+        mysql_query($con, "SET NAMES utf8");
 
         // return database handler
         return $con;
@@ -29,7 +28,7 @@ class DB_Connect {
 
     // Closing database connection
     public function close() {
-        mysqli_close($con);
+        mysql_close();
     }
 
 }

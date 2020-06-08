@@ -42,6 +42,8 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
 	if ( this.classname() == 3) return "Α3";
 	if ( this.classname() == 4) return "Β1";
 	if ( this.classname() == 5) return "Β2";
+	if ( this.classname() == 7) return "Β4";
+	if ( this.classname() == 8) return "Β5";
         return "Β3";
     }, this);
 
@@ -101,7 +103,9 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
             new Class(3, "Α3"),
             new Class(4, "Β1"),
             new Class(5, "Β2"),
-            new Class(6, "Β3")
+            new Class(6, "Β3"),
+            new Class(7, "Β4"),
+            new Class(8, "Β5")
         ]);
 
 
@@ -232,6 +236,7 @@ var model = function(){
 	  var age = person.age();
 	  var sex = person.sex();
 	  var fathername = person.fathername();
+    var fathernamegen = person.fathernamegen();
 	  var studentcode = person.studentcode();
 	  var classname = person.classname();
 
@@ -258,6 +263,7 @@ var model = function(){
 	    'age' : age,
 	    'sex' : sex,
 	    'fathername' : fathername,
+      'fathernamegen' : fathernamegen,
 	    'studentcode' : studentcode,
 	    'classname' : classname,
 	    'address' : address,

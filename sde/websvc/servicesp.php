@@ -16,7 +16,7 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 
     // include db handler
     //require_once 'include/config.php';
-    require_once 'include/DB_Functions.php';
+    require_once 'include/db_functions.php';
     $db = new DB_Functions();
 
     // response Array
@@ -95,10 +95,10 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
     } else if ($tag == 'getuserlessons') {
         // Request type is Register new user
         $userid = $_POST['userid'];
-        
-        
+
+
             $lessons = $db->getUserLessons($userid);
-			
+
             if ($lessons) {
                 // user stored successfully
                 $response["success"] = 1;
@@ -111,15 +111,15 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 	} else if ($tag == 'getuserclasses') {
         // Request type is Register new user
         $userid = $_POST['userid'];
-        $lessonid = $_POST['lessonid'];        
-        
+        $lessonid = $_POST['lessonid'];
+
             $classes = $db->getUserClasses($userid, $lessonid);
-			
+
             if ($classes) {
                 // user stored successfully
                 $response["success"] = 1;
                 $response["classes"] = $classes;
-				
+
             } else {
                 // user failed to store
                 $response["error"] = 1;
@@ -128,10 +128,10 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 	} else if ($tag == 'role') {
         // Request type is Register new user
         $userid = $_POST['userid'];
-        
-        
+
+
             $userrole = $db->getUserRole($userid);
-			
+
             if ($classes) {
                 // user stored successfully
                 $response["success"] = 1;
@@ -146,10 +146,10 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
         $studentid = $_POST['studentid'];
 		$teacherid = $_POST['teacherid'];
 		$eduyear = $_POST['eduyear'];
-        
-        
+
+
             $studentgrades = $db->getUserGrades($studentid, $teacherid, $eduyear);
-			
+
             if ($studentgrades) {
                 // user stored successfully
                 $response["success"] = 1;
@@ -167,10 +167,10 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 		$teacherid = $_POST['teacherid'];
 		$eduyear = $_POST['eduyear'];
 		$grade = $_POST['value'];
-        
-        
+
+
             $res = $db->updUserGrades($studentid, $lessonid, $period, $teacherid, $eduyear, $grade);
-			
+
             if ($res = '1') {
                 // user stored successfully
                 $response["success"] = 1;

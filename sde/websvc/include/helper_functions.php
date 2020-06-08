@@ -50,25 +50,25 @@ class Helper_Functions {
           $ftgrade = 'Δώδεκα';
         break;
       case '13':
-          $ftgrade = 'Δέκα Τρία';
+          $ftgrade = 'Δεκατρία';
         break;
       case '14':
-          $ftgrade = 'Δέκα Τέσσερα';
+          $ftgrade = 'Δεκατέσσερα';
         break;
       case '15':
-          $ftgrade = 'Δέκα Πέντε';
+          $ftgrade = 'Δεκαπέντε';
         break;
       case '16':
-          $ftgrade = 'Δέκα Έξι';
+          $ftgrade = 'Δεκαέξι';
         break;
       case '17':
-          $ftgrade = 'Δέκα Επτά';
+          $ftgrade = 'Δεκαεπτά';
         break;
       case '18':
-          $ftgrade = 'Δέκα Οκτώ';
+          $ftgrade = 'Δεκαοκτώ';
         break;
       case '19':
-          $ftgrade = 'Δέκα Εννέα';
+          $ftgrade = 'Δεκαεννέα';
         break;
         case '20':
             $ftgrade = 'Είκοσι';

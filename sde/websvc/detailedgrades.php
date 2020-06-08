@@ -4,8 +4,10 @@
 include_once('plugins/tbs/tbs_class.php'); // Load the TinyButStrong template engine
 include_once('plugins/tbs/tbs_plugin_opentbs.php'); // Load the OpenTBS plugin
 include_once('include/helper_functions.php');
-require_once 'include/DB_Functions.php';
+require_once 'include/db_functions.php';
 $db = new DB_Functions();
+$con = $db->con;
+$con->query(DB_DATABASE);
 $hf = new Helper_Functions();
 
 
@@ -46,7 +48,9 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)
 ORDER BY lname, fname";
 
 
-$result = mysql_query($qry) or die(mysql_error());
+//$result = mysql_query($qry) or die(mysql_error());
+
+$result = $con->query($qry);
 
 
 // Retrieve the user name to display
@@ -56,7 +60,7 @@ if ($yourname=='') $yourname = "(no name)";
 
 // A recordset for merging tables
 $data = array();
-while($row = mysql_fetch_assoc($result))
+while($row = $result->fetch_assoc())
 {
         $studentid = $row["studentid"];
         $studentsex = $hf->getArthro($row["sex"]);
@@ -65,12 +69,13 @@ while($row = mysql_fetch_assoc($result))
         FROM `_students_lessons` as g INNER JOIN lessons as l ON g.LessonID = l.LessonID
         WHERE g.eduyear =  '".$eduyear."'
         AND g.StudentID=".$studentid." AND l.lessonID<9";
-        $result2 = mysql_query($qry) or die(mysql_error());
+        //$result2 = mysql_query($qry) or die(mysql_error());
+		$result2 = $con->query($qry);
         $lessons = array();
         $i = 0;
         $total = 0;
         $count = 0;
-        while($row2 = mysql_fetch_assoc($result2))
+        while($row2 = $result2->fetch_assoc())
         {
           $lessons[$i] = $row2['finalgrade'];
           $total += intval($row2["finalgrade"]);
@@ -78,48 +83,59 @@ while($row = mysql_fetch_assoc($result))
           $i = $i + 1;
         }
 
-        $ints = intval($total/$count);
-				$decs = $total%$count;
-        $intstext = $hf->getFulltextGrade($ints);
-        $decstext = $hf->getFulltextGrade($decs);
-        $basecounttext = $hf->getFulltext2($count);
+		try {
+			if ($count>0)
+			{
+			$ints = intval($total/$count);
 
-        $decsarithm = (intval($decs)>0) ? '& '.$decs.'/'.$count : '';
-        $decsarithmtext = (intval($decs)>0) ? '& '.$decstext.'/'.$basecounttext : '';
+			$decs = $total%$count;
+			$intstext = $hf->getFulltextGrade($ints);
+			$decstext = $hf->getFulltextGrade($decs);
+			$basecounttext = $hf->getFulltext2($count);
+
+			$decsarithm = (intval($decs)>0) ? '& '.$decs.'/'.$count : '';
+			$decsarithmtext = (intval($decs)>0) ? '& '.$decstext.'/'.$basecounttext : '';
 
 
 
 
 
-        $data[] = array('studentid'=> $studentid, 'firstname'=>$studentsex.' '.$row["fname"],
-         'lname'=>  $row["lname"],
-         'ftname'=>  $fathernamegen,
-         'arthro'=>  $studentsex,
-         'glossa'=> $lessons[0],
-         'agglika'=> $lessons[1],
-         'pliroforiki'=> $lessons[2],
-         'mathim'=> $lessons[3],
-         'phys'=> $lessons[4],
-         'periv'=> $lessons[5],
-         'koin'=> $lessons[6],
-         'kallit'=> $lessons[7],
-          'glossatext'=> $hf->getFulltextGrade($lessons[0]),
-          'agglikatext'=> $hf->getFulltextGrade($lessons[1]),
-          'pliroforikitext'=> $hf->getFulltextGrade($lessons[2]),
-          'mathimtext'=> $hf->getFulltextGrade($lessons[3]),
-          'phystext'=> $hf->getFulltextGrade($lessons[4]),
-          'perivtext'=> $hf->getFulltextGrade($lessons[5]),
-          'kointext'=> $hf->getFulltextGrade($lessons[6]),
-          'kallittext'=> $hf->getFulltextGrade($lessons[7]),
-          'ints'=> $ints,
-          'decs'=> $decs,
-          'basecount'=> $count,
-          'intstext'=> $intstext,
-          'decstext'=> $decstext,
-          'decsarithm'=> $decsarithm,
-          'decsarithmtext'=> $decsarithmtext,
-          'basecounttext'=> $basecounttext
-          );
+			$data[] = array('studentid'=> $studentid, 'firstname'=>$studentsex.' '.$row["fname"],
+			 'lname'=>  $row["lname"],
+			 'ftname'=>  $fathernamegen,
+			 'arthro'=>  $studentsex,
+			 'glossa'=> $lessons[0],
+			 'agglika'=> $lessons[1],
+			 'pliroforiki'=> $lessons[2],
+			 'mathim'=> $lessons[3],
+			 'phys'=> $lessons[4],
+			 'periv'=> $lessons[5],
+			 'koin'=> $lessons[6],
+			 'kallit'=> $lessons[7],
+			  'glossatext'=> $hf->getFulltextGrade($lessons[0]),
+			  'agglikatext'=> $hf->getFulltextGrade($lessons[1]),
+			  'pliroforikitext'=> $hf->getFulltextGrade($lessons[2]),
+			  'mathimtext'=> $hf->getFulltextGrade($lessons[3]),
+			  'phystext'=> $hf->getFulltextGrade($lessons[4]),
+			  'perivtext'=> $hf->getFulltextGrade($lessons[5]),
+			  'kointext'=> $hf->getFulltextGrade($lessons[6]),
+			  'kallittext'=> $hf->getFulltextGrade($lessons[7]),
+			  'ints'=> $ints,
+			  'decs'=> $decs,
+			  'basecount'=> $count,
+			  'intstext'=> $intstext,
+			  'decstext'=> $decstext,
+			  'decsarithm'=> $decsarithm,
+			  'decsarithmtext'=> $decsarithmtext,
+			  'basecounttext'=> $basecounttext
+			  );
+			  }
+		} 
+		catch (Exception $e) 
+		{
+			echo 'Caught exception: ',  $e->getMessage(), "\n";
+		}
+
 
 }
 

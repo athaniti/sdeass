@@ -12,7 +12,8 @@
  */
   require_once 'include/db_functions.php';
     $db = new DB_Functions();
-    mysql_select_db(DB_DATABASE);
+	$con = $db->con;
+    $con->query(DB_DATABASE);
 
 $eduyear = (!empty($_POST['eduyear'])) ? $_POST['eduyear'] : '';
 $action = (!empty($_POST['action'])) ? $_POST['action'] : ''; //action to be used(insert, delete, update, fetch)
@@ -27,6 +28,7 @@ if(!empty($student)){
   $age = $student['age'];
   $sex = $student['sex'];
   $fathername = $student['fathername'];
+  $fathernamegen = $student['fathernamegen'];
   $classname = $student['classname'];
   $address = $student['address'];
   $marital = $student['marital'];
@@ -63,7 +65,7 @@ switch($action){
   case "update":
 
     if(!empty($student)){
-      $res = $db->updateStudentData($student['studentid'], $studentcode, $fname, $lname, $sex, $age, $classname, $fathername,
+      $res = $db->updateStudentData2($student['studentid'], $studentcode, $fname, $lname, $sex, $age, $classname, $fathername, $fathernamegen,
 				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $iscurrent, $isactive, $eduyear);
       echo json_encode($res);
     }
@@ -80,18 +82,19 @@ switch($action){
 
   default:
   //only select student records which aren't deleted
-  mysql_query("SET NAMES utf8");
+  //mysqli_query("SET NAMES utf8");
+  mysqli_query($con, "SET NAMES utf8");
 
   $wherestr = '';
   if(!empty($eduyear)){
     $wherestr = " WHERE `_students_class`.eduperiod='".$eduyear."' ";
   }
-  $students = mysql_query("SELECT students.*, `_students_class`.ClassID As class
+  $students = $con->query("SELECT students.*, `_students_class`.ClassID As class
 			  FROM students INNER JOIN `_students_class` ON students.StudentID = `_students_class`.StudentID".$wherestr."
-			  ORDER BY students.StudentLname, students.StudentFname") or die(mysql_error());
+			  ORDER BY students.StudentCode, students.StudentLname, students.StudentFname");
   $students_r = array();
 
-  while($row = mysql_fetch_assoc($students)){
+    while($row = $students->fetch_assoc()){
 
       //default student data
       $id = $row['StudentID'];
@@ -102,6 +105,7 @@ switch($action){
       $sex = $row['Sex'];
       $classname = $row['class'];
       $fathername = $row['Fathername'];
+      $fathernamegen = $row['FathernameGen'];
       $address = $row['Address'];
       $marital = $row['MaritalStatus'];
       $children = $row['ChildrenNumber'];
@@ -117,24 +121,24 @@ switch($action){
       //its false by default since
       //this is only true if the user clicks
       //on the span
-      $student_update = $studentcode_update = $fname_update = $lname_update = $age_update = $sex_update = $classname_update = $fathername_update = $address_update = $marital_update = $children_update = $phone_update = $jobstatus_update = $monthsunemployment_update = $isroma_update = $iscurrent_update = $isactive_update = false;
-      $studentcode_focus = $fname_focus = $lname_focus = $age_focus = $sex_focus = $classname_focus = $fathername_focus = $address_focus = $marital_focus = $children_focus = $phone_focus = $jobstatus_focus = $monthsunemployment_focus = $isroma_focus = $iscurrent_focus = $isactive_focus = false;
+      $student_update = $studentcode_update = $fname_update = $lname_update = $age_update = $sex_update = $classname_update = $fathername_update = $fathernamegen_update = $address_update = $marital_update = $children_update = $phone_update = $jobstatus_update = $monthsunemployment_update = $isroma_update = $iscurrent_update = $isactive_update = false;
+      $studentcode_focus = $fname_focus = $lname_focus = $age_focus = $sex_focus = $classname_focus = $fathername_focus = $fathernamegen_focus = $address_focus = $marital_focus = $children_focus = $phone_focus = $jobstatus_focus = $monthsunemployment_focus = $isroma_focus = $iscurrent_focus = $isactive_focus = false;
 
       //build the array that will store all the student records
       $students_r[] = array(
           'id' => $id, 'studentcode' => $studentcode, 'fname' => $fname, 'lname' => $lname, 'age' => $age,
-	  'sex' => $sex, 'classname' => $classname, 'fathername' => $fathername, 'address' => $address, 'marital' => $marital, 'children' => $children,
+	  'sex' => $sex, 'classname' => $classname, 'fathername' => $fathername, 'fathernamegen' => $fathernamegen, 'address' => $address, 'marital' => $marital, 'children' => $children,
 	  'phone' => $phone, 'jobstatus' => $jobstatus, 'monthsunemployment' => $monthsunemployment, 'isroma' => $isroma, 'iscurrent' => $iscurrent,
 	  'isactive' => $isactive,
           'studentUpdate' => $student_update,
           'studentcodeUpdate' => $studentcode_update, 'fnameUpdate' => $fname_update, 'lnameUpdate' => $lname_update, 'ageUpdate' => $age_update,
-          'sexUpdate' => $sex_update, 'classnameUpdate' => $classname_update, 'fathernameUpdate' => $fathername_update,
+          'sexUpdate' => $sex_update, 'classnameUpdate' => $classname_update, 'fathernameUpdate' => $fathername_update,'fathernamegenUpdate' => $fathernamegen_update,
           'addressUpdate' => $address_update, 'maritalUpdate' => $marital_update, 'childrenUpdate' => $children_update,
 	  'phoneUpdate' => $phone_update, 'jobstatusUpdate' => $jobstatus_update, 'monthsunemploymentUpdate' => $monthsunemployment_update,
           'isromeUpdate' => $isroma_update, 'iscurrentUpdate' => $iscurrent_update, 'isactiveUpdate' => $isactive_update,
           'studentcodeHasFocus' => $studentcode_focus, 'fnameHasFocus' => $fname_focus, 'lnameHasFocus' => $lname_focus,
 	  'ageHasFocus' => $age_focus,
-          'sexHasFocus' => $sex_focus, 'classnameHasFocus' => $classname_focus, 'fathernameHasFocus' => $fathername_focus,
+          'sexHasFocus' => $sex_focus, 'classnameHasFocus' => $classname_focus, 'fathernameHasFocus' => $fathername_focus,'fathernamegenHasFocus' => $fathernamegen_focus,
           'addressHasFocus' => $address_focus, 'maritalHasFocus' => $marital_focus, 'childrenHasFocus' => $children_focus,
 	  'phoneHasFocus' => $phone_focus,
 	  'jobstatusHasFocus' => $jobstatus_focus, 'monthsunemploymentHasFocus' => $monthsunemployment_focus,

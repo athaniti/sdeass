@@ -258,7 +258,8 @@ class Spreadsheet_Excel_Reader
      */ 
     function Spreadsheet_Excel_Reader()
     {
-        $this->_ole =& new OLERead();
+		$class = "OLERead";
+        $this->_ole = new $class();
         $this->setUTFEncoder('iconv');
     }
 
@@ -1050,6 +1051,7 @@ class Spreadsheet_Excel_Reader
     function _encodeUTF16($string)
     {
         $result = $string;
+		$this->_encoderFunction='mb_convert_encoding';
         if ($this->_defaultEncoding){
             switch ($this->_encoderFunction){
                 case 'iconv' :     $result = iconv('UTF-16LE', $this->_defaultEncoding, $string);
