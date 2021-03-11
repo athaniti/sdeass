@@ -9,6 +9,7 @@ where eduyear='1617';
 
 
 Με το script αυτό γίνεται εισαγωγή των απαραίτητων εγγραφών για τη γενική αξιολόγηση για το τρέχων ακαδημαϊκό έτος.
+
 insert into `_students_general` (`StudentID`, `eduyear`)
 select `_students_class`.StudentID, '1617' 
 FROM `_students_class` where eduperiod='1617'
