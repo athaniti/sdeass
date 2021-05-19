@@ -34,7 +34,7 @@ try
 		//Get records from database
 		$result = $con->query("SELECT *, _students_class.ClassID AS StudentClassID FROM students
 				      INNER JOIN _students_class ON students.StudentID=_students_class.StudentID
-				      WHERE _students_class.eduperiod='".$eduyear."'".$filterstr.$filter.";");
+				      WHERE students.IsActive=1 and _students_class.eduperiod='".$eduyear."'".$filterstr.$filter.";");
 
 		//Add all records to an array
 		$rows = array();
