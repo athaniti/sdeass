@@ -1,0 +1,152 @@
+<html>
+  <head>
+	 <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Μεσολογγίου</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <link href="../css/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+	<link href="../js/jtable/themes/lightcolor/orange/jtable.css" rel="stylesheet" type="text/css" />
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+    <script src="../js/main.js" type="text/javascript"></script>
+	<script src="../js/grades.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="../js/jtable/jquery.jtable.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		isLoggedIn();
+		var classid = getUrlVars()["classid"];
+		var teacherid = getUrlVars()["teacherid"];
+		//var eduyear = getUrlVars()["eduyear"];
+		var eduyear = getCurrentAcademicYear();
+		var userid = window.localStorage["userid"];
+    	</script>
+  <body id="stage" class="theme">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();</script>
+  </script>
+    </div>
+    <div id="gradestitle"></div>
+	<div id="GradesContainer" style="width: 100%;">
+    <div id="exportgrades">
+   
+
+    </div>
+    <div id="GradesTableContainer" style="width: 100%;"></div>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+		  	 var greekMessages = {
+            serverCommunicationError: 'Πρόβλημα στην επικοινωνία με τον server.',
+            loadingMessage: 'Περιμένετε...',
+            noDataAvailable: 'Δεν υπάρχουν διαθέσιμα δεδομένα!',
+            addNewRecord: '+ Προσθήκη εγγραφής',
+            editRecord: 'Επεξεργασία Εγγραφής',
+            areYouSure: 'Είστε σίγουρος;',
+            deleteConfirmation: 'Η εγγραφή θα διαγραφεί. Είστε σίγουρος;',
+            save: 'Αποθήκευση',
+            saving: 'Αποθήκευση...',
+            cancel: 'Ακύρωση',
+            deleteText: 'Διαγραφή',
+            deleting: 'Διαγραφή...',
+            error: 'Σφάλμα',
+            close: 'Κλείσιμο',
+            cannotLoadOptionsFor: '{0} δεν είναι δυνατή η φόρτωση επιλογών!'
+           // pagingInfo: 'Σελίδα {2}, {0} από {1} ',
+            //canNotDeletedRecords: '{1} kayıttan {0} adedi silinemedi!',
+            //deleteProggress: '{1} kayıttan {0} adedi silindi, devam ediliyor...'
+        };
+		    //Prepare jTable
+			$('#GradesTableContainer').jtable({
+				messages: greekMessages, //Lozalize
+				title: 'Γενική Αξιολόγηση',
+				sorting: true,
+				defaultSorting: 'StudentLname ASC',
+				//paging: true,
+				//pageSize: 8,
+				actions: {
+					listAction: websvcroot+'/StudentGeneralGrades.php?action=list&tag=perstudent&classid='+classid+'&eduyear='+eduyear,
+					updateAction: websvcroot+'/StudentGeneralGrades.php?action=update&classid='+classid+'&tag=perstudent&eduyear='+eduyear
+				},
+				fields: {
+					StudentID: {
+						key: true,
+						create: false,
+						edit: false,
+						list: false
+					},
+					StudentLname: {
+						title: 'Επίθετο',
+						width: '10%',
+						edit: false
+					},
+					StudentFname: {
+						title: 'Όνομα',
+						width: '10%',
+						edit: false
+					},
+					ClassName: {
+						title: 'Τμήμα',
+						width: '5%',
+						edit: false
+					},
+					amathisiakiporeia: {
+						title: 'Μαθ. Πορεία - Α',
+						width: '10%',
+						type: 'textarea'
+					},
+					asynergasia: {
+						title: 'Συνεργασία - Α',
+						width: '30%',
+						type: 'textarea'
+					},
+					aendiaferon: {
+						title: 'Ενδιαφ. - Α',
+						width: '10%',
+						type: 'textarea'
+					},
+					adesmefsi: {
+						title: 'Δέσμευση - Α',
+						width: '10%',
+						type: 'textarea'
+					},
+					bmathisiakiporeia: {
+						title: 'Μαθ. Πορεία - Β',
+						width: '30%',
+						type: 'textarea'
+					},
+					bsynergasia: {
+						title: 'Συνεργασία - Β',
+						width: '10%',
+						type: 'textarea'
+					},
+					bendiaferon: {
+						title: 'Ενδιαφ. - Β',
+						width: '10%',
+						type: 'textarea'
+					}
+					,
+					bdesmefsi: {
+						title: 'Δέσμευση - Β',
+						width: '10%',
+						type: 'textarea'
+					}
+									
+				}
+			});
+
+			//Load person list from server
+			$('#GradesTableContainer').jtable('load');
+
+		});
+
+	</script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+  </body>
+</html>

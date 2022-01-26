@@ -1,0 +1,81 @@
+<html>
+  <head>
+	 <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Μεσολογγίου</title>
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script src="../js/grades.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.jeditable.mini.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		isLoggedIn();
+		var classid = getUrlVars()["classid"];
+		var lessonid = getUrlVars()["lessonid"];
+		var userid = window.localStorage["userid"];
+	</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+  <body id="stage" class="theme" onLoad="init();">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();</script>
+  </script>
+    </div>
+	<div id="GradesContainer" style="width: 100%;">
+    <p>Πατήστε επάνω στην περιγραφική αξιολόγηση για επεξεργασία.</p>
+    <div id="" class="hidden"></div>
+    <label>Α' Τετράμηνο</label>
+    <div class="edit_area" id="atetramino"></div>
+    <label>Β' Τετράμηνο</label>
+    <div class="edit_area" id="btetramino"></div>
+    
+   
+    </div>
+	<script type="text/javascript">
+		var studentid = getUrlVars()["studentid"];
+		var teacherid = getUrlVars()["teacherid"];
+		getStudentGrades(studentid, teacherid);
+			
+		$(document).ready(function () {
+			$('#atetramino').editable(websvcroot+'servicesp.php', {			
+				type      : 'textarea',
+				submitdata : {tag: 'savegrade', studentid: studentid, teacherid: teacherid, lessonid: lessonid, period: '1', eduyear:'1213'},
+		        cancel    : 'Cancel',
+        		submit    : 'OK',
+         		indicator : '<img src="'+sderoot+'/images/indicator.gif">',
+         		tooltip   : 'Πατήστε για επεξεργασία...',
+			cssclass  : 'jedit',
+			callback : function(value, settings) {
+			  var obj = jQuery.parseJSON(value);
+			  $("#atetramino").html(obj.studentgrades);
+			}
+			});
+			$('#btetramino').editable(websvcroot+'servicesp.php', {			
+				type      : 'textarea',
+				value   	  : 'grade',
+		        submitdata : {tag: 'savegrade', studentid: studentid, teacherid: teacherid, lessonid: lessonid, period: '2', eduyear:'1213'},
+		        cancel    : 'Cancel',
+        		submit    : 'OK',
+         		indicator : '<img src="/images/indicator.gif">',
+         		tooltip   : 'Πατήστε για επεξεργασία...',
+			cssclass  : 'jedit',
+			callback : function(value, settings) {
+			  var obj = jQuery.parseJSON(value);
+			  $("#btetramino").html(obj.studentgrades);
+			}
+			});
+			
+			
+			
+		});
+
+	</script>
+ <script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+  </body>
+</html>
