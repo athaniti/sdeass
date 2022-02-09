@@ -1,3 +1,7 @@
+var sderoot='/sdemesol/sdeass/';
+var homepage = 'index.html';
+var websderoot='/sdemesol/sdeass/';
+var websvcroot = '/sdemesol/sde/websvc/';
 function init() {
 	/* For phonegap app
 	document.addEventListener("deviceready", deviceReady, true);
@@ -63,7 +67,7 @@ function findUser(data) {
 	    //console.log("click");
 	    if(u != '' && p!= '') 
 	    {
-		$.getJSON('/sde/websvc/services.php?tag=login&username='+u+'&password='+p+'&callback=?', findUser);
+		$.getJSON(websvcroot+'/services.php?tag=login&username='+u+'&password='+p+'&callback=?', findUser);
 	                
 	        $("#submitButton").removeAttr("disabled");
 	    } else {

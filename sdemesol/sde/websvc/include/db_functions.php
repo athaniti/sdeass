@@ -828,6 +828,9 @@ class DB_Functions {
 		$successfull = true;
 		$result1 = $this->con->query("INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (".$sid.", ".$classid.", '".$eduyear."');");
 		if ($result1 == false) {$successfull = false;}
+		
+		$result1gen = $this->con->query("INSERT INTO `_students_general` (StudentID, eduyear) VALUES (".$sid.", '".$eduyear."');");
+		if ($result1gen == false) {$successfull = false;}
 
 		for ($x = 1; $x <= 10; $x++) {
 			$result2 = $this->con->query("INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (".$sid.", ".$x.", '0', '".$eduyear."');");
