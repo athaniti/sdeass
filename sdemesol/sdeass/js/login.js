@@ -41,14 +41,18 @@ function findUser(data) {
 	//window.localStorage["username"] = data.user.username;
 	window.localStorage["username"] = $("#password", form).val(); 
 	window.localStorage["password"] = $("#password", form).val(); 
-	window.localStorage["name"] = data.user.fname + ' ' + data.user.lname;;
+	window.localStorage["name"] = data.user.fname + ' ' + data.user.lname;
 	window.localStorage["userid"] = data.uid;
+	window.localStorage["userrole"] = data.user.role;
 	//alert(data.user.userrole);
 	if (data.user.role =='1') {
 		window.location.replace("fpage.html?userid="+data.uid);
 	}
 	else if (data.user.role =='2') {
 		window.location.replace("admin/fpage.html?userid="+data.uid);
+	}
+	else if (data.user.role =='3') {
+		window.location.replace("director/fpage.html?userid="+data.uid);
 	}
 	else {
 		window.location.replace("fpage.html?userid="+data.uid);

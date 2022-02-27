@@ -4,13 +4,18 @@ var websderoot='/sdemesol/sdeass/';
 var websvcroot = '/sdemesol/sde/websvc/';
 var eduyear = getSelectedAcademicYear();
 var userid = window.localStorage["userid"];
+var userrole = window.localStorage["userrole"];
 var isAdmin = 0;
-if (userid==100){ isAdmin=1;}
+var isDirector = 0;
+if (userrole==2){ isAdmin=1;}
+if (userrole==3){ isDirector=1;}
 
 
 function getMenu() {
-    if (userid==100){ isAdmin=1;}
+    if (userrole==2){ isAdmin=1;}
+    if (userrole==3){ isDirector=1;}
     var hpage = '';
+	if (isDirector==1) {hpage = 'director/';}
     if (isAdmin==1) {hpage = 'admin/';}
     document.write('<div class="navbar-collapse collapse"><ul class="nav navbar-nav">');
     document.write('<li><a href="'+sderoot+hpage+'fpage.html?userid='+userid+'">Αρχική Σελίδα</a></li>');
@@ -23,7 +28,7 @@ function getMenu() {
 	document.write('</ul></li>');
     }
     document.write('<li class="dropdown">');
-              document.write('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ρυθμίσεις <span class="caret"></span></a>');
+    document.write('<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ρυθμίσεις <span class="caret"></span></a>');
     document.write('<ul class="dropdown-menu" role="menu">');
 
 
