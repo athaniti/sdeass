@@ -12,6 +12,8 @@
  */
   $ethnosimosrc = 'https://athaniti.com/sdemesol/sde/websvc/images/ethnosimo.jpg';
   $titletext = 'ΕΛΛΗΝΙΚΗ ΔΗΜΟΚΡΑΤΙΑ<br />ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ ΚΑΙ ΘΡΗΣΚΕΥΜΑΤΩΝ<br />ΓΕΝΙΚΗ ΓΡΑΜΜΑΤΕΙΑ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΕΚΠΑΙΔΕΥΣΗΣ,<br />ΚΑΤΑΡΤΙΣΗΣ, ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ ΚΑΙ ΝΕΟΛΑΙΑΣ<br />ΔΙΕΥΘΥΝΣΗ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ<br />ΙΔΡΥΜΑ ΝΕΟΛΑΙΑΣ ΚΑΙ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ';
+  $directortext = 'Η ΔΙΕΥΘΥΝΤΡΙΑ';
+  $subdirectortext = 'Ο ΥΠΟΔΙΕΥΘΥΝΤΗΣ';
   $directorname = 'Γριβοπούλου Αγγελική';
   $subdirectorname = 'Αθανίτης Ανδρέας';
   $poreiastart = 'Η μαθησιακή του/ της πορεία είναι ';
@@ -631,7 +633,7 @@ $lpagecont='';
 				    $lpagecont .='<span style="font-weight:bold; font-size:1em;">Ενδιαφέρον-Ανάληψη Πρωτοβουλιών</span><br /><br />'.$endiaferonstart.mb_strtolower($row[$endiaf], mb_detect_encoding($row[$endiaf])).$endiaferonend.'<br /><br /><br /><br />';
 				    $lpagecont .='<span style="font-weight:bold; font-size:1em;">Δέσμευση-Αποτελεσματικότητα</span><br /><br /><br />'.$desmefsistart.mb_strtolower($row[$desmefsi], mb_detect_encoding($row[$desmefsi])).$desmefsiend.'<br /><br /><br />';
 				    $lpagecont .='<table width="100%" cellspacing="0" style="border: none;"><tr>';
-				    $lpagecont .='<td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;" >Ο ΔΙΕΥΘΥΝΤΗΣ<br /><br /><br /><br /><br />'.$directorname.'</td><td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;">Ο ΥΠΟΔΙΕΥΘΥΝΤΗΣ<br /><br /><br /><br /><br />'.$subdirectorname.'</td></tr></table>';
+				    $lpagecont .='<td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;" >'.$directortext.'<br /><br /><br /><br /><br />'.$directorname.'</td><td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;">'.$subdirectortext.'<br /><br /><br /><br /><br />'.$subdirectorname.'</td></tr></table>';
 				    $lpagecont .='</div>'.$pagesep.$pagesep;
 
 				    //$content .=$schema_insert.$lpagecont.$pagesep;
