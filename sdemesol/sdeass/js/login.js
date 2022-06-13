@@ -1,7 +1,3 @@
-var sderoot='/sdemesol/sdeass/';
-var homepage = 'index.html';
-var websderoot='/sdemesol/sdeass/';
-var websvcroot = '/sdemesol/sde/websvc/';
 function init() {
 	/* For phonegap app
 	document.addEventListener("deviceready", deviceReady, true);

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Αγρινίου</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+      
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+
+  </head>
+  <body id="stage" class="theme" onLoad="init();">
+<div id="usermenu">
+
+</div>
+<div class="container">
+    <div data-role="content">
+        <form id="loginForm"  class="form-signin" role="form">
+          <h2 class="form-signin-heading">Εισαγωγή στο σύστημα</h2>
+            <input type="text" class="form-control" name="username" id="username" value="" placeholder="Username" required autofocus/>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required/>
+        <input type="submit" value="Login" id="submitButton" class="btn btn-lg btn-primary btn-block" >
+        </form>
+        <div id="fpmessage" class="alert" role="alert"></div>
+
+
+        <div id="reg">
+          <a href="#" onClick="showRegForm();">Εγγραφή.</a>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div data-role="footer">
+        <h4>&copy; 2021 Ανδρέας Αθανίτης</h4>
+    </div>
+
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
+$("#loginPage").live("pageinit", function(e) {	
+        checkPreAuth();
+    });
+</script>
+
+  </body>
+</html>

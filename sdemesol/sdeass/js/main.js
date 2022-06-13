@@ -1,7 +1,7 @@
-﻿var sderoot='/sdemesol/sdeass/';
+﻿var sderoot='/sde/sdemesol/sdeass/';
 var homepage = 'index.html';
-var websderoot='/sdemesol/sdeass/';
-var websvcroot = '/sdemesol/sde/websvc/';
+var websderoot='/sde/sdemesol/sdeass';
+var websvcroot = '/sde/sdemesol/sde/websvc/';
 var eduyear = getSelectedAcademicYear();
 var userid = window.localStorage["userid"];
 var userrole = window.localStorage["userrole"];

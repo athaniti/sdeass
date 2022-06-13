@@ -1,0 +1,218 @@
+<html>
+  <head>
+	 <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Αγρινίου</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <link href="../css/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+	<link href="../js/jtable/themes/lightcolor/orange/jtable.css" rel="stylesheet" type="text/css" />
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+    
+    <script src="../js/main.js" type="text/javascript"></script>
+	<script src="../js/grades.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="../js/jtable/jquery.jtable.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		isLoggedIn();
+		var period = getUrlVars()["classid"];
+		var teacherid = getUrlVars()["teacherid"];
+		var eduyear = getSelectedAcademicYear();
+		var userid = window.localStorage["userid"];
+		var classid = getUrlVars()["classid"];
+		if(!classid){
+		  classid = 0;
+		};
+    	</script>
+  <body id="stage" class="theme">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();</script>
+  </script>
+    </div>
+    <div id="gradestitle"></div>
+	<div id="GradesContainer" style="width: 100%;">
+    <div id="exportgrades">
+    <script>
+    	document.write('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&semester=a&teacherid='+teacherid+'&eduyear='+eduyear+'">Εξαγωγή σε Word για το Α\' Τετράμηνο</a>');
+		document.write('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&semester=b&teacherid='+teacherid+'&eduyear='+eduyear+'">Εξαγωγή σε Word για το B\' Τετράμηνο</a>');
+		//document.write('<a href="'+websvcroot+'expsvc.php?type=e&tag=perstudent&teacherid='+teacherid+'&eduyear='+eduyear+'">Export to Excel</a>');
+    </script>
+
+    </div>
+    <div class="filtering">
+    <form>
+      <script>
+	document.write('<input type="hidden" name="teacherid" id="teacherid" value="'+teacherid+'" />');
+	document.write('<input type="hidden" name="eduyear" id="eduyear" value="'+eduyear+'" />');
+      </script>
+        Τμήμα:
+        <select id="classid" name="classid">
+            <option selected="selected" value="0">Όλα</option>
+            <option value="1">Α1</option>
+            <option value="2">Α2</option>
+            <option value="3">Α3</option>
+            <option value="4">Β1</option>
+            <option value="5">Β2</option>
+            <option value="6">Β3</option>
+        </select>
+        <button type="submit" id="LoadRecordsButton">Φίλτρο</button>
+    </form>
+    </div>
+    <div id="StudentTableContainer" style="width: 100%;"></div>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+		  	 var greekMessages = {
+            serverCommunicationError: 'Πρόβλημα στην επικοινωνία με τον server.',
+            loadingMessage: 'Περιμένετε...',
+            noDataAvailable: 'Δεν υπάρχουν διαθέσιμα δεδομένα!',
+            addNewRecord: '+ Προσθήκη εγγραφής',
+            editRecord: 'Επεξεργασία Εγγραφής',
+            areYouSure: 'Είστε σίγουρος;',
+            deleteConfirmation: 'Η εγγραφή θα διαγραφεί. Είστε σίγουρος;',
+            save: 'Αποθήκευση',
+            saving: 'Αποθήκευση...',
+            cancel: 'Ακύρωση',
+            deleteText: 'Διαγραφή',
+            deleting: 'Διαγραφή...',
+            error: 'Σφάλμα',
+            close: 'Κλείσιμο',
+            cannotLoadOptionsFor: '{0} δεν είναι δυνατή η φόρτωση επιλογών!'
+           // pagingInfo: 'Σελίδα {2}, {0} από {1} ',
+            //canNotDeletedRecords: '{1} kayıttan {0} adedi silinemedi!',
+            //deleteProggress: '{1} kayıttan {0} adedi silindi, devam ediliyor...'
+        };
+		    //Prepare jTable
+			$('#StudentTableContainer').jtable({
+				messages: greekMessages, //Lozalize
+				title: 'Αξιολόγηση ανά γραμματισμό',
+				sorting: true,
+				defaultSorting: 'StudentLname ASC',
+				//paging: true,
+				//pageSize: 8,
+				actions: {
+					listAction: websvcroot+'/StudentsActions.php?action=list&type=educ&classid='+classid+'&eduyear='+eduyear
+				},
+				fields: {
+					StudentID: {
+						key: true,
+						create: false,
+						edit: false,
+						list: false
+					}
+					,
+					//CHILD TABLE DEFINITION FOR "PHONE NUMBERS"
+					Grades: {
+					    title: 'Αξιολόγηση',
+					    width: '10%',
+					    sorting: false,
+					    edit: false,
+					    create: false,
+					    display: function (studentData) {
+						//Create an image that will be used to open child table
+						var $img = $('<img src="'+websderoot+'images/note.png" title="Βαθμοί εκπαιδευόμενου" />');
+						//Open child table when user clicks the image
+						$img.click(function () {
+						    $('#StudentTableContainer').jtable('openChildTable',
+							    $img.closest('tr'),
+							    {
+								title: studentData.record.StudentFname + ' ' + studentData.record.StudentLname,
+								actions: {
+								    listAction: websvcroot+'/StudentGrades.php?action=list&tag=studentgrades&studentid=' + studentData.record.StudentID + '&eduyear='+eduyear,
+								    updateAction: websvcroot+'/StudentGrades.php?action=update&tag=studentgrades&studentid=' + studentData.record.StudentID + '&eduyear='+eduyear
+								    },
+								fields: {
+								    StudentID: {
+									type: 'hidden',
+									defaultValue: studentData.record.StudentId
+								    },
+								    LessonID: {
+									key: true,
+									create: false,
+									edit: false,
+									list: true
+								    },
+								    LessonName: {
+									    title: 'Γραμματισμος',
+									    width: '10%',
+									    edit: false
+								    },
+								    asemester: {
+									    title: 'Α Τετρ.',
+									    width: '30%',
+									    type: 'textarea'
+								    },
+								    aendiaferon: {
+									    title: 'Α-Ενδιαφ.',
+									    width: '10%',
+									    options: { '': '', 'Ελάχιστο': 'Ελάχιστο', 'Μέτριο': 'Μέτριο', 'Ικανοποιητικό': 'Ικανοποιητικό', 'Μεγάλο': 'Μεγάλο', 'Πολύ Μεγάλο': 'Πολύ Μεγάλο'}
+								    },
+								    aantapokrisi: {
+									    title: 'Α-Ανταπόκ.',
+									    width: '10%',
+									    options: { '': '', 'Ανεπαρκώς': 'Ανεπαρκώς', 'Επαρκώς': 'Επαρκώς', 'Καλά': 'Καλά', 'Πολύ καλά': 'Πολύ καλά', 'Άριστα': 'Άριστα'}
+								    },
+								    bsemester: {
+									    title: 'Β Τετρ.',
+									    width: '30%',
+									    type: 'textarea'
+								    },
+								    bendiaferon: {
+									    title: 'Β-Ενδιαφ.',
+									    width: '10%',
+									    options: { '': '', 'Ελάχιστο': 'Ελάχιστο', 'Μέτριο': 'Μέτριο', 'Ικανοποιητικό': 'Ικανοποιητικό', 'Μεγάλο': 'Μεγάλο', 'Πολύ Μεγάλο': 'Πολύ Μεγάλο'}
+								    },
+								    bantapokrisi: {
+									    title: 'Β-Ανταπόκ.',
+									    width: '10%',
+									    options: { '': '', 'Ανεπαρκώς': 'Ανεπαρκώς', 'Επαρκώς': 'Επαρκώς', 'Καλά': 'Καλά', 'Πολύ καλά': 'Πολύ καλά', 'Άριστα': 'Άριστα'}
+								    }
+								    ,
+								    finalgrade: {
+									    title: 'Τελ. Βαθμός',
+									    width: '10%',
+									    options: { '':'','0': '0','1': '1','2': '2','3': '3','4': '4','5': '5','6': '6','7': '7','8': '8','9': '9',
+									    '10': '10','11': '11','12': '12','13': '13','14': '14','15': '15','16': '16','17': '17','18': '18','19': '19','20': '20'
+									    }
+								    }
+								}
+							    }, function (data) { //opened handler
+								data.childTable.jtable('load');
+							    });
+						});
+						//Return image to show on the person row
+						return $img;
+					    }
+					}
+					,
+					StudentLname: {
+						title: 'Επίθετο',
+						width: '45%',
+						edit: false
+					},
+					StudentFname: {
+						title: 'Όνομα',
+						width: '45%',
+						edit: false
+					}
+									
+				}
+			});
+
+			//Load person list from server
+			$('#StudentTableContainer').jtable('load');
+
+		});
+
+	</script>
+    <script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+
+  </body>
+</html>

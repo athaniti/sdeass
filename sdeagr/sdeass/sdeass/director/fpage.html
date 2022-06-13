@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Μεσολογγίου</title>
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+    
+    
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../js/fpage.js"></script>
+    <script type="text/javascript">
+      isLoggedIn();
+      var userid = window.localStorage["userid"];
+    </script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+  <body id="stage" class="theme" onLoad="fillPage();">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();</script>
+    <script>eduyear=getSelectedAcademicYear();</script>
+  </script>
+  
+    </div>
+  <h1>Προσωπική Σελίδα του: <span id="teachername"></span></h1>
+  <div class="row">
+        <div class="col-sm-4">
+	  <div class="panel panel-success">
+	    <div class="panel-heading">
+              <h3 class="panel-title">Αξιολογήσεις</h3>
+            </div>
+	    <div class="panel-body">
+	      <script>
+		if (userid!=100){
+		  document.write('<a id="litgrades" href="'+sderoot+'educators/gradesperstudent.html?teacherid='+userid+'">Αξιολόγηση Εκπαιδευόμενων ανά Γραμματισμό</a>');
+		  document.write('<br /><a id="projgrades" href="'+sderoot+'educators/gradesprojects.html?teacherid='+userid+'&eduyear='+eduyear+'">Αξιολόγηση Εκπαιδευόμενων σε Project - Εργαστήρια</a>');  
+		}
+	      </script>
+	      
+            </div>
+	  </div>
+	</div>
+	<div class="col-sm-4">
+	  <div class="panel panel-success">
+	    <div class="panel-heading">
+              <h3 class="panel-title">Τμήμα Ευθύνης: <span id="respclass"></span> </h3>
+            </div>
+	    <div class="panel-body">
+	      <div id="aksiologisi"></div>
+	      <div id="aksiologisia"></div>
+	      <div id="aksiologisib"></div>
+            </div>
+	  </div>
+	</div>
+	    <div class="col-sm-4">
+	  <div class="panel panel-success">
+	    <div class="panel-heading">
+              <h3 class="panel-title">Projects / Εργαστήρια:</h3>
+            </div>
+	    <div class="panel-body">
+	      <div id="projects"></div>
+            </div>
+	  </div>
+	</div>
+	
+	<div class="col-sm-4">
+	<div class="panel panel-success">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Διαχείριση Αξιολογήσεων</h3>
+	  </div>
+	  <div class="panel-body">
+	    <script type="text/javascript">
+	    document.write('<a href="'+sderoot+'admin/gradesperstudent.html?eduyear='+eduyear+'" class="adminbtn">Αξιολόγηση Εκπαιδευόμενων ανά Μάθημα</a>');
+	    document.write('<br /><a href="'+sderoot+'admin/projectgrades.html?eduyear='+eduyear+'" class="adminbtn">Αξιολόγηση Εκπαιδευόμενων ανά Project - Εργαστήριο</a>');
+	    document.write('<br /><a href="'+sderoot+'admin/generalgradesperstudent.html?eduyear='+eduyear+'" class="adminbtn">Γενική Αξιολόγηση Εκπαιδευόμενων</a>');
+	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&semester=a&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή σε Word για το Α\' Τετράμηνο</a>');
+	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή σε Word για το B\' Τετράμηνο</a>');
+	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=endiaferonantapokrisi&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Ενδιαφέροντος - Ανταπόκρισης Τελικό</a>');
+	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=arithmetic&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αριθμητικής Βαθμολογίας σε Word</a>');
+		//document.write('<br /><a href="'+websvcroot+'detailedgrades02.php?eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</a>');
+			document.write('<br /><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'+eduyear+'">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</button>');
+
+	    </script>
+	  </div>
+	</div>
+      </div>
+  </div>
+  
+  <div id="fpage" data-role="page" style="visibility: hidden;">
+    
+    <h2>Μαθήματα</h2>
+    
+    <ul data-role="listview" id="lessons" data-inset="true">
+    </ul>
+    
+    <h2>Τάξεις</h2>
+    
+    <ul data-role="listview" id="classes" data-inset="true">
+    </ul>
+    
+   
+    
+   </div>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+  
+  </body>
+  
+</html>

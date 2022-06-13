@@ -1,0 +1,129 @@
+<html>
+  <head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>Σύστημα Διαχείρισης Σ.Δ.Ε. Αγρινίου</title>
+    <!--<link rel="stylesheet" href="css/main.css" type="text/css">
+     Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+      <link href="../css/themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+	<link href="../js/jtable/themes/lightcolor/orange/jtable.css" rel="stylesheet" type="text/css" />
+    <script src="../js/main.js" type="text/javascript"></script>
+	<script src="../js/grades.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="../js/jtable/jquery.jtable.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		isLoggedIn();
+		
+    	</script>
+  <body id="stage" class="theme">
+  <div id="usermenu"  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <script>getMenu();</script>
+  </script>
+    </div>
+    <div id="gradestitle"></div>
+    <div id="GradesContainer" style="width: 100%;">
+    
+    
+    <div id="GradesTableContainer" style="width: 100%;"></div>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+		  	 var greekMessages = {
+            serverCommunicationError: 'Πρόβλημα στην επικοινωνία με τον server.',
+            loadingMessage: 'Περιμένετε...',
+            noDataAvailable: 'Δεν υπάρχουν διαθέσιμα δεδομένα!',
+            addNewRecord: '+ Προσθήκη εγγραφής',
+            editRecord: 'Επεξεργασία Εγγραφής',
+            areYouSure: 'Είστε σίγουρος;',
+            deleteConfirmation: 'Η εγγραφή θα διαγραφεί. Είστε σίγουρος;',
+            save: 'Αποθήκευση',
+            saving: 'Αποθήκευση...',
+            cancel: 'Ακύρωση',
+            deleteText: 'Διαγραφή',
+            deleting: 'Διαγραφή...',
+            error: 'Σφάλμα',
+            close: 'Κλείσιμο',
+            cannotLoadOptionsFor: '{0} δεν είναι δυνατή η φόρτωση επιλογών!'
+           // pagingInfo: 'Σελίδα {2}, {0} από {1} ',
+            //canNotDeletedRecords: '{1} kayıttan {0} adedi silinemedi!',
+            //deleteProggress: '{1} kayıttan {0} adedi silindi, devam ediliyor...'
+        };
+		    //Prepare jTable
+			$('#GradesTableContainer').jtable({
+				messages: greekMessages, //Lozalize
+				title: 'Αξιολόγηση project - εργαστηρίου',
+				sorting: true,
+				defaultSorting: 'StudentLname ASC',
+				//paging: true,
+				//pageSize: 8,
+				actions: {
+					listAction: websvcroot+'/StudentGrades.php?action=list&tag=projectperstudent',
+					updateAction: websvcroot+'/StudentGrades.php?action=update&tag=projectperstudent'
+				},
+				fields: {
+					ProjectID: {
+						key: true,
+						create: false,
+						edit: false,
+						list: false
+					},
+					StudentID: {
+					  key: true,
+					  create: false,
+					  edit: false,
+					  list: false
+					},
+					StudentLname: {
+						title: 'Επίθετο',
+						width: '10%',
+						edit: false
+					},
+					StudentFname: {
+						title: 'Όνομα',
+						width: '10%',
+						edit: false
+					},
+					ProjectName: {
+						title: 'Project - Εργαστήριο',
+						width: '10%',
+						edit: false
+					},
+					ProjectType: {
+						title: 'Τύπος',
+						width: '10%',
+						edit: true,
+						list: false
+						
+					},
+					asemester: {
+						title: 'Α Τετρ.',
+						width: '30%',
+						type: 'textarea'
+					},
+					bsemester: {
+						title: 'Β Τετρ.',
+						width: '30%',
+						type: 'textarea'
+					}
+									
+				}
+			});
+
+			//Load person list from server
+			$('#GradesTableContainer').jtable('load');
+
+		});
+
+	</script>
+	<script src="../js/bootstrap.min.js"></script>
+<script src="../js/functions.js"></script>
+  </body>
+</html>
