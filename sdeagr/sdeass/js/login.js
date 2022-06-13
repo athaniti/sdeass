@@ -63,7 +63,7 @@ function findUser(data) {
 	    //console.log("click");
 	    if(u != '' && p!= '') 
 	    {
-		$.getJSON('/sde/websvc/services.php?tag=login&username='+u+'&password='+p+'&callback=?', findUser);
+		$.getJSON(websvcroot+'services.php?tag=login&username='+u+'&password='+p+'&callback=?', findUser);
 	                
 	        $("#submitButton").removeAttr("disabled");
 	    } else {
