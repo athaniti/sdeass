@@ -206,8 +206,8 @@ while($row = $result->fetch_assoc())
               'titleprotocolnumber'=>$titleprotocolnumber,
               'protocoln'=>$protocoln
       			  );
-              $protocoln=$protocoln+1;
-              $titleprotocolnumber=$titleprotocolnumber+2;
+              $protocoln=$protocoln+3; //+1 when Vevaioseis are protocoled after titles and apolytiria, +3 when all 3 of them are together
+              $titleprotocolnumber=$titleprotocolnumber+3; //+2 when Vevaioseis are protocoled after titles and apolytiria, +3 when all 3 of them are together
 			  } //End of if(count)
 		}
 		catch (Exception $e)
@@ -221,8 +221,9 @@ while($row = $result->fetch_assoc())
 // -----------------
 // Load the template
 // -----------------
-
-$template = 'templates/sdetpl05.docx';
+try 
+{
+$template = 'templates/sdetpl05_mes_bw.docx';
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 // --------------------------------------------
@@ -257,5 +258,10 @@ if ($save_as==='') {
     $netfilename = str_replace('templates/','',$output_file_name);
     $destination_path = '../../sdeass/documents/';
     rename($source_file, $destination_path . pathinfo($source_file, PATHINFO_BASENAME));
-    exit('File <a href="/sdeass/documents/'.$netfilename.'" target="_blank">['.$netfilename.']</a> has been created.');
+    exit('File <a href="/sdemesol/sdeass/documents/'.$netfilename.'" target="_blank">['.$netfilename.']</a> has been created.');
 }
+}
+catch (Exception $e)
+		{
+			echo 'Caught exception: ',  $e->getMessage(), "\n";
+		}
