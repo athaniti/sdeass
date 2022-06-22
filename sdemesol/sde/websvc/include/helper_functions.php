@@ -118,14 +118,44 @@ class Helper_Functions {
     }
 
     public function getArthro($grade) {
-      $ftgrade='ο';
+      $ftgrade='Ο';
       switch ($grade)
       {
       case '2':
-          $ftgrade = 'η';
+          $ftgrade = 'Η';
           break;
       default:
-          $ftgrade = 'ο';
+          $ftgrade = 'Ο';
+      }
+
+      return $ftgrade;
+
+    }
+	
+	public function getArthro2($grade) {
+      $ftgrade='ου';
+      switch ($grade)
+      {
+      case '2':
+          $ftgrade = 'ης';
+          break;
+      default:
+          $ftgrade = 'ου';
+      }
+
+      return $ftgrade;
+
+    }
+	
+	public function getKataliksi($grade) {
+      $ftgrade='ενος';
+      switch ($grade)
+      {
+      case '2':
+          $ftgrade = 'ενη';
+          break;
+      default:
+          $ftgrade = 'ενος';
       }
 
       return $ftgrade;
