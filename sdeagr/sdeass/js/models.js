@@ -280,7 +280,7 @@ var model = function(){
 
 	  //submit to server via POST
 	  $.post(
-	      '/sde/websvc/person_save.php',
+	      websvcroot+'/person_save.php',
 	      {'action' : 'update', 'student' : student, 'eduyear' : eduyear},
 	      function(response){
 		if (response=='true')
