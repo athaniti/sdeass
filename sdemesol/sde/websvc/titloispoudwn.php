@@ -116,15 +116,16 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 // Prepare some data for the demo
 // ------------------------------
 //Get records from database
-$filename = 'Βεβαιώσεις Αριθμητικής '.$eduyearstr;
+$filename = 'Τίτλοι Σπουδών '.$eduyearstr;
 
-$qry = "SELECT s.StudentID AS studentid, s.StudentFname AS fname, s.Sex as sex, s.FathernameGen as fathername,
-s.StudentLname AS lname, s.mitrooarrenwn as mitrooar, s.dimotologio as dimotologio, s.dimos as dimos, s.nomos as nomos
+$qry = "SELECT s.StudentID AS studentid, s.StudentFname AS fname, s.Sex as sex, s.FathernameGen as fathername, s.MotherNameGen as mname, s.Genos as genos,
+s.StudentLname AS lname, s.Age as birthyear, s.ipikootita as ipikootita, s.mitrooarrenwn as mitrooar, s.dimotologio as dimotologio, s.dimos as dimos, s.nomos as nomos
 FROM `_students_class` as l INNER JOIN  students as s ON s.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = l.ClassID
  WHERE l.eduperiod =  '".$eduyear."' AND class.classID>3
 AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)
 ORDER BY lname, fname";
+
 
 
 //$result = mysql_query($qry) or die(mysql_error());
@@ -143,68 +144,82 @@ while($row = $result->fetch_assoc())
 {
         $studentid = $row["studentid"];
         $studentsex = $hf->getArthro($row["sex"]);
+		$studentgenos = $row["genos"];
+		if ($studentgenos=='0') {$studentgenos='..............';}
+		$katalixi1 = $hf->getKataliksi($row["sex"]);
+		$katalixi2 = $hf->getArthro2($row["sex"]);
         $fathernamegen = $row["fathername"];
-        $qry = "SELECT l.LessonName, g.finalgrade as finalgrade
-        FROM `_students_lessons` as g INNER JOIN lessons as l ON g.LessonID = l.LessonID
+        $qry = "SELECT g.finalendiaferon as endiaferon, g.finalantapokrisi as antapokrisi
+        FROM `_students_general`  g
         WHERE g.eduyear =  '".$eduyear."'
-        AND g.StudentID=".$studentid." AND l.lessonID<9";
+        AND g.StudentID=".$studentid;
         //$result2 = mysql_query($qry) or die(mysql_error());
+		
 		    $result2 = $con->query($qry);
         $lessons = array();
         $i = 0;
         $total = 0;
         $count = 0;
+		$endiaferon = '............';
+		$antapokrisi = '............';
+		 
         while($row2 = $result2->fetch_assoc())
         {
-          $lessons[$i] = $row2['finalgrade'];
-          $total += intval($row2["finalgrade"]);
-          if (intval($row2["finalgrade"])>0) $count=$count+1;
+
+			if (!isset($row2['endiaferon']) || !is_null($row2['endiaferon']) || !empty($row2['endiaferon'])) {$endiaferon = $row2['endiaferon'];}
+			if (!isset($row2['antapokrisi']) || !is_null($row2['antapokrisi']) || !empty($row2['antapokrisi'])) {$antapokrisi = $row2['antapokrisi'];}
+		  
+        }
+		
+		/// 
+		
+		
+		$qry3 = "SELECT l.LessonName, g.finalgrade as finalgrade
+        FROM `_students_lessons` as g INNER JOIN lessons as l ON g.LessonID = l.LessonID
+        WHERE g.eduyear =  '".$eduyear."'
+        AND g.StudentID=".$studentid." AND l.lessonID<9";
+        //$result2 = mysql_query($qry) or die(mysql_error());
+		    $result3 = $con->query($qry3);
+        $lessons = array();
+        $i = 0;
+        $total = 0;
+        $count = 0;
+        while($row3 = $result3->fetch_assoc())
+        {
+          $lessons[$i] = $row3['finalgrade'];
+          $total += intval($row3["finalgrade"]);
+          if (intval($row3["finalgrade"])>0) $count=$count+1;
           $i = $i + 1;
         }
+		
+		
+		///
 
 		try //Get Student's Numeric grades
     {
 			if ($count>0 and $total>60)
 			{
-  			$ints = intval($total/$count);
-
-  			$decs = $total%$count;
-  			$intstext = $hf->getFulltextGrade($ints);
-  			$decstext = $hf->getFulltextGrade($decs);
-  			$basecounttext = $hf->getFulltext2($count);
-
-  			$decsarithm = (intval($decs)>0) ? '& '.$decs.'/'.$count : '';
-  			$decsarithmtext = (intval($decs)>0) ? '& '.$decstext.'/'.$basecounttext : '';
-			     $data[] = array('studentid'=> $studentid, 'firstname'=>$studentsex.' '.$row["fname"],
+  			//echo $count + ' ' + $total;
+			     $data[] = array(
+				 'studentid'=> $studentid, 
+				 'firstname'=>$row["fname"],
       			 'lname'=>  $row["lname"],
       			 'ftname'=>  $fathernamegen,
+				 'mname'=>  $row["mname"],
+				 'genos'=>  $studentgenos,
       			 'arthro'=>  $studentsex,
-      			 'glossa'=> $lessons[0],
-      			 'agglika'=> $lessons[1],
-      			 'pliroforiki'=> $lessons[2],
-      			 'mathim'=> $lessons[3],
-      			 'phys'=> $lessons[4],
-      			 'periv'=> $lessons[5],
-      			 'koin'=> $lessons[6],
-      			 'kallit'=> $lessons[7],
-      			  'glossatext'=> $hf->getFulltextGrade($lessons[0]),
-      			  'agglikatext'=> $hf->getFulltextGrade($lessons[1]),
-      			  'pliroforikitext'=> $hf->getFulltextGrade($lessons[2]),
-      			  'mathimtext'=> $hf->getFulltextGrade($lessons[3]),
-      			  'phystext'=> $hf->getFulltextGrade($lessons[4]),
-      			  'perivtext'=> $hf->getFulltextGrade($lessons[5]),
-      			  'kointext'=> $hf->getFulltextGrade($lessons[6]),
-      			  'kallittext'=> $hf->getFulltextGrade($lessons[7]),
-      			  'ints'=> $ints,
-      			  'decs'=> $decs,
-      			  'basecount'=> $count,
-      			  'intstext'=> $intstext,
-      			  'decstext'=> $decstext,
-      			  'decsarithm'=> $decsarithm,
-      			  'decsarithmtext'=> $decsarithmtext,
-      			  'basecounttext'=> $basecounttext,
+      			 'mitrooar'=>  $row["mitrooar"],
+				 'dimotologio'=>  $row["dimotologio"],
+				 'dimos'=>  $row["dimos"],
+				 'nomos'=>  $row["nomos"],
+				 'ipikootita'=>  $row["ipikootita"],
+				 'birthyear'=>  $row["birthyear"],
+      			 'endiaferon'=>  $endiaferon,
+				 'antapokrisi'=>  $antapokrisi,
               'titleprotocolnumber'=>$titleprotocolnumber,
-              'protocoln'=>$protocoln
+              'protocoln'=>$protocoln,
+			  'katalixi1'=>  $katalixi1,
+			  'katalixi2'=>  $katalixi2
       			  );
               $protocoln=$protocoln+3; //+1 when Vevaioseis are protocoled after titles and apolytiria, +3 when all 3 of them are together
               $titleprotocolnumber=$titleprotocolnumber+3; //+2 when Vevaioseis are protocoled after titles and apolytiria, +3 when all 3 of them are together
@@ -216,15 +231,15 @@ while($row = $result->fetch_assoc())
 		}
 
 
-}//End of whilw loop
+}//End of while loop
 
 // -----------------
 // Load the template
 // -----------------
 try 
 {
-$template = 'templates/sdetpl05_mes_bw.docx';
-$TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
+$template2 = 'templates/titlos.docx';
+$TBS->LoadTemplate($template2, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 // --------------------------------------------
 // Merging and other operations on the template
@@ -242,7 +257,7 @@ $TBS->PlugIn(OPENTBS_DELETE_COMMENTS);
 
 // Define the name of the output file
 $save_as = (isset($_GET['save_as']) && (trim($_GET['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_GET['save_as']) : '';
-$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template);
+$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template2);
 //$output_file_name = str_replace('templates/','../../../sdeass/documents/',$output_file_name);
 $save_as='1';
 if ($save_as==='') {

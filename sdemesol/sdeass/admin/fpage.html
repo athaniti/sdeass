@@ -190,7 +190,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Κλείσιμο</button>
-					<button type="button"  id="submitForm" class="btn btn-primary">Εξαγωγή αρχείου</button>
+					<button type="button"  id="submitForm2" class="btn btn-primary">Εξαγωγή αρχείου</button>
 				</div>
 			</div>
 		</div>
@@ -263,9 +263,9 @@ $(document).ready(function () {
             type: "POST",
             data: postData,
 			success: function(data, textStatus, jqXHR) {
-                $('#exampleModal .modal-header .modal-title').html("Result");
-                $('#exampleModal .modal-body').html(data);
-                $("#submitForm").remove();
+                $('#exampleModal2 .modal-header .modal-title').html("Result");
+                $('#exampleModal2 .modal-body').html(data);
+                $("#submitForm2").remove();
             },
             error: function(jqXHR, status, error) {
                 console.log(status + ": " + error);
@@ -274,7 +274,7 @@ $(document).ready(function () {
         e.preventDefault();
     });
      
-    $("#submitForm").on('click', function() {
+    $("#submitForm2").on('click', function() {
         $("#titlesexport-form").submit();
     });
 });
