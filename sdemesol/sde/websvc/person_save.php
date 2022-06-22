@@ -10,10 +10,9 @@
   /**
  * check for POST request
  */
-  require_once 'include/db_functions.php';
+ require_once 'include/db_functions.php';
     $db = new DB_Functions();
 	$con = $db->con;
-    $con->query(DB_DATABASE);
 
 $eduyear = (!empty($_POST['eduyear'])) ? $_POST['eduyear'] : '';
 $action = (!empty($_POST['action'])) ? $_POST['action'] : ''; //action to be used(insert, delete, update, fetch)
