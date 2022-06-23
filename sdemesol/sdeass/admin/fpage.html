@@ -85,9 +85,9 @@
 	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=endiaferonantapokrisi&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Ενδιαφέροντος - Ανταπόκρισης Τελικό</a>');
 	    document.write('<br /><a href="'+websvcroot+'expsvc.php?type=w&tag=arithmetic&semester=b&eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αριθμητικής Βαθμολογίας σε Word</a>');
 		//document.write('<br /><a href="'+websvcroot+'detailedgrades02.php?eduyear='+eduyear+'" class="adminbtn">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</a>');
-			document.write('<br /></br><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'+eduyear+'">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</button>');
-			
-			document.write('</br><br /><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="'+eduyear+'">Εξαγωγή Τίτλων Σπουδών σε Word</button>');
+		document.write('<br /></br><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'+eduyear+'">Εξαγωγή Αναλυτικής Βαθμολογίας σε Word</button>');
+		document.write('</br><br /><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="'+eduyear+'">Εξαγωγή Τίτλων Σπουδών σε Word</button>');
+		document.write('</br><br /><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" data-whatever="'+eduyear+'">Εξαγωγή Αποδεικτικών Τίτλων Σπουδών σε Word</button>');
 
 	    </script>
 	  </div>
@@ -178,19 +178,55 @@
 							<label for="title-protocol-date" class="col-form-label">Ημερομηνία Πρωτ Τίτλου Σπουδών (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
 							<input type="text" class="form-control" name="title-protocol-date" id="title-protocol-date"></textarea>
 						</div>
-						<div class="form-group">
-							<label for="protocol-number" class="col-form-label">Αρχικός Αρ. Πρωτ Αναλυτικής Βαθμολογίας:</label>
-							<input type="text" class="form-control" name="protocol-number" id="protocol-number"></textarea>
-						</div>
-						<div class="form-group">
-							<label for="protocol-date" class="col-form-label">Ημερομηνία Πρωτ Αναλυτικής Βαθμολογίας (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
-							<input type="text" class="form-control" name="protocol-date" id="protocol-date"></textarea>
-						</div>
+						
 					</form>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Κλείσιμο</button>
 					<button type="button"  id="submitForm2" class="btn btn-primary">Εξαγωγή αρχείου</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Εξαγωγή αποδεικτικών τίτλων σπουδών</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="apodeiktikaexport-form" action="/sdemesol/sde/websvc/apodeiktika.php" method="POST">
+						<div class="form-group">
+							<label for="eduyear" class="col-form-label">Περίοδος:</label>
+							<input type="text" class="form-control" name="eduyear" id="eduyear">
+						</div>
+						<div class="form-group">
+							<label for="praxi" class="col-form-label">Αρ. Πράξης:</label>
+							<input type="text" class="form-control" name="praxi" id="praxi"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="praxi-protocol-date" class="col-form-label">Ημερομηνία Πράξης (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
+							<input type="text" class="form-control" name="praxi-protocol-date" id="praxi-protocol-date"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="title-protocol-number" class="col-form-label">Αρχικός Αρ. Πρωτ Αποδεικτικού Τίτλου Σπουδών:</label>
+							<input type="text" class="form-control" name="title-protocol-number" id="title-protocol-number"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="title-protocol-date" class="col-form-label">Ημερομηνία Πρωτ Αποδεικτικού Τίτλου Σπουδών (ΗΗ-ΜΜ-ΕΕΕΕ):</label>
+							<input type="text" class="form-control" name="title-protocol-date" id="title-protocol-date"></textarea>
+						</div>
+						
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Κλείσιμο</button>
+					<button type="button"  id="submitForm3" class="btn btn-primary">Εξαγωγή αρχείου</button>
 				</div>
 			</div>
 		</div>
@@ -214,6 +250,18 @@ $('#exampleModal2').on('show.bs.modal', function (event) {
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text('Εξαγωγή τίτλων σπουδών για το σχ. έτος ' + recipient)
+  modal.find('.modal-body  #eduyear').val(recipient)
+})
+</script>
+
+<script>
+$('#exampleModal3').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Εξαγωγή αποδεικτικών τίτλων σπουδών για το σχ. έτος ' + recipient)
   modal.find('.modal-body  #eduyear').val(recipient)
 })
 </script>
@@ -276,6 +324,34 @@ $(document).ready(function () {
      
     $("#submitForm2").on('click', function() {
         $("#titlesexport-form").submit();
+    });
+	
+	
+	$("#apodeiktikaexport-form").on("submit", function(e) {
+		event.preventDefault(); //prevent default action 
+        var postData = $(this).serializeArray();
+		//alert(postData);
+		console.log(postData);
+        var formURL = $(this).attr("action");
+		console.log(formURL);
+        $.ajax({
+            url: formURL,
+            type: "POST",
+            data: postData,
+			success: function(data, textStatus, jqXHR) {
+                $('#exampleModal3 .modal-header .modal-title').html("Result");
+                $('#exampleModal3 .modal-body').html(data);
+                $("#submitForm3").remove();
+            },
+            error: function(jqXHR, status, error) {
+                console.log(status + ": " + error);
+            }
+        });
+        e.preventDefault();
+    });
+     
+    $("#submitForm3").on('click', function() {
+        $("#apodeiktikaexport-form").submit();
     });
 });
 

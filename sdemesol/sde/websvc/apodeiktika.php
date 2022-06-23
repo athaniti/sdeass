@@ -203,8 +203,8 @@ while($row = $result->fetch_assoc())
   			//echo $count + ' ' + $total;
 			     $data[] = array(
 				 'studentid'=> $studentid, 
+				 'firstname'=>$row["fname"],
 				 'mitroo'=>$row["scode"],
-      			 'firstname'=>$row["fname"],
       			 'lname'=>  $row["lname"],
       			 'ftname'=>  $fathernamegen,
 				 'mname'=>  $row["mname"],
@@ -242,7 +242,7 @@ while($row = $result->fetch_assoc())
 // -----------------
 try 
 {
-	$template2 = 'templates/titlos.docx';
+	$template2 = 'templates/apodeiktiko.docx';
 	
 	$TBS->LoadTemplate($template2, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
