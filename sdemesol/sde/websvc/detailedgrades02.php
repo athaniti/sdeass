@@ -178,7 +178,7 @@ while($row = $result->fetch_assoc())
 			     $data[] = array('studentid'=> $studentid, 'firstname'=>$studentsex.' '.$row["fname"],
       			 'lname'=>  $row["lname"],
       			 'ftname'=>  $fathernamegen,
-      			 'arthro'=>  $studentsex,
+      			 'arthro'=>  mb_strtolower($arthro, mb_detect_encoding($arthro)),
       			 'glossa'=> $lessons[0],
       			 'agglika'=> $lessons[1],
       			 'pliroforiki'=> $lessons[2],

@@ -119,7 +119,7 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 //Get records from database
 $filename = 'Τίτλοι Σπουδών '.$eduyearstr;
 
-$qry = "SELECT s.StudentID AS studentid, s.StudentCode as scode, s.StudentFname AS fname, s.Sex as sex, s.FathernameGen as fathername, s.MotherNameGen as mname, s.Genos as genos,
+$qry = "SELECT s.StudentID AS studentid, s.StudentCode as scode, s.StudentFname AS fname, s.Sex as sex, s.Fathername as fathername, s.MotherName as mname, s.Genos as genos,
 s.StudentLname AS lname, s.Age as birthyear, s.ipikootita as ipikootita, s.mitrooarrenwn as mitrooar, s.dimotologio as dimotologio, s.dimos as dimos, s.nomos as nomos
 FROM `_students_class` as l INNER JOIN  students as s ON s.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = l.ClassID
@@ -221,7 +221,8 @@ while($row = $result->fetch_assoc())
               'titleprotocolnumber'=>$titleprotocolnumber,
 			  'apodeiktikoprotocolnumber'=>$apodeiktikoprotocolnumber,
               'katalixi1'=>  $katalixi1,
-			  'katalixi2'=>  $katalixi2
+			  'katalixi2'=>  $katalixi2,
+              'protocoln'=>$protocoln
       			  );
 				
               $protocoln=$protocoln+3; //+1 when Vevaioseis are protocoled after titles and apolytiria, +3 when all 3 of them are together
@@ -242,7 +243,7 @@ while($row = $result->fetch_assoc())
 // -----------------
 try 
 {
-	$template2 = 'templates/apodeiktiko.docx';
+	$template2 = 'templates/aitisianalitikis.docx';
 	
 	$TBS->LoadTemplate($template2, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
@@ -291,47 +292,3 @@ catch (Exception $e)
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
 		
-try 
-{
-	$template2 = 'templates/apodeiktiko.docx';
-	$TBS->LoadTemplate($template2, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
-
-	// --------------------------------------------
-	// Merging and other operations on the template
-	// --------------------------------------------
-
-	// Merge data in the body of the document
-	$TBS->MergeBlock('a', $data);
-
-	// Delete comments
-	$TBS->PlugIn(OPENTBS_DELETE_COMMENTS);
-
-	// -----------------
-	// Output the result
-	// -----------------
-
-	// Define the name of the output file
-	$save_as = (isset($_GET['save_as']) && (trim($_GET['save_as'])!=='') && ($_SERVER['SERVER_NAME']=='localhost')) ? trim($_GET['save_as']) : '';
-	$output_file_name = str_replace('.', '_'.date('Y-m-d').$save_as.'.', $template2);
-	//$output_file_name = str_replace('templates/','../../../sdeass/documents/',$output_file_name);
-	$save_as='1';
-	if ($save_as==='') {
-		// Output the result as a downloadable file (only streaming, no data saved in the server)
-		$TBS->Show(OPENTBS_DOWNLOAD, $output_file_name); // Also merges all [onshow] automatic fields.
-		// Be sure that no more output is done, otherwise the download file is corrupted with extra data.
-		exit();
-	} else {
-		// Output the result as a file on the server.
-		$TBS->Show(OPENTBS_FILE, $output_file_name); // Also merges all [onshow] automatic fields.
-		// The script can continue.
-		$source_file = $output_file_name;
-		$netfilename = str_replace('templates/','',$output_file_name);
-		$destination_path = '../../sdeass/documents/';
-		rename($source_file, $destination_path . pathinfo($source_file, PATHINFO_BASENAME));
-		exit('File <a href="/sdemesol/sdeass/documents/'.$netfilename.'" target="_blank">['.$netfilename.']</a> has been created.');
-	}
-}
-catch (Exception $e)
-		{
-			echo 'Caught exception: ',  $e->getMessage(), "\n";
-		}
