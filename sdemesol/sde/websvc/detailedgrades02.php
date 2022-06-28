@@ -175,10 +175,10 @@ while($row = $result->fetch_assoc())
 
   			$decsarithm = (intval($decs)>0) ? '& '.$decs.'/'.$count : '';
   			$decsarithmtext = (intval($decs)>0) ? '& '.$decstext.'/'.$basecounttext : '';
-			     $data[] = array('studentid'=> $studentid, 'firstname'=>$studentsex.' '.$row["fname"],
+			     $data[] = array('studentid'=> $studentid, 'firstname'=>mb_strtolower($studentsex, mb_detect_encoding($studentsex)).' '.$row["fname"],
       			 'lname'=>  $row["lname"],
       			 'ftname'=>  $fathernamegen,
-      			 'arthro'=>  mb_strtolower($arthro, mb_detect_encoding($arthro)),
+      			 'arthro'=>  mb_strtolower($studentsex, mb_detect_encoding($studentsex)),
       			 'glossa'=> $lessons[0],
       			 'agglika'=> $lessons[1],
       			 'pliroforiki'=> $lessons[2],
