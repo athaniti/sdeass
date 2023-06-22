@@ -122,7 +122,7 @@ $qry = "SELECT s.StudentID AS studentid, s.StudentFname AS fname, s.Sex as sex, 
 s.StudentLname AS lname, s.mitrooarrenwn as mitrooar, s.dimotologio as dimotologio, s.dimos as dimos, s.nomos as nomos
 FROM `_students_class` as l INNER JOIN  students as s ON s.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = l.ClassID
- WHERE l.eduperiod =  '".$eduyear."' AND class.classID>3
+ WHERE l.eduperiod =  '".$eduyear."' AND class.classID>3 AND s.foraksiologisi=1
 AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)
 ORDER BY lname, fname";
 

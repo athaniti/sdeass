@@ -35,6 +35,7 @@ if(!empty($student)){
   $phone = $student['phone'];
   $studentcode = $student['studentcode'];
   $isroma = $student['isroma'];
+  $foraksiologisi = $student['foraksiologisi'];
   $iscurrent = $student['iscurrent'];
   $isactive = $student['isactive'];
   $jobstatus = $student['jobstatus'];
@@ -65,7 +66,7 @@ switch($action){
 
     if(!empty($student)){
       $res = $db->updateStudentData2($student['studentid'], $studentcode, $fname, $lname, $sex, $age, $classname, $fathername, $fathernamegen,
-				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $iscurrent, $isactive, $eduyear);
+				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $foraksiologisi, $iscurrent, $isactive, $eduyear);
       echo json_encode($res);
     }
     break;
@@ -112,6 +113,7 @@ switch($action){
       $jobstatus = $row['JobStatus'];
       $monthsunemployment = $row['MonthsUnemployment'];
       $isroma = $row['IsRoma'];
+	  $foraksiologisi = $row['foraksiologisi'];
       $iscurrent = $row['IsCurrent'];
       $isactive = $row['IsActive'];
 
@@ -120,28 +122,28 @@ switch($action){
       //its false by default since
       //this is only true if the user clicks
       //on the span
-      $student_update = $studentcode_update = $fname_update = $lname_update = $age_update = $sex_update = $classname_update = $fathername_update = $fathernamegen_update = $address_update = $marital_update = $children_update = $phone_update = $jobstatus_update = $monthsunemployment_update = $isroma_update = $iscurrent_update = $isactive_update = false;
-      $studentcode_focus = $fname_focus = $lname_focus = $age_focus = $sex_focus = $classname_focus = $fathername_focus = $fathernamegen_focus = $address_focus = $marital_focus = $children_focus = $phone_focus = $jobstatus_focus = $monthsunemployment_focus = $isroma_focus = $iscurrent_focus = $isactive_focus = false;
+      $student_update = $studentcode_update = $fname_update = $lname_update = $age_update = $sex_update = $classname_update = $fathername_update = $fathernamegen_update = $address_update = $marital_update = $children_update = $phone_update = $jobstatus_update = $monthsunemployment_update = $isroma_update = $foraksiologisi_update = $iscurrent_update = $isactive_update = false;
+      $studentcode_focus = $fname_focus = $lname_focus = $age_focus = $sex_focus = $classname_focus = $fathername_focus = $fathernamegen_focus = $address_focus = $marital_focus = $children_focus = $phone_focus = $jobstatus_focus = $monthsunemployment_focus = $isroma_focus = $foraksiologisi_focus = $iscurrent_focus = $isactive_focus = false;
 
       //build the array that will store all the student records
       $students_r[] = array(
           'id' => $id, 'studentcode' => $studentcode, 'fname' => $fname, 'lname' => $lname, 'age' => $age,
 	  'sex' => $sex, 'classname' => $classname, 'fathername' => $fathername, 'fathernamegen' => $fathernamegen, 'address' => $address, 'marital' => $marital, 'children' => $children,
-	  'phone' => $phone, 'jobstatus' => $jobstatus, 'monthsunemployment' => $monthsunemployment, 'isroma' => $isroma, 'iscurrent' => $iscurrent,
+	  'phone' => $phone, 'jobstatus' => $jobstatus, 'monthsunemployment' => $monthsunemployment, 'isroma' => $isroma, 'foraksiologisi' => $foraksiologisi, 'iscurrent' => $iscurrent,
 	  'isactive' => $isactive,
           'studentUpdate' => $student_update,
           'studentcodeUpdate' => $studentcode_update, 'fnameUpdate' => $fname_update, 'lnameUpdate' => $lname_update, 'ageUpdate' => $age_update,
           'sexUpdate' => $sex_update, 'classnameUpdate' => $classname_update, 'fathernameUpdate' => $fathername_update,'fathernamegenUpdate' => $fathernamegen_update,
           'addressUpdate' => $address_update, 'maritalUpdate' => $marital_update, 'childrenUpdate' => $children_update,
 	  'phoneUpdate' => $phone_update, 'jobstatusUpdate' => $jobstatus_update, 'monthsunemploymentUpdate' => $monthsunemployment_update,
-          'isromeUpdate' => $isroma_update, 'iscurrentUpdate' => $iscurrent_update, 'isactiveUpdate' => $isactive_update,
+          'isromaUpdate' => $isroma_update, 'foraksiologisiUpdate' => $foraksiologisi_update, 'iscurrentUpdate' => $iscurrent_update, 'isactiveUpdate' => $isactive_update,
           'studentcodeHasFocus' => $studentcode_focus, 'fnameHasFocus' => $fname_focus, 'lnameHasFocus' => $lname_focus,
 	  'ageHasFocus' => $age_focus,
           'sexHasFocus' => $sex_focus, 'classnameHasFocus' => $classname_focus, 'fathernameHasFocus' => $fathername_focus,'fathernamegenHasFocus' => $fathernamegen_focus,
           'addressHasFocus' => $address_focus, 'maritalHasFocus' => $marital_focus, 'childrenHasFocus' => $children_focus,
 	  'phoneHasFocus' => $phone_focus,
 	  'jobstatusHasFocus' => $jobstatus_focus, 'monthsunemploymentHasFocus' => $monthsunemployment_focus,
-          'isromeHasFocus' => $isroma_focus, 'iscurrentHasFocus' => $iscurrent_focus, 'isactiveHasFocus' => $isactive_focus
+          'isromaHasFocus' => $isroma_focus, 'foraksiologisiHasFocus' => $foraksiologisi_focus,'iscurrentHasFocus' => $iscurrent_focus, 'isactiveHasFocus' => $isactive_focus
           );
   }
       $response["eduyear"] = $eduyear;

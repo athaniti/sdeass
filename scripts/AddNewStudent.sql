@@ -1,0 +1,3 @@
+-- Εισαγωγή νέου εκπαιδευόμενου
+
+INSERT INTO `students` (`StudentID`, `StudentCode`, `StudentFname`, `StudentLname`, `Sex`, `Age`, `ClassID`, `Fathername`, `FathernameGen`, `MotherName`, `MotherNameGen`, `Genos`, `Phone`, `JobStatus`, `IsRoma`, `IsCurrent`, `Address`, `IsActive`, `ChildrenNumber`, `MonthsUnemployment`, `MaritalStatus`, `Vat`, `amka`, `adt`, `mitrooarrenwn`, `dimotologio`, `dimos`, `nomos`, `ipikootita`) VALUES (NULL, '90', 'Κωνσταντίνα', 'Κιτσάκη', '2', '1971', '3', 'Βασίλειος', 'Βασιλείου', 'Χρυσούλα', 'Χρυσούλας', 'Ρουπάκη', NULL, 'Εργαζόμενος', '0', '1', NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', NULL);

@@ -29,6 +29,7 @@ var StudentModel = function() {
 	this.age = ko.observable("");
 	this.jobstatus = ko.observable("");
 	this.isroma = ko.observable("");
+	this.foraksiologisi = ko.observable("");
 	this.iscurrent = ko.observable("");
 	this.isactive = ko.observable("");
 	this.details = ko.observableArray([]);
@@ -63,6 +64,7 @@ var StudentModel = function() {
 		      self.classid(d[0]['classid']);
 		      self.jobstatus(d[0]['jobstatus']);
 		      self.isroma(d[0]['isroma']);
+			  self.foraksiologisi(d[0]['foraksiologisi']);
 		      self.iscurrent(d[0]['iscurrent']);
 		      self.isactive(d[0]['isactive']);
 		      
@@ -103,6 +105,8 @@ var StudentModel = function() {
 	  var classid = 0;
 	  var jobstatus = this.jobstatus();
 	  var isroma = this.isroma();
+	  var foraksiologisi = this.foraksiologisi();
+	  
 	  var iscurrent = this.iscurrent();
 	  var isactive = this.isactive();
 	  
@@ -120,6 +124,7 @@ var StudentModel = function() {
 	    'age' : age,
 	    'jobstatus' : jobstatus,
 	    'isroma' : isroma,
+		'foraksiologisi' : foraksiologisi,
 	    'iscurrent' : iscurrent,
 	    'isactive' : isactive,
 	    'classid' : classid

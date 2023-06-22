@@ -33,6 +33,7 @@ if(!empty($person)){
   $age = $person['age'];
   $jobstatus = $person['jobstatus'];
   $isroma = $person['isroma'];
+  $foraksiologisi = $person['foraksiologisi'];
   $iscurrent = $person['iscurrent'];
   $isactive = $person['isactive'];
 
@@ -44,7 +45,7 @@ switch($action){
   case "update":
     if(!empty($person)){
       $res = $db->updateStudentData($person['personid'], $code, $fname,  $lname,  $sex, $age, $classid, $fathername,
-				    $phone, $address, $jobstatus, $isroma, $iscurrent, $isactive, 0);
+				    $phone, $address, $jobstatus, $isroma, $foraksiologisi, $iscurrent, $isactive, 0);
       echo json_encode($res);
     }
 
@@ -66,7 +67,7 @@ switch($action){
 	  'lname' => $user['StudentLname'],
 	  'sex' => $user['Sex'],
           'age' => $user['Age'], 'classid' => $user['ClassID'], 'address' => $user['Address'], 'phone' => $user['Phone'],
-	  'fathername' => $user['Fathername'], 'jobstatus' => $user['JobStatus'], 'isroma' => $user['IsRoma'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
+	  'fathername' => $user['Fathername'], 'jobstatus' => $user['JobStatus'], 'isroma' => $user['IsRoma'], 'foraksiologisi' => $user['foraksiologisi'], 'iscurrent' => $user['IsCurrent'], 'isactive' => $user['IsActive']
           );
       echo json_encode($sdestudent);
       break;

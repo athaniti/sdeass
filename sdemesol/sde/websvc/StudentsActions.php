@@ -53,7 +53,7 @@ try
 	else if($_GET["action"] == "create")
 	{
 		//Insert record into database
-		$result = $con->query("INSERT INTO students(StudentFname, StudentLname, ClassID, Sex, Age, Fathername, Phone, Address, JobStatus, IsActive, IsRoma) VALUES('" . $_POST["StudentFname"] . "', '" . $_POST["StudentLname"] . "', '" . $_POST["ClassID"] . "', '" . $_POST["Sex"] . "', " . $_POST["Age"] . ",'" . $_POST["Fathername"] . "','" . $_POST["Phone"] . "','" . $_POST["Address"] . "','" . $_POST["JobStatus"] . "','" . $_POST["IsActive"] . "','" . $_POST["IsRoma"] . "');");
+		$result = $con->query("INSERT INTO students(StudentFname, StudentLname, ClassID, Sex, Age, Fathername, Phone, Address, JobStatus, IsActive, IsRoma, foraksiologisi) VALUES('" . $_POST["StudentFname"] . "', '" . $_POST["StudentLname"] . "', '" . $_POST["ClassID"] . "', '" . $_POST["Sex"] . "', " . $_POST["Age"] . ",'" . $_POST["Fathername"] . "','" . $_POST["Phone"] . "','" . $_POST["Address"] . "','" . $_POST["JobStatus"] . "','" . $_POST["IsActive"] . "','" . $_POST["IsRoma"] . "''" . $_POST["foraksiologisi"] . "');");
 
 		//Get last inserted record (to return to jTable)
 		$result = $con->query("SELECT * FROM students WHERE StudentId = LAST_INSERT_ID();");
@@ -70,7 +70,7 @@ try
 	else if($_GET["action"] == "update")
 	{
 		//Update record in database
-		$qry = "UPDATE students SET StudentFname = '" . $_POST["StudentFname"] . "', StudentLname = '" . $_POST["StudentLname"] . "', ClassID = '" . $_POST["StudentClassID"] . "', Sex = '" . $_POST["Sex"] . "', Fathername = '" . $_POST["Fathername"] . "', Phone = '" . $_POST["Phone"] . "', Address = '" . $_POST["Address"] . "', JobStatus = '" . $_POST["JobStatus"] . "', IsActive = " . $_POST["IsActive"].", IsRoma = " . $_POST["IsRoma"].", Age = " . $_POST["Age"] . " WHERE StudentID = " . $_POST["StudentID"] . ";";
+		$qry = "UPDATE students SET StudentFname = '" . $_POST["StudentFname"] . "', StudentLname = '" . $_POST["StudentLname"] . "', ClassID = '" . $_POST["StudentClassID"] . "', Sex = '" . $_POST["Sex"] . "', Fathername = '" . $_POST["Fathername"] . "', Phone = '" . $_POST["Phone"] . "', Address = '" . $_POST["Address"] . "', JobStatus = '" . $_POST["JobStatus"] . "', IsActive = " . $_POST["IsActive"].", IsRoma = " . $_POST["IsRoma"].", foraksiologisi = " . $_POST["foraksiologisi"].", Age = " . $_POST["Age"] . " WHERE StudentID = " . $_POST["StudentID"] . ";";
 		$result = $con->query($qry);
 		$qry2 = "UPDATE _students_class SET ClassID = " . $_POST["StudentClassID"] . " WHERE StudentID = " . $_POST["StudentID"] . " AND eduperiod = '" . $eduyear . "';";
 		$result2 = $con->query($qry2);

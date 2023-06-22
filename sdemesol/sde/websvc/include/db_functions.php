@@ -915,9 +915,9 @@ class DB_Functions {
             return false;
         }
 		$result = $this->con->query("INSERT INTO students
-							  (StudentFname, StudentLname, Sex, Age, ClassID, Fathername, Phone, Address, JobStatus, IsRoma, IsCurrent, IsActive)
+							  (StudentFname, StudentLname, Sex, Age, ClassID, Fathername, Phone, Address, JobStatus, IsRoma, foraksiologisi, IsCurrent, IsActive)
 							  VALUES
-							  ('$studentfname', '$studentlname', '$sex', '$age', $classid,'$fathername','$phone','$address','$jobstatus','$isroma', '$iscurrent', $isactive);");
+							  ('$studentfname', '$studentlname', '$sex', '$age', $classid,'$fathername','$phone','$address','$jobstatus','$isroma', '$foraksiologisi', '$iscurrent', $isactive);");
 		$sid = $this->con->insert_id();
 		$successfull = true;
 		$result1 = $this->con->query("INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (".$sid.", ".$classid.", '".$eduyear."');");
@@ -946,7 +946,7 @@ class DB_Functions {
     }
 
     public function updateStudentData($studentid, $studentCode, $studentfname, $studentlname, $sex, $age, $classid, $fathername,
-				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $iscurrent, $isactive, $eduyear) {
+				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $foraksiologisi, $iscurrent, $isactive, $eduyear) {
 		//*** Start Transaction ***//
 		$this->con->query("BEGIN");
 		$result = $this->con->query("UPDATE students SET
@@ -964,6 +964,7 @@ class DB_Functions {
 				      JobStatus = '".$jobstatus."',
 				      MonthsUnemployment = '".$monthsunemployment."',
 				      IsRoma = '".$isroma."',
+					  foraksiologisi = '".$foraksiologisi."',
 				      IsCurrent = '".$iscurrent."',
 				      IsActive = '".$isactive."'
 				      WHERE StudentID = ".$studentid.";");
@@ -992,8 +993,10 @@ class DB_Functions {
     }
 
     public function updateStudentData2($studentid, $studentCode, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $fathernamegen,
-              $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $iscurrent, $isactive, $eduyear) {
-    //*** Start Transaction ***//
+              $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $foraksiologisi, $iscurrent, $isactive, $eduyear) {
+    
+    
+	//*** Start Transaction ***//
     $this->con->query("BEGIN");
     $result = $this->con->query("UPDATE students SET
               StudentCode = '".$studentCode."',
@@ -1011,12 +1014,13 @@ class DB_Functions {
               JobStatus = '".$jobstatus."',
               MonthsUnemployment = '".$monthsunemployment."',
               IsRoma = '".$isroma."',
+			  foraksiologisi = '".$foraksiologisi."',
               IsCurrent = '".$iscurrent."',
               IsActive = '".$isactive."'
               WHERE StudentID = ".$studentid.";");
 
     $successfull = true;
-    if($eduyear>0)
+	if($eduyear>0)
     {
         $result1 = $this->con->query("UPDATE `_students_class` SET ClassID = ".$classid." WHERE StudentID = ".$studentid." AND eduperiod ='".$eduyear."';");
         if ($result1 == false) {$successfull = false;}

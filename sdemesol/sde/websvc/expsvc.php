@@ -44,8 +44,10 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
     require_once 'include/db_functions.php';
     require_once 'lib/PHPWord.php';
     $db = new DB_Functions();
-    $con = $db->con;
-    $con->query(DB_DATABASE);
+    //$con = $db->con;
+    //$con->query(DB_DATABASE);
+	
+	$con = $db->con;
 
 
     // response Array
@@ -89,7 +91,7 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 
 
 
-    $qry = "SELECT students.StudentFname AS fname, students.StudentLname AS lname, l.asemester as asem, l.bsemester as bsem, class.ClassName as classname, class.ClassID as classid, lessons.LessonName As lessonname, l.*  FROM `_students_lessons` AS l INNER JOIN students ON students.StudentID=l.StudentID INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID INNER JOIN class ON class.ClassID = `_students_class`.ClassID INNER JOIN lessons ON lessons.LessonID=l.LessonID WHERE l.eduyear='".$eduyear."' AND `_students_class`.eduperiod='".$eduyear."' AND l.StudentID IN (SELECT students.StudentID from students INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID WHERE students.IsActive=1 AND `_students_class`.eduperiod='".$eduyear."' AND `_students_class`.ClassID IN (SELECT ClassID FROM `_class_teachers` WHERE TeacherID = ".$teacherid." AND eduyear='".$eduyear."')) AND l.LessonID IN (SELECT LessonID from `_lessons_teachers` WHERE TeacherID = ".$teacherid.") ORDER BY lessonname, classname, lname, fname;";
+    $qry = "SELECT students.StudentFname AS fname, students.StudentLname AS lname, l.asemester as asem, l.bsemester as bsem, class.ClassName as classname, class.ClassID as classid, lessons.LessonName As lessonname, l.*  FROM `_students_lessons` AS l INNER JOIN students ON students.StudentID=l.StudentID INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID INNER JOIN class ON class.ClassID = `_students_class`.ClassID INNER JOIN lessons ON lessons.LessonID=l.LessonID WHERE l.eduyear='".$eduyear."' AND `_students_class`.eduperiod='".$eduyear."' AND l.StudentID IN (SELECT students.StudentID from students INNER JOIN `_students_class` ON `_students_class`.StudentID = students.StudentID WHERE students.IsActive=1 AND `_students_class`.eduperiod='".$eduyear."' AND `_students_class`.ClassID IN (SELECT ClassID FROM `_class_teachers` WHERE TeacherID = ".$teacherid." AND eduyear='".$eduyear."')) AND students.foraksiologisi=1 AND l.LessonID IN (SELECT LessonID from `_lessons_teachers` WHERE TeacherID = ".$teacherid.") ORDER BY lessonname, classname, lname, fname;";
 
 
 		$result = $con->query($qry);
@@ -301,7 +303,7 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 
 		$filename = $projdetails['projectName']."_".$eduyear."_".$semestname."_Τετράμηνο";
 		//Get records from database
-		$qry = "SELECT students.StudentFname AS StudentFname, students.StudentLname AS StudentLname, projects.projectName As ProjectName, projects.Type As ProjectType, p.* FROM `_projects_students` AS p INNER JOIN students ON students.StudentID=p.StudentID INNER JOIN projects ON projects.ProjectID=p.ProjectID WHERE projects.ProjectID=".$projectid.";";
+		$qry = "SELECT students.StudentFname AS StudentFname, students.StudentLname AS StudentLname, projects.projectName As ProjectName, projects.Type As ProjectType, p.* FROM `_projects_students` AS p INNER JOIN students ON students.StudentID=p.StudentID INNER JOIN projects ON projects.ProjectID=p.ProjectID WHERE  AND students.foraksiologisi=1 projects.ProjectID=".$projectid.";";
 
 		$result = $con->query($qry);
 
@@ -511,7 +513,7 @@ INNER JOIN (SELECT * FROM `_students_general` WHERE eduyear='".$eduyear."') AS g
 INNER JOIN (SELECT * FROM `_students_lessons` WHERE eduyear='".$eduyear."') AS l ON l.StudentID = s.StudentID
 INNER JOIN lessons ON lessons.LessonID = l.LessonID
 WHERE l.eduyear =  '".$eduyear."' AND lessons.LessonID<10
-AND `_students_class`.eduperiod='".$eduyear."'
+AND `_students_class`.eduperiod='".$eduyear."' AND s.foraksiologisi=1
 AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfilter." ORDER BY lname, fname, priority, classname";
 
 	    //$qry = "SELECT students.StudentID AS studentid, students.StudentFname AS fname, students.StudentLname AS lname, l.asemester AS asem, l.bsemester AS bsem, class.ClassName AS classname, class.ClassID AS classid, lessons.LessonName AS lessonname, lessons.Priority AS priority, l.*, g.* FROM  `_students_lessons` AS l INNER JOIN `_students_general` AS g ON g.StudentID = l.StudentID INNER JOIN students ON students.StudentID = l.StudentID INNER JOIN class ON class.ClassID = students.ClassID INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."' AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfilter." ORDER BY lname, fname, priority, classname";
@@ -706,7 +708,7 @@ $lpagecont='';
 	    FROM  `_students_lessons` AS l
 	    INNER JOIN students ON students.StudentID = l.StudentID INNER JOIN  `_students_class` ON `_students_class`.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = `_students_class`.ClassID
-	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."'  AND `_students_class`.`eduperiod`='".$eduyear."' AND class.classID>3
+	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."'  AND `_students_class`.`eduperiod`='".$eduyear."' AND class.classID>3 AND students.foraksiologisi=1
 	    AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfilter."
 	    ORDER BY lname, fname, priority, classname";
 
@@ -907,7 +909,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 	    FROM  `_students_lessons` AS l
 	    INNER JOIN students ON students.StudentID = l.StudentID INNER JOIN  `_students_class` ON `_students_class`.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = `_students_class`.ClassID
-	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."' AND `_students_class`.eduperiod =  '".$eduyear."'
+	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."' AND `_students_class`.eduperiod =  '".$eduyear."' AND students.foraksiologisi=1
 	    AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfilter."
 	    ORDER BY lname, fname, priority, classname";
 

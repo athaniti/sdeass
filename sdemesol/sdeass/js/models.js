@@ -8,7 +8,7 @@
 
 
 var personModel = function(id, studentcode, fname, lname, age, sex, classname, fathername, fathernamegen, address, marital, children,
-			   phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive){
+			   phone, jobstatus, monthsunemployment, isroma, foraksiologisi, iscurrent, isactive){
   var self = this; //caching so that it can be accessed later in a different context
   this.id = ko.observable(id); //unique id for the student (auto increment primary key from the database)
   this.studentcode = ko.observable(studentcode); //name of the student
@@ -29,6 +29,8 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
 
   this.isroma = ko.observable(isroma);
   this.isromabool = ko.observable((isroma==1 ? true : false));
+  this.foraksiologisi = ko.observable(foraksiologisi);
+  this.foraksiologisibool = ko.observable((foraksiologisi==1 ? true : false));
   this.iscurrent = ko.observable(iscurrent);
   this.iscurrentbool = ko.observable((iscurrent==1 ? true : false));
   this.isactive = ko.observable(isactive);
@@ -53,15 +55,19 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
     }, this);
 
   this.CurrentByName = ko.computed(function(){
-        if ( this.isroma() == 1) return "ΝΑΙ";
+        if ( this.iscurrent() == 1) return "ΝΑΙ";
 	return "ΟΧΙ";
     }, this);
 
   this.ActiveByName = ko.computed(function(){
-        if ( this.isroma() == 1) return "ΝΑΙ";
+        if ( this.isactive() == 1) return "ΝΑΙ";
 	return "ΟΧΙ";
     }, this);
 
+  this.foraksiologisiByName = ko.computed(function(){
+        if ( this.foraksiologisi() == 1) return "ΝΑΙ";
+	return "ΟΧΙ";
+    }, this);
   //this.url = ko.computed(function(){
   //  return 'student.html?studentid='+this.id();
   //});
@@ -82,6 +88,7 @@ var personModel = function(id, studentcode, fname, lname, age, sex, classname, f
   this.jobstatusHasFocus = ko.observable(false); //if the age is currently updated
   this.monthsunemploymentHasFocus = ko.observable(false); //if the age is currently updated
   this.isromaHasFocus = ko.observable(false); //if the name is currently updated
+  this.foraksiologisiHasFocus = ko.observable(false); //if the name is currently updated
   this.iscurrentHasFocus = ko.observable(false); //if the name is currently updated
   this.isactiveHasFocus = ko.observable(false); //if the age is currently updated
 
@@ -156,7 +163,7 @@ var model = function(){
 		      var jobstatus = data[x]['jobstatus'];
 		      var monthsunemployment = data[x]['monthsunemployment'];
 		      var isroma = data[x]['isroma'];
-
+			  var foraksiologisi = data[x]['foraksiologisi'];
 		      var iscurrent = data[x]['iscurrent'];
 		      var isactive = data[x]['isactive'];
 
@@ -164,7 +171,7 @@ var model = function(){
 		      //push each of the student record to the observable array for
 		      //storing student data
 		      self.people.push(new personModel(id, studentcode, fname, lname, age, sex, classname, fathername, fathernamegen,
-						       address, marital, children, phone, jobstatus, monthsunemployment, isroma, iscurrent, isactive));
+						       address, marital, children, phone, jobstatus, monthsunemployment, isroma, foraksiologisi, iscurrent, isactive));
 		  }
 
 	      }
@@ -246,7 +253,8 @@ var model = function(){
 	  var phone = person.phone();
 	  var isromabool = person.isromabool();
 	  var isroma = (isromabool==true ? 1 : 0);
-
+	  var foraksiologisibool = person.foraksiologisibool();
+	  var foraksiologisi = (foraksiologisibool==true ? 1 : 0);
 	  var iscurrentbool = person.iscurrentbool();
 	  var iscurrent = (iscurrentbool==true ? 1 : 0);
 	  var isactivebool = person.isactivebool();
@@ -271,6 +279,7 @@ var model = function(){
 	    'children' : children,
 	    'phone' : phone,
 	    'isroma' : isroma,
+		'foraksiologisi' : foraksiologisi,
 	    'isactive' : isactive,
 	    'iscurrent' : iscurrent,
 	    'jobstatus' : jobstatus,
@@ -283,8 +292,9 @@ var model = function(){
 	      websvcroot+'/person_save.php',
 	      {'action' : 'update', 'student' : student, 'eduyear' : eduyear},
 	      function(response){
-		if (response=='true')
+		if (response.trim()=='true')
 		{
+			console.log("success 1");
 		  removefocus(person);
 		}
 	      }
@@ -343,7 +353,9 @@ var model = function(){
 
 var removefocus = function(person)
 {
+	//console.log("Before Person Update");
   person.studentUpdate(false);
+  //console.log("After Person Update");
 
 };
 
