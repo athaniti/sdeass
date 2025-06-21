@@ -20,6 +20,7 @@ if (isset($_GET['eduyear'])) {
     $eduyear = $_GET["eduyear"];
   }
 $praxi = '22';
+$grademode = 'i';
 $titleprotocolnumber = intval('301');
 $titleprotocoldate = '28/06/2019';
 $praxiprotocoldate = '28-06-2019';
@@ -36,6 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST')
     if (isset($_GET['praxi']) && !empty($_GET['praxi']))
     {
       $praxi = $_GET["praxi"];
+    }
+	if (isset($_GET['mode']) && !empty($_GET['mode']))
+    {
+      $grademode = $_GET["mode"];
     }
     if (isset($_GET['protocol-number']) && !empty($_GET['protocol-number']))
     {
@@ -64,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST')
 }
 else
 {
+
   if (isset($_POST['eduyear']) && !empty($_POST['eduyear']))
   {
         $eduyear = $_POST['eduyear'];
@@ -72,6 +78,10 @@ else
   {
     $praxi = $_POST["praxi"];
   }
+  if (isset($_POST['mode']) && !empty($_POST['mode']))
+    {
+      $grademode = $_POST["mode"];
+    }
   if (isset($_POST['protocol-number']) && !empty($_POST['protocol-number']))
   {
     $protocoln = intval(trim($_POST["protocol-number"]));
@@ -97,6 +107,7 @@ else
   }
 
 }
+$grademode = trim($grademode);
   //$eduyear = '1516'; //For test reasons
 $eduyearstr='20'.substr($eduyear, 0, 2).' - 20'.substr($eduyear, -2, 2);
 
@@ -154,7 +165,7 @@ while($row = $result->fetch_assoc())
         $i = 0;
         $total = 0;
         $count = 0;
-        while($row2 = $result2->fetch_assoc())
+		while($row2 = $result2->fetch_assoc())
         {
           $lessons[$i] = $row2['finalgrade'];
           $total += intval($row2["finalgrade"]);
@@ -167,7 +178,10 @@ while($row = $result->fetch_assoc())
 			if ($count>0 and $total>60)
 			{
   			$ints = intval($total/$count);
-
+			
+			$graderesult = $total / $count;
+			//$roundedresult = round($graderesult, 2);
+			$roundedresult = number_format($graderesult, 2, ',', '');
   			$decs = $total%$count;
   			$intstext = $hf->getFulltextGrade($ints);
   			$decstext = $hf->getFulltextGrade($decs);
@@ -195,6 +209,7 @@ while($row = $result->fetch_assoc())
       			  'perivtext'=> $hf->getFulltextGrade($lessons[5]),
       			  'kointext'=> $hf->getFulltextGrade($lessons[6]),
       			  'kallittext'=> $hf->getFulltextGrade($lessons[7]),
+				  'decresult'=> $roundedresult,
       			  'ints'=> $ints,
       			  'decs'=> $decs,
       			  'basecount'=> $count,
@@ -223,7 +238,12 @@ while($row = $result->fetch_assoc())
 // -----------------
 try 
 {
-$template = 'templates/sdetpl05_mes_bw.docx';
+	$template = 'templates/sdetpl05_mes_bw2025.docx';
+	if ($grademode=='d')
+    {
+      $template = 'templates/sdetpl05_mes_bw2025dec.docx';
+    }
+
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 // --------------------------------------------
@@ -258,7 +278,7 @@ if ($save_as==='') {
     $netfilename = str_replace('templates/','',$output_file_name);
     $destination_path = '../../sdeass/documents/';
     rename($source_file, $destination_path . pathinfo($source_file, PATHINFO_BASENAME));
-    exit('File <a href="/sdemesol/sdeass/documents/'.$netfilename.'" target="_blank">['.$netfilename.']</a> has been created.');
+    exit('File <a href="/sdemesol/sdeass/documents/'.$netfilename.'" target="_blank">['.$netfilename.']</a> has been created. </br>Grade Mode:'.$grademode);
 }
 }
 catch (Exception $e)
