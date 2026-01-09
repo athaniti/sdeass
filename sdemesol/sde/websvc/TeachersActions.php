@@ -6,10 +6,12 @@ try
 	require_once 'include/db_functions.php';
     $db = new DB_Functions();
 	$con = $db->con;
-    $eduyear = '1314';
-    if (isset($_GET['eduyear']) && $_GET['eduyear'] != '') {
-	$eduyear = $_GET['eduyear'];
-    }
+    $eduyear = '2526';
+    if (isset($_GET['eduyear']) && $_GET['eduyear'] !== '') {
+		$eduyear = $_GET['eduyear'];
+	} elseif (isset($_POST['eduyear']) && $_POST['eduyear'] !== '') {
+		$eduyear = $_POST['eduyear'];
+	}
 
 
 	//Getting records (listAction)
@@ -17,13 +19,15 @@ try
 	{
 		//Get records from database
 		//$a1 = "SELECT COUNT(*) FROM `_class_teachers`
-		$result = $con->query("SELECT *, l.LessonID FROM sdeusers LEFT JOIN `_lessons_teachers` AS l ON l.TeacherID = sdeusers.UserID;");
+		$result = $con->query("SELECT distinct sdeusers.*, l.LessonID FROM sdeusers LEFT JOIN `_lessons_teachers` AS l ON l.TeacherID = sdeusers.UserID;");
 
 		//Add all records to an array
 		$rows = array();
 		while($row = $result->fetch_array())
 		{
-			$result2 = $con->query("SELECT ClassID FROM `_class_teachers` WHERE eduyear= '".$eduyear."' AND TeacherID = ".$row['UserID'].";");
+			$userid=(int)$row['UserID'];
+			$result2 = $con->query("SELECT ClassID FROM `_class_teachers` WHERE eduyear= '".$eduyear."' AND TeacherID = ".$userid.";");
+			
 			while($row2 = $result2->fetch_array())
 			{
 				switch ($row2["ClassID"])
@@ -92,9 +96,15 @@ try
 
 				//Get last inserted record (to return to jTable)
 				$resultu = $con->query("SELECT * FROM sdeusers WHERE UserID = $newid;");
+				$userId   = (int)$newid;
+				$lessonId = isset($_POST['LessonID']) && $_POST['LessonID'] !== '' ? (int)$_POST['LessonID'] : 0;
 				$row = $resultu->fetch_array();
-
-				$result1 = $con->query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $row["UserID"] . ",'".$eduyear."');");
+				if ($lessonId <= 0) {
+					throw new Exception("LessonID is required");
+				}
+				$con->query("DELETE FROM `_lessons_teachers` WHERE TeacherID = $userId AND eduyear = '$eduyear'");
+				$con->query("INSERT INTO `_lessons_teachers` (`TeacherID`,`LessonID`,`eduyear`) VALUES ($userId, $lessonId, '$eduyear')");
+				//$result1 = $con->query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $row["UserID"] . ",'".$eduyear."');");
 				$insvalues = "";
 				if ($_POST["A1"] == "1") {$insvalues .= "(1, " . $row["UserID"] . ",'".$eduyear."')";}
 				if ($_POST["A2"] == "1") {$insvalues .= ",(2, " . $row["UserID"] . ",'".$eduyear."')";}
@@ -134,8 +144,25 @@ try
 			//Update record in database
 			$result = $con->query("UPDATE sdeusers SET UserFname = '" . $_POST["UserFname"] . "', UserLname = '" . $_POST["UserLname"] . "', Username = '" . $_POST["Username"] . "', Eidikotita = '" . $_POST["Eidikotita"] . "', EidikotitaCode = '" . $_POST["EidikotitaCode"] . "', Phone = '" . $_POST["Phone"] . "', Email = '" . $_POST["Email"] . "', Address = '" . $_POST["Address"] . "', userrole = '" . $_POST["userrole"] . "' WHERE UserID = " . $_POST["UserID"] . ";");
 
-			$result1 = $con->query("DELETE FROM `_lessons_teachers` WHERE TeacherID = " . $_POST["UserID"] . ";");
-			$result1 = $con->query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $_POST["UserID"] . ",'".$eduyear."');");
+			//$result1 = $con->query("DELETE FROM `_lessons_teachers` WHERE TeacherID = " . $_POST["UserID"] . ";");
+			//$result1 = $con->query("INSERT INTO `_lessons_teachers` (LessonID, TeacherID, eduyear) VALUES(" . $_POST["LessonID"] . ", " . $_POST["UserID"] . ",'".$eduyear."');");
+			$userId   = (int)($_POST['UserID'] ?? 0);
+			$lessonId = isset($_POST['LessonID']) && $_POST['LessonID'] !== '' ? (int)$_POST['LessonID'] : 0;
+
+			if ($userId <= 0) {
+				throw new Exception("Invalid UserID");
+			}
+			if ($lessonId <= 0) {
+				throw new Exception("LessonID is required");
+			}
+
+			// delete ONLY for this year
+			$con->query("DELETE FROM `_lessons_teachers` WHERE TeacherID = $userId AND eduyear = '$eduyear'");
+
+			// insert mapping with LessonID
+			$con->query("INSERT INTO `_lessons_teachers` (`TeacherID`,`LessonID`,`eduyear`) VALUES ($userId, $lessonId, '$eduyear')");
+			//echo json_encode("INSERT INTO `_lessons_teachers` (`TeacherID`,`LessonID`,`eduyear`) VALUES ($userId, $lessonId, '$eduyear')");
+			
 			$insvalues = "";
 			if ($_POST["A1"] == "1") {$insvalues .= "(1, " . $_POST["UserID"] . ",'".$eduyear."')";}
 			if ($_POST["A2"] == "1") {$insvalues .= ",(2, " . $_POST["UserID"] . ",'".$eduyear."')";}

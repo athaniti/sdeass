@@ -100,7 +100,6 @@ define('SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT',    "%s");
 * @link       http://pear.php.net/package/PackageName
 * @see        OLE, Spreadsheet_Excel_Writer
 */
-#[\AllowDynamicProperties]
 class Spreadsheet_Excel_Reader
 {
     /**
@@ -167,14 +166,6 @@ class Spreadsheet_Excel_Reader
      * @access private
      */
     var $_defaultEncoding;
-
-    /**
-     * UTF-16LE encoder function (iconv / mb_convert_encoding)
-     *
-     * @var string
-     * @access private
-     */
-    var $_encoderFunction = '';
 
     /**
      * Default number format
@@ -265,16 +256,6 @@ class Spreadsheet_Excel_Reader
      *
      * Some basic initialisation
      */ 
-    /**
-     * PHP 5/7/8 compatible constructor
-     */
-    public function __construct()
-    {
-        // Call legacy constructor to initialize OLE reader
-        $this->Spreadsheet_Excel_Reader();
-    }
-
-
     function Spreadsheet_Excel_Reader()
     {
 		$class = "OLERead";

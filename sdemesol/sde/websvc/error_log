@@ -1,0 +1,1006 @@
+[16-Oct-2025 10:43:24 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:43:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:43:31 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:43:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:43:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:43:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 10:50:16 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 23:29:38 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 23:29:42 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ' lgknnhmy_sdemesoladmin'@'localhost' (using password: YES) in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php:18
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php(18): mysqli_connect('localhost', ' lgknnhmy_sdeme...', Object(SensitiveParameterValue), 'lgknnhmy_sdemes...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(14): DB_Connect->connect()
+#2 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(20): DB_Functions->__construct()
+#3 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/DB_Connect.php on line 18
+[16-Oct-2025 23:37:12 America/Boise] PHP Warning:  require_once(include/DB_Functions.php): Failed to open stream: No such file or directory in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php on line 16
+[16-Oct-2025 23:37:12 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'include/DB_Functions.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php:16
+Stack trace:
+#0 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php on line 16
+[16-Oct-2025 23:37:14 America/Boise] PHP Warning:  require_once(include/DB_Functions.php): Failed to open stream: No such file or directory in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php on line 16
+[16-Oct-2025 23:37:14 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'include/DB_Functions.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php:16
+Stack trace:
+#0 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/expsvc.pdf.php on line 16
+[16-Oct-2025 23:38:26 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'aendiaferon' doesn't have a default value in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:885
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(885): mysqli->query('INSERT INTO `_s...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(630): DB_Functions->changeStudentsYear('2425', '2526')
+#2 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 885
+[16-Oct-2025 23:38:52 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'aendiaferon' doesn't have a default value in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:885
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(885): mysqli->query('INSERT INTO `_s...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(630): DB_Functions->changeStudentsYear('2425', '2526')
+#2 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 885
+[16-Oct-2025 23:39:26 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'aendiaferon' doesn't have a default value in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:885
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(885): mysqli->query('INSERT INTO `_s...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(630): DB_Functions->changeStudentsYear('2425', '2526')
+#2 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 885
+[16-Oct-2025 23:41:46 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'finalgrade' doesn't have a default value in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:885
+Stack trace:
+#0 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(885): mysqli->query('INSERT INTO `_s...')
+#1 /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/services.php(630): DB_Functions->changeStudentsYear('2425', '2526')
+#2 {main}
+  thrown in /home4/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 885
+[08-Jan-2026 00:17:44 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function read() on null in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php:382
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(19): Spreadsheet_Excel_Reader->read('external/aitise...')
+#1 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 382
+[08-Jan-2026 00:18:50 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function read() on null in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php:382
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(19): Spreadsheet_Excel_Reader->read('external/aitise...')
+#1 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 382
+[08-Jan-2026 00:19:17 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function read() on null in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php:382
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(19): Spreadsheet_Excel_Reader->read('external/aitise...')
+#1 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 382
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$numBigBlockDepotBlocks is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 65
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$sbdStartBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 66
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$rootStartBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 67
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$extensionBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 68
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$numExtensionBlocks is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 69
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$bigBlockChain is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 114
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$smallBlockChain is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 132
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$entry is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 151
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$props is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 200
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$rootentry is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 211
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$wrkbook is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 207
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$nineteenFour is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 668
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$sn is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 704
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$multiplier is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 751
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$curformat is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 954
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:14 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 00:44:14 America/Boise] PHP Warning:  Undefined array key 15 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 46
+[08-Jan-2026 00:44:14 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect integer value: '' for column 'ChildrenNumber' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', NULL, '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$numBigBlockDepotBlocks is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 65
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$sbdStartBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 66
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$rootStartBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 67
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$extensionBlock is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 68
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$numExtensionBlocks is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 69
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$bigBlockChain is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 114
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$smallBlockChain is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 132
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$entry is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 151
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$props is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 200
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$rootentry is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 211
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property OLERead::$wrkbook is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/Spreadsheet/Excel/Reader/OLERead.php on line 207
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$nineteenFour is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 668
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$sn is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 704
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$multiplier is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 751
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$curformat is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 954
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Deprecated:  Creation of dynamic property Spreadsheet_Excel_Reader::$rectype is deprecated in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/Excel/reader.php on line 955
+[08-Jan-2026 00:44:56 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 00:44:56 America/Boise] PHP Warning:  Undefined array key 15 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 46
+[08-Jan-2026 00:44:56 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect integer value: '' for column 'ChildrenNumber' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', NULL, '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 4): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 5): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 6): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 7): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 8): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 9): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 10): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 11): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 12): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 13): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 14): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 15): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 16): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 17): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 18): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 19): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 20): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 21): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 22): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 23): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 24): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 25): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 26): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 27): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 28): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 29): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 30): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 31): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 32): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 33): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 34): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 35): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 36): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 37): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 38): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:55:39 America/Boise] Excel import error (row 39): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 4): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 5): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 6): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 7): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 8): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 9): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 10): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 11): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 12): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 13): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 14): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 15): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 16): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 17): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 18): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 19): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 20): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 21): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 22): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 23): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 24): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 25): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 26): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 27): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 28): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 29): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 30): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 31): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 32): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 33): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 34): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 35): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 36): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 37): Field 'MotherName' doesn't have a default value
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 38): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:57:00 America/Boise] Excel import error (row 39): Data truncated for column 'JobStatus' at row 1
+[08-Jan-2026 00:58:52 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 00:58:52 America/Boise] PHP Warning:  Undefined array key 15 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 46
+[08-Jan-2026 00:58:52 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect integer value: '' for column 'ChildrenNumber' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', NULL, '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:04:06 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:04:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', '0', '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:11:49 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:11:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'MotherName' doesn't have a default value in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', '0', '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:18:44 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:18:44 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'MotherName' doesn't have a default value in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(101): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', '0', '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:22:23 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:22:23 America/Boise] PHP Warning:  Undefined array key 13 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 95
+[08-Jan-2026 01:22:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(102): DB_Functions->insertExcelData('0', 'Marsila', 'Plastiras', 1, '38', 1, 'Azem', '1988', '\xCE\x93', '6941431306 - 26...', '', '158192080', NULL, 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:24:12 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:24:12 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'MotherNameGen' doesn't have a default value in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(102): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', 'Xhemile', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', '0', '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:27:01 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:27:01 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'mitrooarrenwn' doesn't have a default value in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(102): DB_Functions->insertExcelData('281', 'Marsila', 'Plastiras', 2, '1988', 2, 'Azem', 'Xhemile', '6941431306 - 26...', '\xCE\x9A\xCE\xB1\xCF\x84\xCE\xBF\xCF\x87\xCE\xAE', '', '0', '\xCE\x91\xCF\x85\xCF\x84\xCE\xBF\xCE\xB1\xCF\x80\xCE\xB1\xCF...', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:28:14 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:28:14 America/Boise] PHP Warning:  Undefined array key 8 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 45
+[08-Jan-2026 01:28:14 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[08-Jan-2026 01:28:14 America/Boise] PHP Warning:  Undefined array key 8 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 45
+[08-Jan-2026 01:28:14 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(102): DB_Functions->insertExcelData('312', '\xCE\x9C\xCE\xB1\xCF\x81\xCE\xAF\xCE\xB1-\xCE\x9C\xCE\xB1...', '\xCE\x9C\xCF\x80\xCE\xB1\xCF\x83\xCE\xB9\xCE\xBB\xCE\xAC\xCF...', 2, '1996', 1, '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x91\xCE\xBB\xCE\xB5\xCE\xBE\xCE\xAC\xCE\xBD\xCE\xB4\xCF...', '6944752453', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xB7', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:30:40 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:30:40 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[08-Jan-2026 01:30:40 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(103): DB_Functions->insertExcelData('312', '\xCE\x9C\xCE\xB1\xCF\x81\xCE\xAF\xCE\xB1-\xCE\x9C\xCE\xB1...', '\xCE\x9C\xCF\x80\xCE\xB1\xCF\x83\xCE\xB9\xCE\xBB\xCE\xAC\xCF...', 2, '1996', 1, '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x91\xCE\xBB\xCE\xB5\xCE\xBE\xCE\xAC\xCE\xBD\xCE\xB4\xCF...', '6944752453', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xB7', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:33:34 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:33:34 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[08-Jan-2026 01:33:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:823
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(823): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(103): DB_Functions->insertExcelData('312', '\xCE\x9C\xCE\xB1\xCF\x81\xCE\xAF\xCE\xB1-\xCE\x9C\xCE\xB1...', '\xCE\x9C\xCF\x80\xCE\xB1\xCF\x83\xCE\xB9\xCE\xBB\xCE\xAC\xCF...', 2, '1996', 1, '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x91\xCE\xBB\xCE\xB5\xCE\xBE\xCE\xAC\xCE\xBD\xCE\xB4\xCF...', '6944752453', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xB7', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 823
+[08-Jan-2026 01:35:24 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:35:24 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[08-Jan-2026 01:35:24 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:824
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(824): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(103): DB_Functions->insertExcelData('312', '\xCE\x9C\xCE\xB1\xCF\x81\xCE\xAF\xCE\xB1-\xCE\x9C\xCE\xB1...', '\xCE\x9C\xCF\x80\xCE\xB1\xCF\x83\xCE\xB9\xCE\xBB\xCE\xAC\xCF...', 2, '1996', 1, '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x91\xCE\xBB\xCE\xB5\xCE\xBE\xCE\xAC\xCE\xBD\xCE\xB4\xCF...', '6944752453', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xB7', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 824
+[08-Jan-2026 01:40:02 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[08-Jan-2026 01:40:02 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[08-Jan-2026 01:40:02 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:824
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(824): mysqli->query('INSERT INTO stu...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php(103): DB_Functions->insertExcelData('312', '\xCE\x9C\xCE\xB1\xCF\x81\xCE\xAF\xCE\xB1-\xCE\x9C\xCE\xB1...', '\xCE\x9C\xCF\x80\xCE\xB1\xCF\x83\xCE\xB9\xCE\xBB\xCE\xAC\xCF...', 2, '1996', 1, '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x91\xCE\xBB\xCE\xB5\xCE\xBE\xCE\xAC\xCE\xBD\xCE\xB4\xCF...', '6944752453', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xB7', 0, 0, '2526', 1, 1, 0)
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 824
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 4 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 41
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 02:27:48 America/Boise] PHP Warning:  Undefined array key 2 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/impsvc.php on line 37
+[09-Jan-2026 03:26:10 America/Boise] PHP Warning:  Undefined variable $lessonId in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/TeachersActions.php on line 101
+[09-Jan-2026 03:29:31 America/Boise] PHP Warning:  Undefined variable $lessonId in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/TeachersActions.php on line 101
+[09-Jan-2026 03:37:41 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:37:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:37:51 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:37:51 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:38:01 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:38:09 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:38:10 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:38:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1002
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1002): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1764', '253', '\xCE\x9B\xCE\xB1\xCE\xBC\xCF\x80\xCF\x81\xCE\xB9\xCE\xBD\xCE...', '\xCE\x9A\xCE\xBF\xCE\xBD\xCF\x84\xCE\xBF\xCF\x80\xCE\xAC\xCE...', '2', '1975', '2', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '\xCE\x9C\xCE\xB9\xCF\x87\xCE\xB1\xCE\xAE\xCE\xBB', '6946299458', '\xCE\x9B\xCE\xB5\xCF\x83\xCE\xAF\xCE\xBD\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1002
+[09-Jan-2026 03:44:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1787', '262', '\xCE\x94\xCE\xB9\xCE\xBF\xCE\xBD\xCF\x8D\xCF\x83\xCE\xB9\xCE...', '\xCE\xA0\xCE\xB1\xCF\x80\xCE\xB1\xCE\xB4\xCE\xBF\xCE\xB3\xCE...', '1', '1993', '2', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x82', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x85', '6908279702', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:46:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1787', '262', '\xCE\x94\xCE\xB9\xCE\xBF\xCE\xBD\xCF\x8D\xCF\x83\xCE\xB9\xCE...', '\xCE\xA0\xCE\xB1\xCF\x80\xCE\xB1\xCE\xB4\xCE\xBF\xCE\xB3\xCE...', '1', '1993', '2', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x82', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x85', '6908279702', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:46:18 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1787', '262', '\xCE\x94\xCE\xB9\xCE\xBF\xCE\xBD\xCF\x8D\xCF\x83\xCE\xB9\xCE...', '\xCE\xA0\xCE\xB1\xCF\x80\xCE\xB1\xCE\xB4\xCE\xBF\xCE\xB3\xCE...', '1', '1993', '2', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x82', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x85', '6908279702', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '-', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:46:26 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1787', '262', '\xCE\x94\xCE\xB9\xCE\xBF\xCE\xBD\xCF\x8D\xCF\x83\xCE\xB9\xCE...', '\xCE\xA0\xCE\xB1\xCF\x80\xCE\xB1\xCE\xB4\xCE\xBF\xCE\xB3\xCE...', '1', '1993', '2', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x82', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x85', '6908279702', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '-', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:47:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Άνεργος'',
+              MonthsUnemployment = '0',
+              IsRoma =' at line 14 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1787', '262', '\xCE\x94\xCE\xB9\xCE\xBF\xCE\xBD\xCF\x8D\xCF\x83\xCE\xB9\xCE...', '\xCE\xA0\xCE\xB1\xCF\x80\xCE\xB1\xCE\xB4\xCE\xBF\xCE\xB3\xCE...', '1', '1993', '2', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x82', '\xCE\xA7\xCF\x81\xCE\xAE\xCF\x83\xCF\x84\xCE\xBF\xCF\x85', '6908279702', '\xCE\x91\xCE\xB9\xCF\x84\xCF\x89\xCE\xBB\xCE\xB9\xCE\xBA\xCF...', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xBF\xCF\x82', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:48:53 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1018
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1018): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1018
+[09-Jan-2026 03:51:04 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1020
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1020): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1020
+[09-Jan-2026 03:53:54 America/Boise] PHP Parse error:  syntax error, unexpected token "print" in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1039
+[09-Jan-2026 03:54:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1041
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1041): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1041
+[09-Jan-2026 03:58:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1041
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1041): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1041
+[09-Jan-2026 04:01:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Data truncated for column 'JobStatus' at row 1 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1041
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1041): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1041
+[09-Jan-2026 04:01:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Άνεργος'',
+              MonthsUnemployment = '0',
+              IsRoma =' at line 14 in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php:1041
+Stack trace:
+#0 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php(1041): mysqli->query('UPDATE students...')
+#1 /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/person_save.php(68): DB_Functions->updateStudentData2('1790', '268', '\xCE\x93\xCE\xB5\xCF\x81\xCE\xAC\xCF\x83\xCE\xB9\xCE\xBC\xCE...', '\xCE\xA3\xCE\xB5\xCF\x81\xCE\xB1\xCE\xBA\xCE\xB9\xCF\x8E\xCF...', '1', '1976', '5', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7\xCF\x82', '\xCE\x99\xCF\x89\xCE\xAC\xCE\xBD\xCE\xBD\xCE\xB7', '6983175560', '\xCE\x9D\xCE\xB5\xCE\xBF\xCF\x87\xCF\x8E\xCF\x81\xCE\xB9', '', '0', '\xCE\x86\xCE\xBD\xCE\xB5\xCF\x81\xCE\xB3\xCE\xBF\xCF\x82', '0', '0', '1', '1', '1', '2526')
+#2 {main}
+  thrown in /home1/lgknnhmy/public_html/website_0a3a4301/sdemesol/sde/websvc/include/db_functions.php on line 1041

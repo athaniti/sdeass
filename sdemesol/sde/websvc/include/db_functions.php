@@ -815,15 +815,16 @@ class DB_Functions {
 	/**
      * Insert Excel Data into the database
      */
-    public function insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive, $isold) {
+    public function insertExcelData($mitroo, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $mothername, $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $eduyear, $iscurrent, $isactive, $isold) {
 		if($isold==0)
 		{
 		//*** Start Transaction ***//
 		$this->con->query("BEGIN");
+		echo json_encode($jobstatus);
 		$result = $this->con->query("INSERT INTO students
-							  (StudentCode, StudentFname, StudentLname, Sex, Age, ClassID, Fathername, Phone, Address, MaritalStatus, ChildrenNumber, JobStatus, MonthsUnemployment, IsRoma, IsCurrent, IsActive)
+							  (StudentCode, StudentFname, StudentLname, Sex, Age, ClassID, Fathername, MotherName, Phone, Address, MaritalStatus, ChildrenNumber, JobStatus, MonthsUnemployment, IsRoma, IsCurrent, IsActive)
 							  VALUES
-							  ('$mitroo', '$studentfname', '$studentlname', '$sex', '$age', $classid,'$fathername','$phone','$address', '$marital', '$children','$jobstatus', '$monthsunemployment','$isroma', '$iscurrent', $isactive);");
+							  ('$mitroo', '$studentfname', '$studentlname', '$sex', '$age', $classid,'$fathername','$mothername','$phone','$address', '$marital', '$children','$jobstatus', '$monthsunemployment','$isroma', '$iscurrent', $isactive);");
 		$sid = $this->con->insert_id;
 		$successfull = true;
 		$result1 = $this->con->query("INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (".$sid.", ".$classid.", '".$eduyear."');");
@@ -947,6 +948,15 @@ class DB_Functions {
 
     public function updateStudentData($studentid, $studentCode, $studentfname, $studentlname, $sex, $age, $classid, $fathername,
 				      $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $foraksiologisi, $iscurrent, $isactive, $eduyear) {
+
+
+		$jobstatus = isset($jobstatus) ? trim((string)$jobstatus) : '';
+		if ($jobstatus === '' || !in_array($jobstatus, $allowedJobStatus, true)) {
+			$jobstatusSql = "NULL";
+		} else {
+			// escape for SQL since you build SQL with strings
+			$jobstatusSql = "'" . $this->con->real_escape_string($jobstatus) . "'";
+		}
 		//*** Start Transaction ***//
 		$this->con->query("BEGIN");
 		$result = $this->con->query("UPDATE students SET
@@ -961,7 +971,7 @@ class DB_Functions {
 				      Address = '".$address."',
 				      MaritalStatus = '".$marital."',
 				      ChildrenNumber = '".$children."',
-				      JobStatus = '".$jobstatus."',
+				      JobStatus = '".$jobstatusSql."',
 				      MonthsUnemployment = '".$monthsunemployment."',
 				      IsRoma = '".$isroma."',
 					  foraksiologisi = '".$foraksiologisi."',
@@ -995,9 +1005,16 @@ class DB_Functions {
     public function updateStudentData2($studentid, $studentCode, $studentfname, $studentlname, $sex, $age, $classid, $fathername, $fathernamegen,
               $phone, $address, $marital, $children, $jobstatus, $monthsunemployment, $isroma, $foraksiologisi, $iscurrent, $isactive, $eduyear) {
     
-    
-	//*** Start Transaction ***//
-    $this->con->query("BEGIN");
+    $allowedJobStatus = ['Εργαζόμενος','Άνεργος','Ανενεργός','Αυτοαπασχολούμενος'];
+	$jobstatus = isset($jobstatus) ? trim((string)$jobstatus) : '';
+	
+	if ($jobstatus === '' || !in_array($jobstatus, $allowedJobStatus, true)) {
+		$jobstatusSql = "NULL";
+	} else {
+		// escape for SQL since you build SQL with strings
+		$jobstatusSql = "'" . $this->con->real_escape_string($jobstatus) . "'";
+	}
+	$this->con->query("BEGIN");
     $result = $this->con->query("UPDATE students SET
               StudentCode = '".$studentCode."',
               StudentFname = '".$studentfname."',
@@ -1011,7 +1028,7 @@ class DB_Functions {
               Address = '".$address."',
               MaritalStatus = '".$marital."',
               ChildrenNumber = '".$children."',
-              JobStatus = '".$jobstatus."',
+              JobStatus = ".$jobstatusSql.",
               MonthsUnemployment = '".$monthsunemployment."',
               IsRoma = '".$isroma."',
 			  foraksiologisi = '".$foraksiologisi."',

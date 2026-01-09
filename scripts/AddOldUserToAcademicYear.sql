@@ -1,18 +1,32 @@
 -- Εισαγωγή εκπαιδευόμενου σε ακαδημαϊκό έτος
 
-INSERT INTO `_students_class` (StudentID, ClassID, eduperiod) VALUES (1510, 2, '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 1, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 2, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 3, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 4, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 5, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 6, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 7, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 8, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 9, '0', '2021');
-INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear) VALUES (1510, 10, '0', '2021');
+START TRANSACTION;
 
-insert into `_students_general` (`StudentID`, `eduyear`) VALUES (1510, '2021');
+SET @student_id := 1510;
+SET @year := '2021';
+SET @class_id := 2;
+
+INSERT INTO `_students_class` (StudentID, ClassID, eduperiod)
+VALUES (@student_id, @class_id, @year);
+
+INSERT INTO `_students_lessons` (StudentID, LessonID, isLocked, eduyear)
+VALUES
+(@student_id, 1, 0, @year),
+(@student_id, 2, 0, @year),
+(@student_id, 3, 0, @year),
+(@student_id, 4, 0, @year),
+(@student_id, 5, 0, @year),
+(@student_id, 6, 0, @year),
+(@student_id, 7, 0, @year),
+(@student_id, 8, 0, @year),
+(@student_id, 9, 0, @year),
+(@student_id, 10, 0, @year);
+
+INSERT INTO `_students_general` (StudentID, eduyear)
+VALUES (@student_id, @year);
+
+COMMIT;
+
 
 -- Διαγραφή εκπαιδευόμενου από ακαδημαϊκό έτος
 

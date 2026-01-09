@@ -76,7 +76,7 @@ try
 			{
 				$eduyear = $_GET["eduyear"];
 				//Update record in database
-				$qry = "UPDATE `_students_general`
+				/*$qry = "UPDATE `_students_general`
 				SET
 				amathisiakiporeia = '" . $_POST["amathisiakiporeia"] . "',
 				asynergasia = '" . $_POST["asynergasia"] . "',
@@ -88,12 +88,66 @@ try
 				bdesmefsi = '" . $_POST["bdesmefsi"] . "'
 				WHERE StudentID=".$_POST["StudentID"]." AND eduyear='".$eduyear."'";
 
-				$result = $con->query($qry);
+				$result = $con->query($qry); */
+				
+				// --- Inputs ---
+				$amathisiakiporeia = (string)($_POST['amathisiakiporeia'] ?? '');
+				$asynergasia       = (string)($_POST['asynergasia'] ?? '');
+				$aendiaferon       = (string)($_POST['aendiaferon'] ?? '');
+				$adesmefsi         = (string)($_POST['adesmefsi'] ?? '');
+
+				$bmathisiakiporeia = (string)($_POST['bmathisiakiporeia'] ?? '');
+				$bsynergasia       = (string)($_POST['bsynergasia'] ?? '');
+				$bendiaferon       = (string)($_POST['bendiaferon'] ?? '');
+				$bdesmefsi         = (string)($_POST['bdesmefsi'] ?? '');
+
+				$studentId = (int)($_POST['StudentID'] ?? 0);
+				$eduyear   = (string)$eduyear;
+
+				if ($studentId <= 0 || $eduyear === '') {
+					die(json_encode(["Result"=>"ERROR","Message"=>"Missing/invalid StudentID/eduyear"]));
+				}
+
+				// --- Prepared UPDATE ---
+				$sql = "UPDATE `_students_general`
+						SET amathisiakiporeia = ?,
+							asynergasia = ?,
+							aendiaferon = ?,
+							adesmefsi = ?,
+							bmathisiakiporeia = ?,
+							bsynergasia = ?,
+							bendiaferon = ?,
+							bdesmefsi = ?
+						WHERE StudentID = ? AND eduyear = ?";
+
+				$stmt = $con->prepare($sql);
+				if (!$stmt) {
+					die(json_encode(["Result"=>"ERROR","Message"=>"Prepare failed","MysqlError"=>$con->error]));
+				}
+
+				// 8 strings + int + string
+				$stmt->bind_param(
+					"ssssssssis",
+					$amathisiakiporeia,
+					$asynergasia,
+					$aendiaferon,
+					$adesmefsi,
+					$bmathisiakiporeia,
+					$bsynergasia,
+					$bendiaferon,
+					$bdesmefsi,
+					$studentId,
+					$eduyear
+				);
+
+				if (!$stmt->execute()) {
+					die(json_encode(["Result"=>"ERROR","Message"=>"Execute failed","MysqlError"=>$stmt->error]));
+				}
 
 				//Return result to jTable
 				$jTableResult = array();
 				$jTableResult['Result'] = "OK";
-				$jTableResult['Query'] = $qry;
+				$jTableResult['Query'] = $stmt;
 				print json_encode($jTableResult);
 			}
 

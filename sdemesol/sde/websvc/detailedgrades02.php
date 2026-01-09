@@ -185,10 +185,14 @@ while($row = $result->fetch_assoc())
   			$decs = $total%$count;
   			$intstext = $hf->getFulltextGrade($ints);
   			$decstext = $hf->getFulltextGrade($decs);
-  			$basecounttext = $hf->getFulltext2($count);
+			$basecounttext = "Όγδοα";
+			if($decs=="1") {
+				$basecounttext = $hf->getFulltext2single($count);
+			} else 
+			{$basecounttext = $hf->getFulltext2($count);}
 
   			$decsarithm = (intval($decs)>0) ? '& '.$decs.'/'.$count : '';
-  			$decsarithmtext = (intval($decs)>0) ? '& '.$decstext.'/'.$basecounttext : '';
+  			$decsarithmtext = (intval($decs)>0) ? '& '.$decstext.' '.$basecounttext : '';
 			     $data[] = array('studentid'=> $studentid, 'firstname'=>mb_strtolower($studentsex, mb_detect_encoding($studentsex)).' '.$row["fname"],
       			 'lname'=>  $row["lname"],
       			 'ftname'=>  $fathernamegen,
@@ -239,9 +243,13 @@ while($row = $result->fetch_assoc())
 try 
 {
 	$template = 'templates/sdetpl05_mes_bw2025.docx';
-	if ($grademode=='d')
+	if ($grademode=='d' || $grademode=='D')
     {
       $template = 'templates/sdetpl05_mes_bw2025dec.docx';
+    }
+	else if ($grademode=='b' || $grademode=='B')
+    {
+      $template = 'templates/sdetpl05_mes_bw2025both.docx';
     }
 
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).

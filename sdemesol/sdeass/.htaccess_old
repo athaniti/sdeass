@@ -1,0 +1,16 @@
+# Set default index files
+DirectoryIndex index.php index.html
+
+# Enable rewrite engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # If request is not a file or directory, send to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+</IfModule>
+
+# Disable directory listing for security
+Options -Indexes

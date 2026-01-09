@@ -38,7 +38,7 @@ function getMenu() {
     document.write('</ul></li>');
     document.write('<li class="active"><a href="#">Σχ. Έτος: <span id="eduyear">'+eduyear+'</span></a></li>');
     document.write('</ul>');
-    document.write('<select id="academicyear" class="selectpicker btn" style="margin-top:10px;"><option value="1112">1112</option><option value="1213">1213</option><option value="1314">1314</option><option value="1415">1415</option><option value="1516">1516</option><option value="1617">1617</option><option value="1718">1718</option><option value="1819">1819</option><option value="1920">1920</option><option value="2021">2021</option><option value="2122">2122</option><option value="2223">2223</option><option value="2324">2324</option></select></div>');
+    document.write('<select id="academicyear" class="selectpicker btn" style="margin-top:10px;"><option value="1112">1112</option><option value="1213">1213</option><option value="1314">1314</option><option value="1415">1415</option><option value="1516">1516</option><option value="1617">1617</option><option value="1718">1718</option><option value="1819">1819</option><option value="1920">1920</option><option value="2021">2021</option><option value="2122">2122</option><option value="2223">2223</option><option value="2324">2324</option><option value="2425">2425</option><option value="2526">2526</option><option value="2627">2627</option></select></div>');
 
 
 
@@ -220,7 +220,7 @@ function fillTheProjects(data) {
 		$.each(items, function(key, val) {
 			var newel =   document.createElement('li');
 			newel.className = "lessons";
-			projectsList.append($(newel).html('<a class="adminbtn" href="projectgrades.html?projectid='+val.projectid+'">'+val.projectname+'</a>'));
+			projectsList.append($(newel).html('<a class="adminbtn" href="projectgrades.html?projectid='+val.projectid+'">'+val.projectname+'</a><br />'));
 			});
 
 }

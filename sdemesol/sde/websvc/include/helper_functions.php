@@ -116,6 +116,42 @@ class Helper_Functions {
       return $ftgrade;
 
     }
+	
+	public function getFulltext2single($grade) {
+      $ftgrade='';
+      switch ($grade)
+      {
+      case '1':
+          $ftgrade = 'Πρώτο';
+          break;
+          case '2':
+              $ftgrade = 'Δεύτερο';
+              break;
+              case '3':
+                  $ftgrade = 'Τρίτο';
+                  break;
+                  case '4':
+                      $ftgrade = 'Τέταρτο';
+                      break;
+                      case '5':
+                          $ftgrade = 'Πέμπτο';
+                          break;
+                          case '6':
+                              $ftgrade = 'Έκτο';
+                              break;
+                              case '7':
+                                  $ftgrade = 'Έβδομο';
+                                  break;
+                                  case '8':
+                                      $ftgrade = 'Όγδοο';
+                                      break;
+      default:
+          $ftgrade = '';
+      }
+
+      return $ftgrade;
+
+    }
 
     public function getArthro($grade) {
       $ftgrade='Ο';

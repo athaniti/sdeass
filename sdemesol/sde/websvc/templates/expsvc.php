@@ -11,7 +11,7 @@
  * check for POST request
  */
   $ethnosimosrc = 'https://athaniti.com/sdemesol/sde/websvc/images/ethnosimo.jpg';
-  $titletext = 'ΕΛΛΗΝΙΚΗ ΔΗΜΟΚΡΑΤΙΑ<br />ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ ΘΡΗΣΚΕΥΜΑΤΩΝ ΚΑΙ ΑΘΛΗΤΙΣΜΟΥ<br />ΓΕΝΙΚΗ ΓΡΑΜΜΑΤΕΙΑ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΕΚΠΑΙΔΕΥΣΗΣ,<br />ΚΑΤΑΡΤΙΣΗΣ ΚΑΙ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ<br />ΔΙΕΥΘΥΝΣΗ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ';
+  $titletext = 'ΕΛΛΗΝΙΚΗ ΔΗΜΟΚΡΑΤΙΑ<br />ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΘΡΗΣΚΕΥΜΑΤΩΝ ΚΑΙ ΑΘΛΗΤΙΣΜΟΥ<br />ΓΕΝΙΚΗ ΓΡΑΜΜΑΤΕΙΑ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΕΚΠΑΙΔΕΥΣΗΣ,<br />ΚΑΤΑΡΤΙΣΗΣ ΚΑΙ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ<br />ΔΙΕΥΘΥΝΣΗ ΔΙΑ ΒΙΟΥ ΜΑΘΗΣΗΣ';
   $directortext = 'Η ΔΙΕΥΘΥΝΤΡΙΑ';
   $subdirectortext = 'Ο ΥΠΟΔΙΕΥΘΥΝΤΗΣ';
   $directorname = 'Γριβοπούλου Αγγελική';
@@ -584,10 +584,10 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 
 
 				 $fpagecont = '<div style="font-weight:bold; text-align:left; margin-bottom:60px;">';
-				 $fpagecont .= '<img src="'.$ethnosimosrc.'" border=0 height=60px/><br />'.$titletext.'</div><br /><br /><br /><br /><br /><br /><br /><br />';
+				 $fpagecont .= '<img src="'.$ethnosimosrc.'" border=0 height=40px/><br />'.$titletext.'</div><br /><br /><br /><br /><br /><br /><br /><br />';
 
 				 $fpagecont .= '<div style="font-weight:bold; text-align:center">ΣΧΟΛΕΙΟ ΔΕΥΤΕΡΗΣ ΕΥΚΑΙΡΙΑΣ ΜΕΣΟΛΟΓΓΙΟΥ<br /></div>';
-				 $fpagecontend = '<br /><br /><br /><div style="font-weight:bold; text-align:right;  margin-top:60px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
+				 $fpagecontend = '<br /><br /><br /><div style="font-weight:bold; text-align:right;  margin-top:40px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
 
 			 	$extracontst = '<div style="font-weight:bold; text-align:center">ΠΑΡΑΤΗΡΗΣΕΙΣ ΑΝΑ ΓΡΑΜΜΑΤΙΣΜΟ</div><table width="100%" cellspacing="0" style="border: 0px solid #000;">';
 				//$extracontst .= '<tr><th width="25%"  style="border: 1px solid #000; padding:3px;">Γραμματισμός</th><th width="75%"  style="border: 1px solid #000; padding:3px;">Περιγραφική Αξιολόγηση</th></tr>';
@@ -780,7 +780,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $fpagecont .= '<img src="'.$ethnosimosrc.'" border=0 height=60px/><br />'.$titletext.'</div><br /><br /><br /><br /><br /><br /><br /><br />';
 
 				 $fpagecont .= '<div style="font-weight:bold; text-align:center">ΣΧΟΛΕΙΟ ΔΕΥΤΕΡΗΣ ΕΥΚΑΙΡΙΑΣ ΜΕΣΟΛΟΓΓΙΟΥ<br /></div>';
-				 $fpagecontend = '<br /><br /><div style="font-weight:bold; text-align:right;  margin-top:40px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
+				 $fpagecontend = '<br /><br /><div style="font-weight:bold; text-align:right;  margin-top:60px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
 
 			 	$extracontst = '<div style="font-weight:bold; text-align:center">ΠΑΡΑΤΗΡΗΣΕΙΣ ΑΝΑ ΓΡΑΜΜΑΤΙΣΜΟ</div><table width="100%" cellspacing="0" style="border: 0px solid #000;">';
 				//$extracontst .= '<tr><th width="25%"  style="border: 1px solid #000; padding:3px;">Γραμματισμός</th><th width="75%"  style="border: 1px solid #000; padding:3px;">Περιγραφική Αξιολόγηση</th></tr>';
@@ -809,7 +809,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 					 }
 					 $studentid = $row["studentid"];
 					 $studentname = $row["lname"].' '.$row["fname"];
-					 $fpagestudcont = $fpagecont.'<div style="font-weight:bold; text-align:center;  margin-bottom:250px;">ΦΥΛΛΟ ΑΞΙΟΛΟΓΗΣΗΣ <br /><br />Εκπαιδευόμενος: '.$studentname.'<br /><br /><br />'.$semestname.' ΤΕΤΡΑΜΗΝΟ</div>'.$fpagecontend;
+					 $fpagestudcont = $fpagecont.'<div style="font-weight:bold; text-align:center;  margin-bottom:200px;">ΦΥΛΛΟ ΑΞΙΟΛΟΓΗΣΗΣ <br /><br />Εκπαιδευόμενος: '.$studentname.'<br /><br /><br />'.$semestname.' ΤΕΤΡΑΜΗΝΟ</div>'.$fpagecontend;
 					 //$newstudent .= '<br /><br />Εκπαιδευόμενος: <strong>'.$studentname.'</strong>';
 					 $newstudent .=$lpagecont.$fpagestudcont.$extracontst;
 					 $classname = '';
@@ -831,22 +831,18 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				    {
 					$ints = intval($total/8);
 					$decs = $total%8;
-					$graderesult = 0;
-				    $graderesult = $total / 8;
-				    $roundedresult = number_format($graderesult, 2, ',', '');
 					$average = '<tr style="border: 1px solid #000;">';
 					$average .= '<td style="border: 1px solid #000; padding:3px;">Μέσος όρος</td>';
-					$average .= '<td style="border: 1px solid #000; padding:3px;">('.$total.') - '.strval($ints).' και '.strval($decs).' όγδοα.<br />'.$roundedresult.'</td>';
+					$average .= '<td style="border: 1px solid #000; padding:3px;">('.$total.') - '.strval($ints).' και '.strval($decs).' όγδοα</td>';
 					$average .= '</tr>';
 					$content = $content.$average;
 				    }
 				 }
 				 $ints = $total/8;
 				 $decs = $total%8;
-				 
 				 $average = '<tr style="border: 1px solid #000;">';
 				 $average .= '<td style="border: 1px solid #000; padding:3px;">Μέσος όρος</td>';
-				 $average .= '<td style="border: 1px solid #000; padding:3px;">'.strval($ints).' / '.strval($decs).' όγδοα.';
+				 $average .= '<td style="border: 1px solid #000; padding:3px;">'.strval($ints).' / '.strval($decs).' όγδοα</td>';
 				 $average .= '</tr>';
 				 $content = $content.$extracontend;
 
@@ -913,7 +909,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 	    FROM  `_students_lessons` AS l
 	    INNER JOIN students ON students.StudentID = l.StudentID INNER JOIN  `_students_class` ON `_students_class`.StudentID = l.StudentID
 INNER JOIN class ON class.ClassID = `_students_class`.ClassID
-	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."' AND `_students_class`.eduperiod =  '".$eduyear."' AND students.foraksiologisi=1
+	    INNER JOIN lessons ON lessons.LessonID = l.LessonID WHERE l.eduyear =  '".$eduyear."' AND `_students_class`.eduperiod =  '".$eduyear."' AND class.classID>3 AND students.foraksiologisi=1
 	    AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfilter."
 	    ORDER BY lname, fname, priority, classname";
 
@@ -985,7 +981,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $fpagecont .= '<img src="'.$ethnosimosrc.'" border=0 height=60px/><br />'.$titletext.'</div><br /><br /><br /><br /><br /><br /><br /><br />';
 
 				 $fpagecont .= '<div style="font-weight:bold; text-align:center">ΣΧΟΛΕΙΟ ΔΕΥΤΕΡΗΣ ΕΥΚΑΙΡΙΑΣ ΜΕΣΟΛΟΓΓΙΟΥ<br /></div>';
-				 $fpagecontend = '<br /><br /><div style="font-weight:bold; text-align:right;  margin-top:60px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
+				 $fpagecontend = '<br /><br /><div style="font-weight:bold; text-align:right;  margin-top:40px;">ΣΧΟΛΙΚΟ ΕΤΟΣ '.$eduyearstr.'</div>'.$pagesep;
 
 			 	$extracontst = '<div style="font-weight:bold; text-align:center">ΠΑΡΑΤΗΡΗΣΕΙΣ ΑΝΑ ΓΡΑΜΜΑΤΙΣΜΟ</div><table width="100%" cellspacing="0" style="border: 0px solid #000;">';
 				//$extracontst .= '<tr><th width="25%"  style="border: 1px solid #000; padding:3px;">Γραμματισμός</th><th width="75%"  style="border: 1px solid #000; padding:3px;">Περιγραφική Αξιολόγηση</th></tr>';
@@ -1013,7 +1009,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 					 }
 					 $studentid = $row["studentid"];
 					 $studentname = $row["lname"].' '.$row["fname"];
-					 $fpagestudcont = $fpagecont.'<div style="font-weight:bold; text-align:center;  margin-bottom:250px;">ΦΥΛΛΟ ΑΞΙΟΛΟΓΗΣΗΣ <br /><br />Εκπαιδευόμενος: '.$studentname.'<br /><br /><br />'.$semestname.' ΤΕΤΡΑΜΗΝΟ</div>'.$fpagecontend;
+					 $fpagestudcont = $fpagecont.'<div style="font-weight:bold; text-align:center;  margin-bottom:200px;">ΦΥΛΛΟ ΑΞΙΟΛΟΓΗΣΗΣ <br /><br />Εκπαιδευόμενος: '.$studentname.'<br /><br /><br />'.$semestname.' ΤΕΤΡΑΜΗΝΟ</div>'.$fpagecontend;
 					 //$newstudent .= '<br /><br />Εκπαιδευόμενος: <strong>'.$studentname.'</strong>';
 					 $newstudent .=$lpagecont.$fpagestudcont.$extracontst;
 					 $classname = '';

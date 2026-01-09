@@ -89,7 +89,7 @@ function fillClasses(data) {
 		classesList.html("");
 
 		$.each(items, function(key, val) {
-			classesList.append($(document.createElement('li')).html('<a href="'+sderoot+'/educators/students.html?classid='+val.classid+'&lessonid='+val.lessonid+'">'+val.classname+'</a>')); 
+			classesList.append($(document.createElement('li')).html('<a href="'+sderoot+'/educators/students.html?classid='+val.classid+'&lessonid='+val.lessonid+'">'+val.classname+'</a><br />')); 
 			});
 		
 }
@@ -121,10 +121,10 @@ function fillClass(data) {
 		$.each(items, function(key, val) {
 			classesList.append($(document.createElement('span')).html(val.classname));
 			
-			classesAksiologisia.append($(document.createElement('span')).html('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&classid='+val.classid+'&semester=a&eduyear='+getCurrentAcademicYear()+'" class="adminbtn"><img src="images/word.jpg" border="0" height="25px" /> Εξαγωγή αξιολόγησης σε word ανά Εκπαιδευόμενο (Α Τετραμήνο) για το '+val.classname+'</a>'));
-			classesAksiologisib.append($(document.createElement('span')).html('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&classid='+val.classid+'&semester=b&eduyear='+getCurrentAcademicYear()+'" class="adminbtn"><img src="images/word.jpg" border="0" height="25px" /> Εξαγωγή αξιολόγησης σε word ανά Εκπαιδευόμενο (B Τετραμήνο) για το '+val.classname+'</a>'));
+			classesAksiologisia.append($(document.createElement('span')).html('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&classid='+val.classid+'&semester=a&eduyear='+getCurrentAcademicYear()+'" class="adminbtn"><img src="images/word.jpg" border="0" height="25px" /> Εξαγωγή αξιολόγησης σε word ανά Εκπαιδευόμενο (Α Τετραμήνο) για το '+val.classname+'</a><br />'));
+			classesAksiologisib.append($(document.createElement('span')).html('<a href="'+websvcroot+'expsvc.php?type=w&tag=allstudents&classid='+val.classid+'&semester=b&eduyear='+getCurrentAcademicYear()+'" class="adminbtn"><img src="images/word.jpg" border="0" height="25px" /> Εξαγωγή αξιολόγησης σε word ανά Εκπαιδευόμενο (B Τετραμήνο) για το '+val.classname+'</a><br />'));
 			
-			classesAksiologisi.append($(document.createElement('span')).html('<a href="'+sderoot+'educators/generalgradesperstudent.html?classid='+val.classid+'" class="adminbtn">Καταχώρηση Γενικής Αξιολόγησης ανά Εκπαιδευόμενο για το '+val.classname+'</a>'));
+			classesAksiologisi.append($(document.createElement('span')).html('<a href="'+sderoot+'educators/generalgradesperstudent.html?classid='+val.classid+'" class="adminbtn">Καταχώρηση Γενικής Αξιολόγησης ανά Εκπαιδευόμενο για το '+val.classname+'</a><br />'));
 			});
 		
 }
