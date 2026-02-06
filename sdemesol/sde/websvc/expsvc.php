@@ -658,8 +658,8 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 					$lpagecont .='<table width="100%" cellspacing="0" style="border: none;"><tr>';
 				    $lpagecont .='<td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;" >'.$directortext.'<br /><br /><br /><br /><br />'.$directorname.'</td><td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;">'.$subdirectortext.'<br /><br /><br /><br /><br />'.$subdirectorname.'</td></tr></table>';
 				    //$lpagecont .='</div>'.$pagesep.$pagesep;
-					//$lpagecont .= '</div>'.$pagesep;
-					$lpagecont .= '</div>';
+					$lpagecont .= '</div>'.$pagesep;
+					//$lpagecont .= '</div>';
 
 				    //$content .=$schema_insert.$lpagecont.$pagesep;
 				    $content .=$schema_insert;
