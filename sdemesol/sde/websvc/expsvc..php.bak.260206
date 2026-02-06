@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 /**
  * File to handle all API requests
  * Accepts GET and POST
@@ -32,7 +32,8 @@ ob_start();
     if ($s === '') return '';
     $enc = mb_detect_encoding($s, mb_detect_order(), true) ?: $fallbackEnc;
     return mb_strtolower($s, $enc);
-	}
+}
+
 
 if (isset($_GET['tag']) && $_GET['tag'] != '')
 {
@@ -119,20 +120,20 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 
 			//if this parameter is included ($w=1), file returned will be in word format ('.doc')
 			//if parameter is not included, file returned will be in excel format ('.xls')
-			if (isset($_GET['type']) && ($_GET['type']=='w')) {
-				$file_type = "msword";
-				$file_ending = "doc";
-			} 
-			else 
+			if (isset($_GET['type']) && ($_GET['type']=='w'))
 			{
-				$file_type = "vnd.ms-excel";    
-				$file_ending = "xls";
+				 $file_type = "msword";
+				 $file_ending = "doc";
+			}else {
+				 $file_type = "vnd.ms-excel";
+				 $file_ending = "xls";
+				 //header info for browser: determines file type ('.doc' or '.xls')
+				header("Content-Type: application/$file_type; charset=utf-8");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
+				header("Pragma: no-cache");
+				header("Expires: 0");
+
 			}
-			// headers για ΚΑΙ Word και Excel (download)
-			header("Content-Type: application/$file_type; charset=utf-8");
-			header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
-			header("Pragma: no-cache");
-			header("Expires: 0");
 
 			/*    Start of Formatting for Word or Excel    */
 
@@ -152,10 +153,10 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				if ($Use_Title == 1)
-				{
-					 $content .= $title."<br /><br />";
-				}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 			 	$extracontst = '<table width="100%" cellspacing="0" style="border: 1px solid #000;">';
@@ -222,12 +223,10 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				if (ob_get_length()) { ob_end_clean(); }   // καθάρισε buffer πριν το download
-				header('Content-Type: application/'.$file_type.'; charset=utf-8');
-				header('Content-Length: '.strlen($content));
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
 			}
 			else /*    FORMATTING FOR EXCEL DOCUMENTS ('.xls')   */
 			{
@@ -340,7 +339,7 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 				 $file_ending = "xls";
 				 //header info for browser: determines file type ('.doc' or '.xls')
 				header("Content-Type: application/$file_type; charset=utf-8");
-				header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
 				header("Pragma: no-cache");
 				header("Expires: 0");
 
@@ -364,10 +363,10 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				 //if ($Use_Title == 1)
-				 //{
-				//	 echo("$title\n\n");
-				 //}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 			 	$extracontst = '<table width="100%" cellspacing="0" style="border: 1px solid #000;">';
@@ -425,15 +424,10 @@ if (isset($_GET['tag']) && $_GET['tag'] != '')
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				// καθάρισε τυχόν output buffer (αν υπάρχει)
-				if (ob_get_length()) { @ob_end_clean(); }
-				header('Content-Type: application/msword; charset=utf-8');
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
-				header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-				header('Pragma: no-cache');
-				header('Expires: 0');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
 			}
 			else /*    FORMATTING FOR EXCEL DOCUMENTS ('.xls')   */
 			{
@@ -561,7 +555,7 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 				 $file_ending = "xls";
 				 //header info for browser: determines file type ('.doc' or '.xls')
 				header("Content-Type: application/$file_type; charset=utf-8");
-				header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
 				header("Pragma: no-cache");
 				header("Expires: 0");
 
@@ -587,10 +581,10 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				 //if ($Use_Title == 1)
-				 //{
-				//	 echo("$title\n\n");
-				 //}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 				 //$pagesep = '<br style="page-break-before: always">'; //new line character
@@ -616,7 +610,7 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 				$newstudent = '';
 				$studentname = '';
 				$studentcount=0;
-				$lpagecont='';
+$lpagecont='';
 			        while($row = $result->fetch_assoc())
 				 {
 				    $newstudent = '';
@@ -646,27 +640,21 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 				    $lpagecont = $pagesep.'<div style="font-weight:normal; font-size:0.8em;">';
 				    $lpagecont .='<div style="text-align:center;font-weight:bold;">ΓΕΝΙΚΕΣ ΠΑΡΑΤΗΡΗΣΕΙΣ</div><br /><br />';
 					
-				    //$lpagecont .='<span style="font-weight:bold; font-size:1em;">Μαθησιακή Πορεία</span><br /><br /><br />'.$poreiastart.mb_strtolower($row[$mathisiakiporeia], mb_detect_encoding($row[$mathisiakiporeia])).$poreiaend.'<br /><br /><br />';
-				    //$lpagecont .='<span style="font-weight:bold; font-size:1em;">Συνεργασία/ Συμμετοχή σε Ομαδικές Δραστηριότητες<br />(Εργαστήρια-Σχέδια Δράσης)</span><br /><br />'.$synergasiastart.mb_strtolower($row[$synergasia], mb_detect_encoding($row[$synergasia])).$synergasiaend.'<br /><br /><br /><br /><br /><br />';
-				    //$lpagecont .='<span style="font-weight:bold; font-size:1em;">Ενδιαφέρον-Ανάληψη Πρωτοβουλιών</span><br /><br />'.$endiaferonstart.mb_strtolower($row[$endiaf], mb_detect_encoding($row[$endiaf])).$endiaferonend.'<br /><br /><br /><br />';
-				    //$lpagecont .='<span style="font-weight:bold; font-size:1em;">Δέσμευση-Αποτελεσματικότητα</span><br /><br /><br />'.$desmefsistart.mb_strtolower($row[$desmefsi], mb_detect_encoding($row[$desmefsi])).$desmefsiend.'<br /><br /><br />';
-				    $lpagecont .='<span style="font-weight:bold; font-size:1em;">Μαθησιακή Πορεία</span><br /><br /><br />'.$poreiastart.mb_lower_safe($row[$mathisiakiporeia] ?? null).$poreiaend.'<br /><br /><br />';
+				    $lpagecont .='<span style="font-weight:bold; font-size:1em;">Μαθησιακή Πορεία</span><br /><br /><br />'
+					.$poreiastart.mb_lower_safe($row[$mathisiakiporeia] ?? null).$poreiaend.'<br /><br /><br />';
 					$lpagecont .='<span style="font-weight:bold; font-size:1em;">Συνεργασία/ Συμμετοχή σε Ομαδικές Δραστηριότητες<br />(Εργαστήρια-Σχέδια Δράσης)</span><br /><br />'.$synergasiastart.mb_lower_safe($row[$synergasia] ?? null).$synergasiaend.'<br /><br /><br /><br /><br /><br />';
 					$lpagecont .='<span style="font-weight:bold; font-size:1em;">Ενδιαφέρον-Ανάληψη Πρωτοβουλιών</span><br /><br />'.$endiaferonstart.mb_lower_safe($row[$endiaf] ?? null).$endiaferonend.'<br /><br /><br /><br />';
-					$lpagecont .='<span style="font-weight:bold; font-size:1em;">Δέσμευση-Αποτελεσματικότητα</span><br /><br /><br />'.$desmefsistart.mb_lower_safe($row[$desmefsi] ?? null).$desmefsiend.'<br /><br /><br />';
+					$lpagecont .='<span style="font-weight:bold; font-size:1em;">Δέσμευση-Αποτελεσματικότητα</span><br /><br /><br />'$desmefsistart.mb_lower_safe($row[$desmefsi] ?? null).$desmefsiend.'<br /><br /><br />';
 
-					$lpagecont .='<table width="100%" cellspacing="0" style="border: none;"><tr>';
+				    $lpagecont .='<table width="100%" cellspacing="0" style="border: none;"><tr>';
 				    $lpagecont .='<td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;" >'.$directortext.'<br /><br /><br /><br /><br />'.$directorname.'</td><td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;">'.$subdirectortext.'<br /><br /><br /><br /><br />'.$subdirectorname.'</td></tr></table>';
-				    //$lpagecont .='</div>'.$pagesep.$pagesep;
-					//$lpagecont .= '</div>'.$pagesep;
-					$lpagecont .= '</div>';
+				    $lpagecont .='</div>'.$pagesep.$pagesep;
 
 				    //$content .=$schema_insert.$lpagecont.$pagesep;
 				    $content .=$schema_insert;
 
 				 }
-				 //$content = $content.$extracontend;
-				 $content .= $extracontend . $lpagecont;
+				 $content = $content.$extracontend;
 
 				 //$content .= '<br /><table width="100%" cellspacing="0" style="border: none;"><tr><td width="60%">&nbsp;</td><td style="text-align:center">Ο/Η Εκπαιδευτικός<br /><br /><br />'.$user["UserLname"].' '.$user["UserFname"].'</td></tr></table>';
 
@@ -678,15 +666,10 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				// καθάρισε τυχόν output buffer (αν υπάρχει)
-				if (ob_get_length()) { @ob_end_clean(); }
-				header('Content-Type: application/msword; charset=utf-8');
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
-				header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-				header('Pragma: no-cache');
-				header('Expires: 0');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
 
 
 			}
@@ -767,7 +750,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $file_ending = "xls";
 				 //header info for browser: determines file type ('.doc' or '.xls')
 				header("Content-Type: application/$file_type; charset=utf-8");
-				header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
 				header("Pragma: no-cache");
 				header("Expires: 0");
 
@@ -793,10 +776,10 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				 //if ($Use_Title == 1)
-				 //{
-				//	 echo("$title\n\n");
-				 //}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 				 //$pagesep = '<br style="page-break-before: always">'; //new line character
@@ -875,8 +858,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $average .= '<td style="border: 1px solid #000; padding:3px;">Μέσος όρος</td>';
 				 $average .= '<td style="border: 1px solid #000; padding:3px;">'.strval($ints).' / '.strval($decs).' όγδοα.';
 				 $average .= '</tr>';
-				 //$content = $content.$extracontend;
-				 $content .= $extracontend . $lpagecont;
+				 $content = $content.$extracontend;
 
 				 //$content .= '<br /><table width="100%" cellspacing="0" style="border: none;"><tr><td width="60%">&nbsp;</td><td style="text-align:center">Ο/Η Εκπαιδευτικός<br /><br /><br />'.$user["UserLname"].' '.$user["UserFname"].'</td></tr></table>';
 
@@ -888,15 +870,11 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				// καθάρισε τυχόν output buffer (αν υπάρχει)
-				if (ob_get_length()) { @ob_end_clean(); }
-				header('Content-Type: application/msword; charset=utf-8');
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
-				header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-				header('Pragma: no-cache');
-				header('Expires: 0');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
+
 
 			}
 
@@ -977,7 +955,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $file_ending = "xls";
 				 //header info for browser: determines file type ('.doc' or '.xls')
 				header("Content-Type: application/$file_type; charset=utf-8");
-				header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
 				header("Pragma: no-cache");
 				header("Expires: 0");
 
@@ -1003,10 +981,10 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				//if ($Use_Title == 1)
-				//{
-				//	echo("$title\n\n");
-				//}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 				 //$pagesep = '<br style="page-break-before: always">'; //new line character
@@ -1066,8 +1044,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				    $content .=$schema_insert;
 
 				 }
-				 //$content = $content.$extracontend;
-				 $content .= $extracontend . $lpagecont;
+				 $content = $content.$extracontend;
 
 				 //$content .= '<br /><table width="100%" cellspacing="0" style="border: none;"><tr><td width="60%">&nbsp;</td><td style="text-align:center">Ο/Η Εκπαιδευτικός<br /><br /><br />'.$user["UserLname"].' '.$user["UserFname"].'</td></tr></table>';
 
@@ -1079,15 +1056,10 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				// καθάρισε τυχόν output buffer (αν υπάρχει)
-				if (ob_get_length()) { @ob_end_clean(); }
-				header('Content-Type: application/msword; charset=utf-8');
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
-				header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-				header('Pragma: no-cache');
-				header('Expires: 0');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
 
 
 			}
@@ -1144,7 +1116,7 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				 $file_ending = "xls";
 				 //header info for browser: determines file type ('.doc' or '.xls')
 				header("Content-Type: application/$file_type; charset=utf-8");
-				header("Content-Disposition: attachment; filename=".$filename.".$file_ending");
+				header("Content-Disposition: inline; filename=".$filename.".$file_ending");
 				header("Pragma: no-cache");
 				header("Expires: 0");
 
@@ -1168,10 +1140,10 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 
 				 /*    FORMATTING FOR WORD DOCUMENTS ('.doc')   */
 				 //create title with timestamp:
-				 //if ($Use_Title == 1)
-				 //{
-				//	 echo("$title\n\n");
-				 //}
+				 if ($Use_Title == 1)
+				 {
+					 echo("$title\n\n");
+				 }
 				 //define separator (defines columns in excel & tabs in word)
 				 $sep = "\n"; //new line character
 			 	$extracontst = '<table width="100%" cellspacing="0" style="border: 1px solid #000;">';
@@ -1199,15 +1171,10 @@ INNER JOIN class ON class.ClassID = `_students_class`.ClassID
 				<body>'.$word_landscape_div_start.$content.$word_landscape_div_end.'</body>
 				</html>';
 
-				// καθάρισε τυχόν output buffer (αν υπάρχει)
-				if (ob_get_length()) { @ob_end_clean(); }
-				header('Content-Type: application/msword; charset=utf-8');
-				header('Content-Disposition: attachment; filename="'.$filename.'.doc"');
-				header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-				header('Pragma: no-cache');
-				header('Expires: 0');
+				@header('Content-Type: application/'.$file_type.'; charset=utf-8');
+				@header('Content-Length: '.strlen($content));
+				@header('Content-disposition: inline; filename="'.$filename.'.doc"');
 				echo $content;
-				exit;
 			}
 			else /*    FORMATTING FOR EXCEL DOCUMENTS ('.xls')   */
 			{
