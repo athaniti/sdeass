@@ -617,8 +617,8 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 				$studentname = '';
 				$studentcount=0;
 				$lpagecont='';
-			        while($row = $result->fetch_assoc())
-				 {
+			    while($row = $result->fetch_assoc())
+				{
 				    $newstudent = '';
 				    if ($studentid != $row["studentid"])
 				    {
@@ -658,15 +658,15 @@ AND l.StudentID IN (SELECT StudentID FROM students WHERE IsActive =1)".$classfil
 					$lpagecont .='<table width="100%" cellspacing="0" style="border: none;"><tr>';
 				    $lpagecont .='<td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;" >'.$directortext.'<br /><br /><br /><br /><br />'.$directorname.'</td><td width=50% style="border: none;font-weight:bold;vertical-align: top; text-align:center;">'.$subdirectortext.'<br /><br /><br /><br /><br />'.$subdirectorname.'</td></tr></table>';
 				    //$lpagecont .='</div>'.$pagesep.$pagesep;
-					$lpagecont .= '</div>'.$pagesep;
+					$lpagecont .= '</div>'.$pagesep.$pagesep;
 					//$lpagecont .= '</div>';
 
 				    //$content .=$schema_insert.$lpagecont.$pagesep;
 				    $content .=$schema_insert;
 
-				 }
-				 //$content = $content.$extracontend;
-				 $content .= $extracontend . $lpagecont;
+				}
+				//$content = $content.$extracontend;
+				$content .= $extracontend.$lpagecont;
 
 				 //$content .= '<br /><table width="100%" cellspacing="0" style="border: none;"><tr><td width="60%">&nbsp;</td><td style="text-align:center">Ο/Η Εκπαιδευτικός<br /><br /><br />'.$user["UserLname"].' '.$user["UserFname"].'</td></tr></table>';
 
